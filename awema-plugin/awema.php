@@ -56,6 +56,12 @@ class AwemaPlugin {
                 'manage_awema' => true
             ));
         }
+        
+        // Ajouter la permission aux administrateurs
+        $admin_role = get_role('administrator');
+        if ($admin_role) {
+            $admin_role->add_cap('manage_awema');
+        }
     }
     
     public function create_database_tables() {
