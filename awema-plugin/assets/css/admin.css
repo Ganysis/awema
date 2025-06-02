@@ -1,0 +1,326 @@
+/* AWEMA Plugin Admin Styles */
+
+.awema-dashboard {
+    max-width: 1200px;
+}
+
+.awema-stats {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.stat-card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    flex: 1;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.stat-card h3 {
+    font-size: 32px;
+    color: #23282d;
+    margin: 0 0 10px 0;
+    font-weight: bold;
+}
+
+.stat-card p {
+    margin: 0;
+    color: #666;
+    font-size: 14px;
+}
+
+.awema-quick-actions {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+.awema-quick-actions h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.awema-recent-projects {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.awema-recent-projects h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.status-badge {
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.status-draft {
+    background: #fef7e0;
+    color: #8c5700;
+}
+
+.status-in_progress {
+    background: #e5f3ff;
+    color: #0066cc;
+}
+
+.status-completed {
+    background: #e8f5e8;
+    color: #2e7d32;
+}
+
+/* Formulaire de projet */
+.awema-form-container {
+    max-width: 800px;
+}
+
+.awema-section {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.awema-section h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #0073aa;
+    color: #23282d;
+}
+
+.awema-section .form-table {
+    margin-bottom: 0;
+}
+
+.awema-section .form-table th {
+    width: 200px;
+    vertical-align: top;
+    padding-top: 15px;
+}
+
+.awema-section .form-table td {
+    padding-bottom: 20px;
+}
+
+/* Couleurs */
+input[type="color"] {
+    width: 60px;
+    height: 40px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Logo preview */
+#logo_preview img {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+    background: #fff;
+}
+
+/* Chargement */
+.awema-loading {
+    display: none;
+    text-align: center;
+    padding: 20px;
+}
+
+.awema-loading::after {
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #0073aa;
+    border-radius: 50%;
+    border-top-color: transparent;
+    animation: awema-spin 1s linear infinite;
+}
+
+@keyframes awema-spin {
+    to { transform: rotate(360deg); }
+}
+
+/* Messages */
+.awema-notice {
+    padding: 12px;
+    margin: 20px 0;
+    border-left: 4px solid #0073aa;
+    background: #fff;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.04);
+}
+
+.awema-notice.error {
+    border-left-color: #dc3232;
+    background: #fef7f7;
+}
+
+.awema-notice.success {
+    border-left-color: #46b450;
+    background: #f7fff7;
+}
+
+.awema-notice.warning {
+    border-left-color: #ffb900;
+    background: #fffbf0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .awema-stats {
+        flex-direction: column;
+    }
+    
+    .action-buttons {
+        flex-direction: column;
+    }
+    
+    .action-buttons .button {
+        text-align: center;
+    }
+}
+
+/* Templates page */
+.awema-templates-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.awema-template-card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+}
+
+.awema-template-card h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.awema-template-card .template-preview {
+    width: 100%;
+    height: 150px;
+    background: #f5f5f5;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #666;
+}
+
+.awema-template-card .template-actions {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+/* Configuration page */
+.awema-config-section {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.awema-config-section h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: #23282d;
+}
+
+.awema-test-connection {
+    margin-top: 10px;
+}
+
+.awema-test-result {
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 4px;
+    display: none;
+}
+
+.awema-test-result.success {
+    background: #e8f5e8;
+    color: #2e7d32;
+    border: 1px solid #4caf50;
+}
+
+.awema-test-result.error {
+    background: #fef7f7;
+    color: #d32f2f;
+    border: 1px solid #f44336;
+}
+
+/* Progress bar */
+.awema-progress {
+    width: 100%;
+    height: 20px;
+    background: #f0f0f0;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 10px 0;
+}
+
+.awema-progress-bar {
+    height: 100%;
+    background: linear-gradient(90deg, #0073aa, #005a87);
+    width: 0%;
+    transition: width 0.3s ease;
+    border-radius: 10px;
+}
+
+/* Tooltips */
+.awema-tooltip {
+    position: relative;
+    display: inline-block;
+    cursor: help;
+}
+
+.awema-tooltip::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 125%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #333;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 12px;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s;
+    z-index: 1000;
+}
+
+.awema-tooltip:hover::after {
+    opacity: 1;
+    visibility: visible;
+}
