@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Prévisualisation AWEMA</title>
+    <style>
+        body { 
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; 
+            max-width: 800px; 
+            margin: 0 auto; 
+            padding: 2rem; 
+            line-height: 1.6;
+        }
+        .site-section { 
+            margin: 2rem 0; 
+            padding: 1.5rem; 
+            border: 1px solid #e5e7eb; 
+            border-radius: 8px; 
+            background: #f9fafb;
+        }
+        .links { display: grid; gap: 0.5rem; margin-top: 1rem; }
+        .link { 
+            display: block; 
+            padding: 0.5rem 1rem; 
+            background: #2563eb; 
+            color: white; 
+            text-decoration: none; 
+            border-radius: 4px; 
+            text-align: center;
+            transition: background 0.3s;
+        }
+        .link:hover { background: #1d4ed8; }
+        .status { margin-left: 1rem; font-size: 0.9rem; }
+        .status.new { color: #10b981; font-weight: bold; }
+        .status.old { color: #f59e0b; }
+    </style>
+</head>
+<body>
+    <h1>🚀 Test Prévisualisation AWEMA</h1>
+    
+    <div class="site-section">
+        <h2>🎯 Site Nouveau (site-a3pdavnb) <span class="status new">✅ NOUVEAU DESIGN</span></h2>
+        <p>Site généré avec le nouveau système - Menu responsive, Footer moderne, Police Poppins</p>
+        <div class="links">
+            <a href="/api/preview/site-a3pdavnb?file=index.html" class="link" target="_blank">🏠 Page d'accueil</a>
+            <a href="/api/preview/site-a3pdavnb?file=contact.html" class="link" target="_blank">📞 Contact</a>
+            <a href="/api/preview/site-a3pdavnb?file=mentions-legales.html" class="link" target="_blank">⚖️ Mentions légales</a>
+            <a href="/api/preview/site-a3pdavnb?file=service-service-depannage.html" class="link" target="_blank">🔧 Service Dépannage</a>
+            <a href="/api/preview/site-a3pdavnb?file=service-service-installation.html" class="link" target="_blank">⚡ Service Installation</a>
+            <a href="/api/preview/site-a3pdavnb?file=service-service-renovation.html" class="link" target="_blank">🏗️ Service Rénovation</a>
+        </div>
+    </div>
+
+    <div class="site-section">
+        <h2>📱 Site Ancien (site-1d6ehvvd) <span class="status old">⚠️ ANCIEN DESIGN</span></h2>
+        <p>Site généré avec l'ancien système - Pour comparaison</p>
+        <div class="links">
+            <a href="/api/preview/site-1d6ehvvd?file=index.html" class="link" target="_blank">🏠 Page d'accueil</a>
+            <a href="/api/preview/site-1d6ehvvd?file=contact.html" class="link" target="_blank">📞 Contact</a>
+            <a href="/api/preview/site-1d6ehvvd?file=mentions-legales.html" class="link" target="_blank">⚖️ Mentions légales</a>
+        </div>
+    </div>
+
+    <div class="site-section">
+        <h2>🎨 Pages SEO Locales (Nouveau)</h2>
+        <p>Pages générées automatiquement pour chaque ville et service</p>
+        <div class="links">
+            <a href="/api/preview/site-a3pdavnb?file=service-depannage-paris.html" class="link" target="_blank">🔧 Dépannage Paris</a>
+            <a href="/api/preview/site-a3pdavnb?file=service-installation-boulogne-billancourt.html" class="link" target="_blank">⚡ Installation Boulogne</a>
+            <a href="/api/preview/site-a3pdavnb?file=service-renovation-neuilly-sur-seine.html" class="link" target="_blank">🏗️ Rénovation Neuilly</a>
+        </div>
+    </div>
+
+    <div class="site-section">
+        <h2>✅ Fonctionnalités Testées</h2>
+        <ul>
+            <li>✅ Menu hamburger responsive</li>
+            <li>✅ Footer 4 colonnes moderne</li>
+            <li>✅ Police Poppins partout</li>
+            <li>✅ 25 pages générées automatiquement</li>
+            <li>✅ Design mobile-first</li>
+            <li>✅ Bandeau de construction</li>
+            <li>✅ Navigation entre pages</li>
+        </ul>
+    </div>
+
+    <div class="site-section">
+        <h2>🔧 Développement</h2>
+        <p>URLs directes pour test :</p>
+        <div class="links">
+            <a href="/preview/site-a3pdavnb" class="link" target="_blank">🔗 Redirect Preview</a>
+            <a href="/generated-sites/site-a3pdavnb/" class="link" target="_blank">📁 Fichiers Statiques</a>
+        </div>
+    </div>
+
+    <script>
+        // Ouvrir tous les liens dans de nouveaux onglets
+        document.querySelectorAll('.link').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                window.open(this.href, '_blank');
+            });
+        });
+    </script>
+</body>
+</html>

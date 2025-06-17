@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="fr" class="no-js">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>À propos - ÉlectroMax Pro | Électricien professionnel Toulouse</title>
+    <meta name="description" content="Découvrez ÉlectroMax Pro, électricien professionnel à Toulouse depuis plus de 15 ans. Expertise, qualité et satisfaction client garanties.">
+    
+    <!-- Schema.org Organization -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "ÉlectroMax Pro",
+      "description": "Électricien expert à Toulouse, spécialisé dans l'installation, dépannage et rénovation électrique avec plus de 15 ans d'expérience.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "25 Avenue Jean Jaurès",
+        "addressLocality": "Toulouse",
+        "addressCountry": "FR"
+      },
+      "telephone": "05 61 23 45 67",
+      "email": "contact@electromax-pro.fr",
+      "url": "https://electromax-pro.fr",
+      "foundingDate": "2010",
+      "numberOfEmployees": "5-10",
+      "slogan": "Excellence électricien, satisfaction client garantie"
+    }
+    </script>
+    
+    <style>
+    /* CSS partagé identique à la homepage */
+    :root {
+      --primary: #ea580c;
+      --secondary: #f97316;
+      --white: #ffffff;
+      --gray-50: #f8fafc;
+      --gray-100: #f1f5f9;
+      --gray-200: #e2e8f0;
+      --gray-600: #475569;
+      --gray-700: #334155;
+      --gray-800: #1e293b;
+      --gray-900: #0f172a;
+    }
+    
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      line-height: 1.6;
+      color: var(--gray-800);
+      overflow-x: hidden;
+    }
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 clamp(1rem, 3vw, 2rem);
+    }
+    
+    .text-center { text-align: center; }
+    
+    /* Navigation identique */
+    .divi-nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      background: rgba(255, 255, 255, 0.98);
+      backdrop-filter: blur(10px);
+      z-index: 1000;
+      padding: 1rem 0;
+      box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+    }
+    
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .nav-logo {
+      font-size: clamp(1.5rem, 3vw, 2rem);
+      font-weight: 800;
+      color: var(--primary);
+      text-decoration: none;
+    }
+    
+    .nav-menu {
+      display: flex;
+      list-style: none;
+      gap: clamp(1.5rem, 3vw, 3rem);
+    }
+    
+    .nav-link {
+      color: var(--gray-700);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: clamp(0.9rem, 2vw, 1rem);
+      padding: 0.5rem 1rem;
+      border-radius: 0.5rem;
+      transition: all 0.3s ease;
+    }
+    
+    .nav-link:hover, .nav-link.active {
+      color: var(--primary);
+      background: var(--gray-50);
+    }
+    
+    .nav-cta {
+      background: var(--primary);
+      color: var(--white);
+      padding: clamp(0.75rem, 2vw, 1rem) clamp(1.5rem, 3vw, 2rem);
+      border-radius: 0.5rem;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: clamp(0.9rem, 2vw, 1rem);
+      transition: all 0.3s ease;
+    }
+    
+    .nav-cta:hover {
+      background: var(--secondary);
+      transform: translateY(-2px);
+    }
+    
+    .nav-toggle {
+      display: none;
+      flex-direction: column;
+      gap: 4px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0.5rem;
+    }
+    
+    .nav-toggle span {
+      width: 25px;
+      height: 3px;
+      background: var(--gray-700);
+      transition: all 0.3s ease;
+    }
+    
+    /* Boutons */
+    .btn-primary {
+      background: var(--primary);
+      color: var(--white);
+      padding: clamp(1rem, 2vw, 1.5rem) clamp(2rem, 4vw, 3rem);
+      border-radius: 0.75rem;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: clamp(1rem, 2vw, 1.2rem);
+      transition: all 0.3s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    
+    .btn-primary:hover {
+      background: var(--secondary);
+      transform: translateY(-3px);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    }
+    
+    .hero-badge {
+      background: var(--primary);
+      color: var(--white);
+      padding: 0.75rem 2rem;
+      border-radius: 3rem;
+      display: inline-block;
+      font-weight: 700;
+      font-size: clamp(0.9rem, 2vw, 1rem);
+      margin-bottom: 2rem;
+    }
+    
+    /* Features */
+    .feature-item {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 0.75rem;
+      font-size: clamp(0.9rem, 2vw, 1rem);
+    }
+    
+    .feature-check {
+      width: 20px;
+      height: 20px;
+      background: var(--primary);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--white);
+      font-size: 0.75rem;
+      font-weight: bold;
+      flex-shrink: 0;
+    }
+    
+    /* Footer */
+    .footer-professional {
+      background: var(--gray-900);
+      color: var(--white);
+      padding: clamp(3rem, 6vw, 5rem) 0 clamp(1rem, 2vw, 2rem);
+    }
+    
+    .footer-content {
+      text-align: center;
+    }
+    
+    .footer-title {
+      font-size: clamp(1.5rem, 3vw, 2rem);
+      font-weight: 700;
+      margin-bottom: 1rem;
+      color: var(--primary);
+    }
+    
+    .footer-description {
+      opacity: 0.8;
+      margin-bottom: 2rem;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.1);
+      padding-top: 2rem;
+      margin-top: 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    
+    .footer-copyright {
+      opacity: 0.6;
+    }
+    
+    .footer-credits a {
+      color: var(--primary);
+      text-decoration: none;
+    }
+    
+    /* Responsive */
+    @media (max-width: 768px) {
+      .nav-menu {
+        position: fixed;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: var(--white);
+        flex-direction: column;
+        padding: 2rem;
+        box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        transform: translateY(-100%);
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+      }
+      
+      .nav-menu.active {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+      }
+      
+      .nav-toggle {
+        display: flex;
+      }
+      
+      .services-detailed-grid > div > div {
+        grid-template-columns: 1fr !important;
+        gap: 2rem !important;
+        text-align: center;
+      }
+      
+      .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+    
+    <!-- Navigation -->
+    <nav class="divi-nav">
+        <div class="container">
+            <div class="nav-container">
+                <a href="index.html" class="nav-logo">ÉlectroMax Pro</a>
+                <button class="nav-toggle" id="navToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html" class="nav-link">Accueil</a></li>
+                    <li><a href="services.html" class="nav-link">Services</a></li>
+                    <li><a href="a-propos.html" class="nav-link">À propos</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                    <li><a href="tel:05 61 23 45 67" class="nav-cta">📞 05 61 23 45 67</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Hero À propos -->
+    <section style="padding: 8rem 0 4rem; background: linear-gradient(135deg, var(--gray-900) 0%, var(--primary) 100%); color: var(--white); position: relative;">
+        <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: url('https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?w=1920&h=800&fit=crop') center/cover; opacity: 0.1;"></div>
+        <div class="container" style="position: relative; z-index: 2;">
+            <div class="text-center">
+                <span class="hero-badge">👥 Notre Histoire</span>
+                <h1 style="font-size: clamp(2.5rem, 6vw, 4rem); font-weight: 900; margin-bottom: 2rem;">
+                    À propos de ÉlectroMax Pro
+                </h1>
+                <p style="font-size: clamp(1.2rem, 3vw, 1.6rem); margin-bottom: 3rem; opacity: 0.9; max-width: 800px; margin-left: auto; margin-right: auto;">
+                    Plus de 15 ans d'expertise électricien au service de Toulouse et sa région
+                </p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Notre histoire -->
+    <section style="padding: 6rem 0; background: var(--white);">
+        <div class="container">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: center;">
+                <div>
+                    <h2 style="font-size: clamp(2rem, 5vw, 3rem); font-weight: 900; margin-bottom: 2rem; color: var(--gray-900);">Notre histoire</h2>
+                    <p style="font-size: 1.2rem; color: var(--gray-600); margin-bottom: 2rem; line-height: 1.7;">
+                        Fondée en 2010, <strong>ÉlectroMax Pro</strong> est née de la passion de fournir des services électricien d'excellence. Notre équipe expérimentée s'engage à respecter les plus hauts standards de qualité et de sécurité.
+                    </p>
+                    <p style="font-size: 1.2rem; color: var(--gray-600); margin-bottom: 3rem; line-height: 1.7;">
+                        Basés à Toulouse, nous avons développé une expertise reconnue dans l'installation, le dépannage et la rénovation. Notre approche personnalisée nous permet de répondre précisément aux besoins de chaque client.
+                    </p>
+                    
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;">
+                        <div style="text-align: center; padding: 2rem; background: var(--gray-50); border-radius: 1rem;">
+                            <div style="font-size: 2.5rem; font-weight: 900; color: var(--primary); margin-bottom: 0.5rem;">2010</div>
+                            <div style="color: var(--gray-600);">Année de création</div>
+                        </div>
+                        <div style="text-align: center; padding: 2rem; background: var(--gray-50); border-radius: 1rem;">
+                            <div style="font-size: 2.5rem; font-weight: 900; color: var(--primary); margin-bottom: 0.5rem;">500+</div>
+                            <div style="color: var(--gray-600);">Projets réalisés</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div style="position: relative;">
+                    <img src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=600&h=500&fit=crop" alt="Équipe ÉlectroMax Pro" style="width: 100%; border-radius: 2rem; box-shadow: 0 20px 60px rgba(0,0,0,0.2);">
+                    <div style="position: absolute; bottom: -30px; right: -30px; background: var(--primary); color: var(--white); padding: 2rem; border-radius: 1rem; box-shadow: 0 10px 30px rgba(0,0,0,0.3);">
+                        <div style="font-size: 1.5rem; font-weight: 700; margin-bottom: 0.5rem;">Expert certifié</div>
+                        <div style="opacity: 0.9;">Qualifications RGE</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Nos valeurs -->
+    <section style="padding: 6rem 0; background: var(--gray-50);">
+        <div class="container">
+            <div class="text-center" style="margin-bottom: 4rem;">
+                <h2 style="font-size: clamp(2rem, 5vw, 3rem); font-weight: 900; margin-bottom: 2rem; color: var(--gray-900);">Nos valeurs</h2>
+                <p style="font-size: 1.2rem; color: var(--gray-600); max-width: 600px; margin: 0 auto;">
+                    Ce qui nous guide au quotidien dans notre métier de électricien
+                </p>
+            </div>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 3rem;">
+                <div style="background: var(--white); padding: 3rem; border-radius: 2rem; text-align: center; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+                    <div style="width: 80px; height: 80px; background: var(--primary); color: var(--white); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2rem; margin: 0 auto 2rem;">🎯</div>
+                    <h3 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 1rem; color: var(--gray-900);">Excellence</h3>
+                    <p style="color: var(--gray-600); line-height: 1.7;">
+                        Nous nous engageons à fournir des prestations de la plus haute qualité, en utilisant des matériaux premium et des techniques de pointe.
+                    </p>
+                </div>
+                
+                <div style="background: var(--white); padding: 3rem; border-radius: 2rem; text-align: center; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+                    <div style="width: 80px; height: 80px; background: var(--primary); color: var(--white); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2rem; margin: 0 auto 2rem;">🤝</div>
+                    <h3 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 1rem; color: var(--gray-900);">Confiance</h3>
+                    <p style="color: var(--gray-600); line-height: 1.7;">
+                        Transparence, honnêteté et respect des engagements sont au cœur de notre relation client. Votre satisfaction est notre priorité.
+                    </p>
+                </div>
+                
+                <div style="background: var(--white); padding: 3rem; border-radius: 2rem; text-align: center; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+                    <div style="width: 80px; height: 80px; background: var(--primary); color: var(--white); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2rem; margin: 0 auto 2rem;">⚡</div>
+                    <h3 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 1rem; color: var(--gray-900);">Réactivité</h3>
+                    <p style="color: var(--gray-600); line-height: 1.7;">
+                        Service d'urgence 24h/7j et interventions rapides. Nous comprenons l'importance de résoudre vos problèmes sans délai.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Équipe -->
+    <section style="padding: 6rem 0; background: var(--white);">
+        <div class="container">
+            <div class="text-center" style="margin-bottom: 4rem;">
+                <h2 style="font-size: clamp(2rem, 5vw, 3rem); font-weight: 900; margin-bottom: 2rem; color: var(--gray-900);">Notre équipe</h2>
+                <p style="font-size: 1.2rem; color: var(--gray-600); max-width: 600px; margin: 0 auto;">
+                    Des professionnels expérimentés et certifiés à votre service
+                </p>
+            </div>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 3rem; max-width: 900px; margin: 0 auto;">
+                <div style="text-align: center;">
+                    <div style="width: 150px; height: 150px; background: linear-gradient(135deg, var(--primary), var(--secondary)); border-radius: 50%; margin: 0 auto 2rem; display: flex; align-items: center; justify-content: center; color: var(--white); font-size: 3rem;">👨‍🔧</div>
+                    <h3 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 1rem; color: var(--gray-900);">Jean-Pierre Martin</h3>
+                    <p style="color: var(--primary); font-weight: 600; margin-bottom: 1rem;">Fondateur & Électricien expert</p>
+                    <p style="color: var(--gray-600); line-height: 1.7;">
+                        Plus de 20 ans d'expérience, certifié RGE. Spécialiste des installations complexes et de la mise aux normes.
+                    </p>
+                </div>
+                
+                <div style="text-align: center;">
+                    <div style="width: 150px; height: 150px; background: linear-gradient(135deg, var(--primary), var(--secondary)); border-radius: 50%; margin: 0 auto 2rem; display: flex; align-items: center; justify-content: center; color: var(--white); font-size: 3rem;">👨‍💼</div>
+                    <h3 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 1rem; color: var(--gray-900);">Marc Dubois</h3>
+                    <p style="color: var(--primary); font-weight: 600; margin-bottom: 1rem;">Électricien confirmé</p>
+                    <p style="color: var(--gray-600); line-height: 1.7;">
+                        15 ans d'expérience en dépannage et rénovation. Expert en domotique et solutions connectées.
+                    </p>
+                </div>
+                
+                <div style="text-align: center;">
+                    <div style="width: 150px; height: 150px; background: linear-gradient(135deg, var(--primary), var(--secondary)); border-radius: 50%; margin: 0 auto 2rem; display: flex; align-items: center; justify-content: center; color: var(--white); font-size: 3rem;">👩‍💻</div>
+                    <h3 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 1rem; color: var(--gray-900);">Sophie Legrand</h3>
+                    <p style="color: var(--primary); font-weight: 600; margin-bottom: 1rem;">Responsable clientèle</p>
+                    <p style="color: var(--gray-600); line-height: 1.7;">
+                        Gestion des devis et suivi client. Votre interlocutrice privilégiée pour tous vos projets.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Certifications -->
+    <section style="padding: 6rem 0; background: var(--primary); color: var(--white);">
+        <div class="container">
+            <div class="text-center" style="margin-bottom: 4rem;">
+                <h2 style="font-size: clamp(2rem, 5vw, 3rem); font-weight: 900; margin-bottom: 2rem;">Certifications & Garanties</h2>
+                <p style="font-size: 1.2rem; opacity: 0.9; max-width: 600px; margin: 0 auto;">
+                    Toutes les qualifications pour votre sécurité et votre tranquillité
+                </p>
+            </div>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 3rem;">
+                <div style="text-align: center; padding: 2rem; background: rgba(255,255,255,0.1); border-radius: 1rem; backdrop-filter: blur(10px);">
+                    <div style="font-size: 3rem; margin-bottom: 1.5rem;">🏆</div>
+                    <h3 style="font-size: 1.3rem; font-weight: 700; margin-bottom: 1rem;">Certification RGE</h3>
+                    <p style="opacity: 0.9;">Reconnu Garant de l'Environnement pour les travaux d'efficacité énergétique</p>
+                </div>
+                
+                <div style="text-align: center; padding: 2rem; background: rgba(255,255,255,0.1); border-radius: 1rem; backdrop-filter: blur(10px);">
+                    <div style="font-size: 3rem; margin-bottom: 1.5rem;">🛡️</div>
+                    <h3 style="font-size: 1.3rem; font-weight: 700; margin-bottom: 1rem;">Assurance Décennale</h3>
+                    <p style="opacity: 0.9;">Couverture complète sur 10 ans pour tous nos travaux d'installation</p>
+                </div>
+                
+                <div style="text-align: center; padding: 2rem; background: rgba(255,255,255,0.1); border-radius: 1rem; backdrop-filter: blur(10px);">
+                    <div style="font-size: 3rem; margin-bottom: 1.5rem;">⚡</div>
+                    <h3 style="font-size: 1.3rem; font-weight: 700; margin-bottom: 1rem;">Qualibat</h3>
+                    <p style="opacity: 0.9;">Qualification professionnelle du bâtiment, gage de compétence et qualité</p>
+                </div>
+                
+                <div style="text-align: center; padding: 2rem; background: rgba(255,255,255,0.1); border-radius: 1rem; backdrop-filter: blur(10px);">
+                    <div style="font-size: 3rem; margin-bottom: 1.5rem;">✅</div>
+                    <h3 style="font-size: 1.3rem; font-weight: 700; margin-bottom: 1rem;">CONSUEL</h3>
+                    <p style="opacity: 0.9;">Conformité aux normes de sécurité électrique françaises</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Call to action -->
+    <section style="padding: 6rem 0; background: var(--gray-900); color: var(--white);">
+        <div class="container text-center">
+            <h2 style="font-size: clamp(2rem, 5vw, 3rem); font-weight: 900; margin-bottom: 2rem;">Prêt à commencer votre projet ?</h2>
+            <p style="font-size: 1.2rem; margin-bottom: 3rem; opacity: 0.9; max-width: 600px; margin-left: auto; margin-right: auto;">
+                Contactez-nous dès aujourd'hui pour un devis gratuit et personnalisé
+            </p>
+            <div style="display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap;">
+                <a href="contact.html" class="btn-primary">📋 Devis gratuit</a>
+                <a href="tel:05 61 23 45 67" style="background: transparent; color: var(--white); border: 2px solid var(--white); padding: clamp(1rem, 2vw, 1.5rem) clamp(2rem, 4vw, 3rem); border-radius: 0.75rem; text-decoration: none; font-weight: 700; font-size: clamp(1rem, 2vw, 1.2rem); transition: all 0.3s ease;" onmouseover="this.style.background='var(--white)'; this.style.color='var(--primary)'" onmouseout="this.style.background='transparent'; this.style.color='var(--white)'">📞 05 61 23 45 67</a>
+            </div>
+        </div>
+    </section>
+    
+    
+    <!-- Footer -->
+    <footer class="footer-professional">
+        <div class="container">
+            <div class="footer-content">
+                <h3 class="footer-title">ÉlectroMax Pro</h3>
+                <p class="footer-description">
+                    Électricien professionnel depuis plus de 15 ans. Excellence, qualité et satisfaction client garanties.
+                </p>
+                
+                <div class="footer-bottom">
+                    <p class="footer-copyright">
+                        © 2025 ÉlectroMax Pro. Tous droits réservés.
+                    </p>
+                    <p class="footer-credits">
+                        Design Divi Construction - <a href="https://claude.ai/code" target="_blank">Claude Code</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Scripts -->
+    <script>
+        // Navigation mobile
+        const navToggle = document.getElementById('navToggle');
+        const navMenu = document.getElementById('navMenu');
+        
+        if (navToggle && navMenu) {
+            navToggle.addEventListener('click', () => {
+                navToggle.classList.toggle('active');
+                navMenu.classList.toggle('active');
+            });
+            
+            // Fermer le menu au clic sur lien
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.addEventListener('click', () => {
+                    navToggle.classList.remove('active');
+                    navMenu.classList.remove('active');
+                });
+            });
+        }
+        
+        // Smooth scroll pour les ancres
+        document.querySelectorAll('a[href^="#"]').forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const target = document.querySelector(link.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+        
+        console.log('🏗️ Divi Construction Professional page loaded successfully!');
+    </script>
+</body>
+</html>

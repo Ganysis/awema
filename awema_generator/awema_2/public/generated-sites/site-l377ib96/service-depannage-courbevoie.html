@@ -1,0 +1,1204 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dépannage urgence Courbevoie - qualifié en Plomberie</title>
+    <meta name="description" content="qualifié en Dépannage urgence à Courbevoie. Plomberie Dubois intervient rapidement pour tous vos besoins en Plomberie.">
+    <meta name="keywords" content="Dépannage urgence, Courbevoie, Plomberie, Plomberie Dubois, qualifié">
+    
+    <!-- Schema.org local -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "Dépannage urgence",
+      "provider": {
+        "@type": "LocalBusiness",
+        "name": "Plomberie Dubois",
+        "telephone": "01 23 45 67 89",
+        "email": "pierre.dubois@plomberie-test.fr",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Courbevoie",
+          "addressCountry": "FR"
+        }
+      },
+      "areaServed": "Courbevoie",
+      "description": "qualifié en Dépannage urgence à Courbevoie. Plomberie Dubois intervient rapidement pour tous vos besoins en Plomberie."
+    }
+    </script>
+    
+    <!-- Police Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        
+    :root {
+        --primary-color: #2563eb;
+        --secondary-color: #1d4ed8;
+        --text-dark: #1f2937;
+        --text-light: #6b7280;
+        --bg-light: #f9fafb;
+        --white: #ffffff;
+        --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        --border-radius: 8px;
+    }
+    
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    body {
+        font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        line-height: 1.6;
+        color: var(--text-dark);
+        background: var(--white);
+    }
+    
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 1rem;
+    }
+    
+    @media (min-width: 768px) {
+        .container {
+            padding: 0 2rem;
+        }
+    }
+    
+    /* Navigation moderne avec hamburger */
+    .header {
+        background: var(--white);
+        box-shadow: var(--shadow);
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+        backdrop-filter: blur(10px);
+    }
+    
+    .header-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 0;
+    }
+    
+    .logo {
+        font-size: 1.75rem;
+        font-weight: 700;
+        color: var(--primary-color);
+        text-decoration: none;
+        letter-spacing: -0.025em;
+    }
+    
+    /* Menu desktop */
+    .nav-menu {
+        display: flex;
+        list-style: none;
+        gap: 2rem;
+        align-items: center;
+    }
+    
+    .nav-item {
+        position: relative;
+    }
+    
+    .nav-link {
+        text-decoration: none;
+        color: var(--text-dark);
+        font-weight: 500;
+        padding: 0.75rem 1rem;
+        border-radius: var(--border-radius);
+        transition: all 0.3s ease;
+        position: relative;
+    }
+    
+    .nav-link:hover {
+        color: var(--primary-color);
+        background: var(--bg-light);
+        transform: translateY(-1px);
+    }
+    
+    .nav-link.active {
+        color: var(--primary-color);
+        background: var(--bg-light);
+    }
+    
+    /* Dropdown amélioré */
+    .dropdown {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background: var(--white);
+        box-shadow: var(--shadow-lg);
+        border-radius: var(--border-radius);
+        padding: 0.5rem 0;
+        min-width: 220px;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-10px);
+        transition: all 0.3s ease;
+        border: 1px solid rgba(0,0,0,0.05);
+    }
+    
+    .nav-item:hover .dropdown {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+    
+    .dropdown-link {
+        display: block;
+        padding: 0.75rem 1rem;
+        text-decoration: none;
+        color: var(--text-dark);
+        transition: all 0.3s ease;
+        font-size: 0.95rem;
+    }
+    
+    .dropdown-link:hover {
+        background: var(--bg-light);
+        color: var(--primary-color);
+        padding-left: 1.25rem;
+    }
+    
+    /* Menu hamburger */
+    .mobile-menu-btn {
+        display: none;
+        flex-direction: column;
+        gap: 4px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 0.5rem;
+        z-index: 1001;
+    }
+    
+    .hamburger-line {
+        width: 25px;
+        height: 3px;
+        background: var(--text-dark);
+        border-radius: 2px;
+        transition: all 0.3s ease;
+    }
+    
+    .mobile-menu-btn.active .hamburger-line:nth-child(1) {
+        transform: rotate(45deg) translate(6px, 6px);
+    }
+    
+    .mobile-menu-btn.active .hamburger-line:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .mobile-menu-btn.active .hamburger-line:nth-child(3) {
+        transform: rotate(-45deg) translate(6px, -6px);
+    }
+    
+    /* Menu mobile */
+    .mobile-menu {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: var(--white);
+        transform: translateX(-100%);
+        transition: transform 0.3s ease;
+        z-index: 1000;
+        padding-top: 80px;
+        overflow-y: auto;
+    }
+    
+    .mobile-menu.active {
+        transform: translateX(0);
+    }
+    
+    .mobile-nav-item {
+        border-bottom: 1px solid var(--bg-light);
+    }
+    
+    .mobile-nav-link {
+        display: block;
+        padding: 1rem;
+        text-decoration: none;
+        color: var(--text-dark);
+        font-weight: 500;
+        font-size: 1.1rem;
+        transition: all 0.3s ease;
+    }
+    
+    .mobile-nav-link:hover {
+        background: var(--bg-light);
+        color: var(--primary-color);
+        padding-left: 1.5rem;
+    }
+    
+    .mobile-dropdown {
+        background: var(--bg-light);
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+    }
+    
+    .mobile-dropdown.active {
+        max-height: 500px;
+    }
+    
+    .mobile-dropdown-link {
+        display: block;
+        padding: 0.75rem 2rem;
+        text-decoration: none;
+        color: var(--text-light);
+        font-size: 0.95rem;
+        transition: all 0.3s ease;
+    }
+    
+    .mobile-dropdown-link:hover {
+        color: var(--primary-color);
+        background: var(--white);
+    }
+    
+    .mobile-contact {
+        padding: 2rem 1rem;
+        border-top: 2px solid var(--bg-light);
+        margin-top: 2rem;
+    }
+    
+    .header-contact {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+    
+    .contact-item {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        color: var(--text-dark);
+        text-decoration: none;
+        font-weight: 500;
+        padding: 0.5rem;
+        border-radius: var(--border-radius);
+        transition: all 0.3s ease;
+    }
+    
+    .contact-item:hover {
+        color: var(--primary-color);
+        background: var(--bg-light);
+    }
+    
+    /* Boutons améliorés */
+    .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0.875rem 1.75rem;
+        background: var(--primary-color);
+        color: var(--white);
+        text-decoration: none;
+        border-radius: var(--border-radius);
+        font-weight: 600;
+        font-size: 0.95rem;
+        transition: all 0.3s ease;
+        border: none;
+        cursor: pointer;
+        box-shadow: var(--shadow);
+        letter-spacing: 0.025em;
+    }
+    
+    .btn:hover {
+        background: var(--secondary-color);
+        transform: translateY(-2px);
+        box-shadow: var(--shadow-lg);
+    }
+    
+    .btn-secondary {
+        background: transparent;
+        color: var(--primary-color);
+        border: 2px solid var(--primary-color);
+        box-shadow: none;
+    }
+    
+    .btn-secondary:hover {
+        background: var(--primary-color);
+        color: var(--white);
+        transform: translateY(-2px);
+        box-shadow: var(--shadow);
+    }
+    
+    /* Sections communes */
+    .page-header {
+        background: linear-gradient(135deg, var(--primary-color)15, var(--bg-light));
+        padding: 8rem 0 4rem;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .page-header::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(0,0,0,0.03)" stroke-width="1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>') repeat;
+        opacity: 0.5;
+    }
+    
+    .page-header > * {
+        position: relative;
+        z-index: 1;
+    }
+    
+    .page-header h1 {
+        font-size: clamp(2rem, 5vw, 3.5rem);
+        font-weight: 800;
+        color: var(--primary-color);
+        margin-bottom: 1rem;
+        letter-spacing: -0.025em;
+    }
+    
+    .page-header p {
+        font-size: 1.2rem;
+        color: var(--text-light);
+        max-width: 600px;
+        margin: 0 auto;
+        font-weight: 400;
+    }
+    
+    .section {
+        padding: 4rem 0;
+    }
+    
+    .section-title {
+        text-align: center;
+        font-size: clamp(2rem, 4vw, 2.5rem);
+        color: var(--primary-color);
+        margin-bottom: 3rem;
+        font-weight: 700;
+        letter-spacing: -0.025em;
+    }
+    
+    /* Responsive */
+    @media (max-width: 768px) {
+        .nav-menu,
+        .header-contact {
+            display: none;
+        }
+        
+        .mobile-menu-btn {
+            display: flex;
+        }
+        
+        .page-header {
+            padding: 6rem 0 3rem;
+        }
+        
+        .section {
+            padding: 3rem 0;
+        }
+        
+        .btn {
+            width: 100%;
+            justify-content: center;
+        }
+    }
+    
+    @media (min-width: 768px) {
+        .mobile-menu,
+        .mobile-menu-btn {
+            display: none;
+        }
+    }
+    
+    /* Animations */
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    
+    @keyframes slideInRight {
+        from {
+            opacity: 0;
+            transform: translateX(30px);
+        }
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+    
+    .animate-on-scroll {
+        animation: fadeInUp 0.6s ease forwards;
+    }
+    
+    .animate-slide-right {
+        animation: slideInRight 0.6s ease forwards;
+    }
+  
+        
+        .local-hero {
+            background: linear-gradient(135deg, var(--primary-color)15, var(--bg-light));
+            padding: 8rem 0 4rem;
+        }
+        
+        .local-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 3rem;
+        }
+        
+        .local-advantages {
+            background: var(--bg-light);
+            padding: 2rem;
+            border-radius: 12px;
+            margin: 2rem 0;
+        }
+        
+        .advantages-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .advantage-item {
+            background: var(--white);
+            padding: 1rem;
+            border-radius: 8px;
+            border-left: 4px solid var(--primary-color);
+        }
+        
+        .local-sidebar {
+            background: var(--bg-light);
+            padding: 2rem;
+            border-radius: 12px;
+            position: sticky;
+            top: 100px;
+        }
+        
+        .urgence-box {
+            background: linear-gradient(135deg, #ef4444, #dc2626);
+            color: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+    </style>
+</head>
+<body>
+    
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">
+                    <img src="https://via.placeholder.com/200x80/2563eb/ffffff?text=Plomberie+Dubois" alt="Plomberie Dubois" style="height: 40px;">
+                </a>
+                
+                <!-- Menu Desktop -->
+                <nav>
+                    <ul class="nav-menu">
+                        
+                            <li class="nav-item">
+                                <a href="index.html" class="nav-link">Accueil</a>
+                                
+                            </li>
+                        
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">Services</a>
+                                
+                                    <div class="dropdown">
+                                        
+                                            <a href="service-service-depannage.html" class="dropdown-link">Dépannage urgence</a>
+                                        
+                                            <a href="service-service-installation.html" class="dropdown-link">Installation sanitaire</a>
+                                        
+                                            <a href="service-service-renovation.html" class="dropdown-link">Rénovation plomberie</a>
+                                        
+                                    </div>
+                                
+                            </li>
+                        
+                            <li class="nav-item">
+                                <a href="contact.html" class="nav-link">Contact</a>
+                                
+                            </li>
+                        
+                    </ul>
+                </nav>
+                
+                <!-- Contact Desktop -->
+                <div class="header-contact">
+                    <a href="tel:01 23 45 67 89" class="contact-item">
+                        <span>📞</span>
+                        <span>01 23 45 67 89</span>
+                    </a>
+                    <a href="contact.html" class="btn">Devis Gratuit</a>
+                </div>
+
+                <!-- Bouton Menu Mobile -->
+                <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Menu Mobile -->
+        <div class="mobile-menu" id="mobileMenu">
+            <div class="container">
+                
+                    <div class="mobile-nav-item">
+                        <a href="index.html" class="mobile-nav-link" >Accueil</a>
+                        
+                    </div>
+                
+                    <div class="mobile-nav-item">
+                        <a href="#" class="mobile-nav-link" onclick="toggleMobileDropdown(event, 'Services')">Services</a>
+                        
+                            <div class="mobile-dropdown" id="mobile-dropdown-Services">
+                                
+                                    <a href="service-service-depannage.html" class="mobile-dropdown-link">Dépannage urgence</a>
+                                
+                                    <a href="service-service-installation.html" class="mobile-dropdown-link">Installation sanitaire</a>
+                                
+                                    <a href="service-service-renovation.html" class="mobile-dropdown-link">Rénovation plomberie</a>
+                                
+                            </div>
+                        
+                    </div>
+                
+                    <div class="mobile-nav-item">
+                        <a href="contact.html" class="mobile-nav-link" >Contact</a>
+                        
+                    </div>
+                
+                
+                <div class="mobile-contact">
+                    <a href="tel:01 23 45 67 89" class="btn" style="width: 100%; margin-bottom: 1rem;">
+                        📞 01 23 45 67 89
+                    </a>
+                    <a href="contact.html" class="btn btn-secondary" style="width: 100%;">
+                        Devis Gratuit
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <script>
+        function toggleMobileMenu() {
+            const mobileMenu = document.getElementById('mobileMenu');
+            const menuBtn = document.querySelector('.mobile-menu-btn');
+            
+            mobileMenu.classList.toggle('active');
+            menuBtn.classList.toggle('active');
+            
+            // Empêche le scroll du body quand le menu est ouvert
+            document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
+        }
+
+        function toggleMobileDropdown(event, label) {
+            if (window.innerWidth <= 768) {
+                event.preventDefault();
+                const dropdown = document.getElementById('mobile-dropdown-' + label);
+                dropdown.classList.toggle('active');
+            }
+        }
+
+        // Ferme le menu mobile si on clique à l'extérieur
+        document.addEventListener('click', function(event) {
+            const mobileMenu = document.getElementById('mobileMenu');
+            const menuBtn = document.querySelector('.mobile-menu-btn');
+            
+            if (!mobileMenu.contains(event.target) && !menuBtn.contains(event.target)) {
+                mobileMenu.classList.remove('active');
+                menuBtn.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        });
+
+        // Ferme le menu mobile au redimensionnement
+        window.addEventListener('resize', function() {
+            if (window.innerWidth > 768) {
+                const mobileMenu = document.getElementById('mobileMenu');
+                const menuBtn = document.querySelector('.mobile-menu-btn');
+                
+                mobileMenu.classList.remove('active');
+                menuBtn.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        });
+    </script>
+  
+    
+    
+    <div class="breadcrumbs">
+        <div class="container">
+            <nav style="padding: 1rem 0; font-size: 0.9rem;">
+                
+                    
+                    <a href="index.html" style="color: var(--primary-color); text-decoration: none;">Accueil</a>
+                
+                    <span style="margin: 0 0.5rem; color: var(--text-light);">></span>
+                    <a href="index.html#services" style="color: var(--primary-color); text-decoration: none;">Services</a>
+                
+                    <span style="margin: 0 0.5rem; color: var(--text-light);">></span>
+                    <a href="service-service-depannage.html" style="color: var(--primary-color); text-decoration: none;">Dépannage urgence</a>
+                
+                    <span style="margin: 0 0.5rem; color: var(--text-light);">></span>
+                    <span style="color: var(--text-light);">Courbevoie</span>
+                
+            </nav>
+        </div>
+    </div>
+  
+    
+    <section class="local-hero">
+        <div class="container">
+            <div class="page-header">
+                <h1>Dépannage urgence à Courbevoie</h1>
+                <p>Plomberie Dubois, votre qualifié en Dépannage urgence à Courbevoie et ses environs</p>
+                <div style="margin-top: 2rem;">
+                    <a href="tel:01 23 45 67 89" class="btn">📞 Appeler 01 23 45 67 89</a>
+                    <a href="contact.html" class="btn btn-secondary">Devis gratuit</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="section">
+        <div class="container">
+            <div class="local-content">
+                <div class="local-main">
+                    <h2>Dépannage urgence à Courbevoie : Notre expertise à votre service</h2>
+                    <p>
+                        Vous recherchez un qualifié en Dépannage urgence à Courbevoie ? Plomberie Dubois met son expertise 
+                        à votre disposition pour tous vos besoins en Plomberie. Nos équipes interviennent rapidement 
+                        sur Courbevoie et ses environs pour vous garantir un service de qualité.
+                    </p>
+                    
+                    <h3>Pourquoi choisir Plomberie Dubois à Courbevoie ?</h3>
+                    <div class="local-advantages">
+                        <div class="advantages-list">
+                            <div class="advantage-item">
+                                <h4>🏆 Expertise locale</h4>
+                                <p>Parfaite connaissance de Courbevoie et de ses spécificités</p>
+                            </div>
+                            <div class="advantage-item">
+                                <h4>⚡ Intervention rapide</h4>
+                                <p>Déplacement rapide sur Courbevoie et alentours</p>
+                            </div>
+                            <div class="advantage-item">
+                                <h4>💰 Devis gratuit</h4>
+                                <p>Estimation gratuite et sans engagement à Courbevoie</p>
+                            </div>
+                            <div class="advantage-item">
+                                <h4>✅ Qualité garantie</h4>
+                                <p>Travaux réalisés selon les normes en vigueur</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <h3>Notre service Dépannage urgence à Courbevoie</h3>
+                    <p>Notre service de dépannage d'urgence est disponible 24 heures sur 24 et 7 jours sur 7. Nous intervenons rapidement pour résoudre tous vos problèmes de plomberie : fuites, canalisations bouchées, problèmes de chauffage, etc. Notre équipe expérimentée dispose de tout l'équipement nécessaire pour diagnostiquer et réparer efficacement.</p>
+                    
+                    <p>
+                        Plomberie Dubois intervient sur Courbevoie pour offrir un service de Dépannage urgence adapté à vos besoins. 
+                        Notre équipe de professionnels plomberie est formée aux dernières techniques et 
+                        utilise des équipements de pointe pour garantir la qualité de nos interventions.
+                    </p>
+                    
+                    <h3>Zone d'intervention autour de Courbevoie</h3>
+                    <p>
+                        En plus de Courbevoie, nous intervenons également dans les communes suivantes :
+                    </p>
+                    <ul style="columns: 2; margin: 1rem 0;">
+                        <li>Paris</li><li>Boulogne-Billancourt</li><li>Neuilly-sur-Seine</li><li>Levallois-Perret</li><li>Nanterre</li>
+                    </ul>
+                    
+                    
+                        <h3>Tarifs pour Dépannage urgence à Courbevoie</h3>
+                        <p>Le tarif pour Dépannage urgence à Courbevoie commence à partir de <strong>À partir de 80€</strong>.</p>
+                        <p>
+                            Nous vous proposons un devis personnalisé et gratuit pour votre projet à Courbevoie. 
+                            N'hésitez pas à nous contacter pour obtenir une estimation précise.
+                        </p>
+                    
+                </div>
+                
+                <div class="local-sidebar">
+                    
+                        <div class="urgence-box">
+                            <h3>🚨 Urgence Courbevoie</h3>
+                            <p>Service d'urgence 24h/7j sur Courbevoie</p>
+                            <a href="tel:01 23 45 67 89" class="btn" style="background: white; color: #ef4444; margin-top: 1rem;">
+                                Appeler maintenant
+                            </a>
+                        </div>
+                    
+                    
+                    <h4>Contact Courbevoie</h4>
+                    <div style="background: white; padding: 1.5rem; border-radius: 8px; margin-bottom: 1rem;">
+                        <p><strong>📞 Téléphone :</strong><br><a href="tel:01 23 45 67 89">01 23 45 67 89</a></p>
+                        <p><strong>✉️ Email :</strong><br><a href="mailto:pierre.dubois@plomberie-test.fr">pierre.dubois@plomberie-test.fr</a></p>
+                        <p><strong>⏰ Horaires :</strong><br>Lun-Ven 8h-18h, Sam 9h-12h</p>
+                    </div>
+                    
+                    <a href="contact.html" class="btn" style="width: 100%; margin-bottom: 1rem;">Devis gratuit Courbevoie</a>
+                    <a href="service-service-depannage.html" class="btn btn-secondary" style="width: 100%;">Plus d'infos sur Dépannage urgence</a>
+                    
+                    <h4 style="margin-top: 2rem;">Autres services à Courbevoie</h4>
+                    
+                        <a href="service-installation-courbevoie.html" 
+                           style="display: block; padding: 0.8rem; background: white; margin-bottom: 0.5rem; border-radius: 6px; text-decoration: none; color: var(--text-dark); font-size: 0.9rem;">
+                            Installation sanitaire Courbevoie
+                        </a>
+                    
+                        <a href="service-renovation-courbevoie.html" 
+                           style="display: block; padding: 0.8rem; background: white; margin-bottom: 0.5rem; border-radius: 6px; text-decoration: none; color: var(--text-dark); font-size: 0.9rem;">
+                            Rénovation plomberie Courbevoie
+                        </a>
+                    
+                    
+                    <h4 style="margin-top: 2rem;">Dépannage urgence dans d'autres villes</h4>
+                    
+                        <a href="service-depannage-paris.html" 
+                           style="display: block; padding: 0.8rem; background: white; margin-bottom: 0.5rem; border-radius: 6px; text-decoration: none; color: var(--text-dark); font-size: 0.9rem;">
+                            📍 Dépannage urgence Paris
+                        </a>
+                    
+                        <a href="service-depannage-boulogne-billancourt.html" 
+                           style="display: block; padding: 0.8rem; background: white; margin-bottom: 0.5rem; border-radius: 6px; text-decoration: none; color: var(--text-dark); font-size: 0.9rem;">
+                            📍 Dépannage urgence Boulogne-Billancourt
+                        </a>
+                    
+                        <a href="service-depannage-neuilly-sur-seine.html" 
+                           style="display: block; padding: 0.8rem; background: white; margin-bottom: 0.5rem; border-radius: 6px; text-decoration: none; color: var(--text-dark); font-size: 0.9rem;">
+                            📍 Dépannage urgence Neuilly-sur-Seine
+                        </a>
+                    
+                        <a href="service-depannage-levallois-perret.html" 
+                           style="display: block; padding: 0.8rem; background: white; margin-bottom: 0.5rem; border-radius: 6px; text-decoration: none; color: var(--text-dark); font-size: 0.9rem;">
+                            📍 Dépannage urgence Levallois-Perret
+                        </a>
+                    
+                    
+                    <div style="background: var(--bg-light); padding: 1rem; border-radius: 6px; margin-top: 2rem; text-align: center;">
+                        <p style="font-size: 0.9rem; margin-bottom: 1rem;">🏠 Retour aux pages principales</p>
+                        <a href="index.html" class="btn" style="width: 100%; margin-bottom: 0.5rem; font-size: 0.9rem;">Accueil</a>
+                        <a href="service-service-depannage.html" class="btn btn-secondary" style="width: 100%; font-size: 0.9rem;">Page Dépannage urgence</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-main">
+                <div class="footer-grid">
+                    <!-- Colonne 1: À propos -->
+                    <div class="footer-column">
+                        <h3 class="footer-title">Plomberie Dubois</h3>
+                        <p class="footer-description">
+                            Plomberie professionnelle et dépannage urgent à Paris et région parisienne. Intervention rapide 24h/7j.
+                        </p>
+                        <div class="footer-rating">
+                            <div class="stars">⭐⭐⭐⭐⭐</div>
+                            <span>4.9/5 - Clients satisfaits</span>
+                        </div>
+                    </div>
+
+                    <!-- Colonne 2: Services -->
+                    <div class="footer-column">
+                        <h4 class="footer-subtitle">Nos Services</h4>
+                        <ul class="footer-list">
+                            
+                                <li><a href="service-service-depannage.html" class="footer-link">Dépannage urgence</a></li>
+                            
+                                <li><a href="service-service-installation.html" class="footer-link">Installation sanitaire</a></li>
+                            
+                                <li><a href="service-service-renovation.html" class="footer-link">Rénovation plomberie</a></li>
+                            
+                            
+                        </ul>
+                    </div>
+
+                    <!-- Colonne 3: Zones d'intervention -->
+                    <div class="footer-column">
+                        <h4 class="footer-subtitle">Zones d'intervention</h4>
+                        <ul class="footer-list">
+                            
+                                <li><span class="footer-city">📍 Paris</span></li>
+                            
+                                <li><span class="footer-city">📍 Boulogne-Billancourt</span></li>
+                            
+                                <li><span class="footer-city">📍 Neuilly-sur-Seine</span></li>
+                            
+                                <li><span class="footer-city">📍 Levallois-Perret</span></li>
+                            
+                                <li><span class="footer-city">📍 Courbevoie</span></li>
+                            
+                                <li><span class="footer-city">📍 Nanterre</span></li>
+                            
+                            
+                        </ul>
+                    </div>
+
+                    <!-- Colonne 4: Contact -->
+                    <div class="footer-column">
+                        <h4 class="footer-subtitle">Contact</h4>
+                        <div class="footer-contact">
+                            <div class="contact-info">
+                                <div class="contact-row">
+                                    <span class="contact-icon">📞</span>
+                                    <a href="tel:01 23 45 67 89" class="footer-link">01 23 45 67 89</a>
+                                </div>
+                                <div class="contact-row">
+                                    <span class="contact-icon">✉️</span>
+                                    <a href="mailto:pierre.dubois@plomberie-test.fr" class="footer-link">pierre.dubois@plomberie-test.fr</a>
+                                </div>
+                                <div class="contact-row">
+                                    <span class="contact-icon">📍</span>
+                                    <span>123 Rue de la République, Paris</span>
+                                </div>
+                                
+                                <div class="contact-row">
+                                    <span class="contact-icon">⏰</span>
+                                    <span>Lun-Ven 8h-18h, Sam 9h-12h</span>
+                                </div>
+                                
+                            </div>
+                            <div class="footer-cta">
+                                <a href="contact.html" class="footer-btn">Devis Gratuit</a>
+                                <span class="emergency-badge">🚨 Urgences 24h/7j</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <div class="footer-legal">
+                        <p>&copy; 2025 Plomberie Dubois. Tous droits réservés.</p>
+                        <div class="footer-links">
+                            <a href="mentions-legales.html" class="footer-link">Mentions légales</a>
+                            <a href="contact.html" class="footer-link">Contact</a>
+                        </div>
+                    </div>
+                    <div class="footer-social">
+                        <span>Suivez-nous :</span>
+                        <div class="social-links">
+                            <a href="#" class="social-link" title="Facebook">📘</a>
+                            <a href="#" class="social-link" title="Instagram">📷</a>
+                            <a href="https://www.google.com/search?q=Plomberie%20Dubois%20Paris" target="_blank" class="social-link" title="Google">🔍</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <style>
+            .footer {
+                background: linear-gradient(135deg, var(--text-dark) 0%, #111827 100%);
+                color: var(--white);
+                padding: 0;
+                margin-top: 4rem;
+            }
+
+            .footer-main {
+                padding: 4rem 0 2rem;
+                border-bottom: 1px solid rgba(255,255,255,0.1);
+            }
+
+            .footer-grid {
+                display: grid;
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            @media (min-width: 768px) {
+                .footer-grid {
+                    grid-template-columns: 1fr 1fr;
+                }
+            }
+
+            @media (min-width: 1024px) {
+                .footer-grid {
+                    grid-template-columns: 2fr 1fr 1fr 1.5fr;
+                }
+            }
+
+            .footer-column {
+                padding: 0;
+            }
+
+            .footer-title {
+                font-size: 1.5rem;
+                font-weight: 700;
+                color: var(--white);
+                margin-bottom: 1rem;
+                letter-spacing: -0.025em;
+            }
+
+            .footer-subtitle {
+                font-size: 1.1rem;
+                font-weight: 600;
+                color: var(--white);
+                margin-bottom: 1rem;
+                position: relative;
+                padding-bottom: 0.5rem;
+            }
+
+            .footer-subtitle::after {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 2rem;
+                height: 2px;
+                background: var(--primary-color);
+                border-radius: 1px;
+            }
+
+            .footer-description {
+                color: rgba(255,255,255,0.8);
+                line-height: 1.6;
+                margin-bottom: 1.5rem;
+                font-size: 0.95rem;
+            }
+
+            .footer-rating {
+                display: flex;
+                align-items: center;
+                gap: 0.5rem;
+                margin-top: 1rem;
+            }
+
+            .stars {
+                color: #fbbf24;
+                font-size: 0.9rem;
+            }
+
+            .footer-rating span {
+                color: rgba(255,255,255,0.7);
+                font-size: 0.85rem;
+            }
+
+            .footer-list {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+            }
+
+            .footer-list li {
+                margin-bottom: 0.5rem;
+            }
+
+            .footer-link {
+                color: rgba(255,255,255,0.8);
+                text-decoration: none;
+                transition: all 0.3s ease;
+                font-size: 0.9rem;
+                padding: 0.25rem 0;
+                display: inline-block;
+            }
+
+            .footer-link:hover {
+                color: var(--primary-color);
+                transform: translateX(4px);
+            }
+
+            .footer-city {
+                color: rgba(255,255,255,0.7);
+                font-size: 0.85rem;
+                display: flex;
+                align-items: center;
+                gap: 0.5rem;
+            }
+
+            .footer-more {
+                color: rgba(255,255,255,0.6);
+                font-size: 0.8rem;
+                font-style: italic;
+            }
+
+            .footer-contact {
+                display: flex;
+                flex-direction: column;
+                gap: 1.5rem;
+            }
+
+            .contact-info {
+                display: flex;
+                flex-direction: column;
+                gap: 0.75rem;
+            }
+
+            .contact-row {
+                display: flex;
+                align-items: center;
+                gap: 0.75rem;
+                font-size: 0.9rem;
+            }
+
+            .contact-icon {
+                font-size: 1rem;
+                width: 1.5rem;
+                flex-shrink: 0;
+            }
+
+            .footer-cta {
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .footer-btn {
+                background: var(--primary-color);
+                color: var(--white);
+                padding: 0.75rem 1.5rem;
+                border-radius: var(--border-radius);
+                text-decoration: none;
+                font-weight: 600;
+                text-align: center;
+                transition: all 0.3s ease;
+                box-shadow: var(--shadow);
+            }
+
+            .footer-btn:hover {
+                background: var(--secondary-color);
+                transform: translateY(-2px);
+                box-shadow: var(--shadow-lg);
+            }
+
+            .emergency-badge {
+                background: linear-gradient(135deg, #ef4444, #dc2626);
+                padding: 0.5rem 1rem;
+                border-radius: 20px;
+                font-size: 0.8rem;
+                font-weight: 600;
+                text-align: center;
+                animation: pulse 2s infinite;
+            }
+
+            @keyframes pulse {
+                0%, 100% { opacity: 1; }
+                50% { opacity: 0.8; }
+            }
+
+            .footer-bottom {
+                padding: 2rem 0;
+                background: rgba(0,0,0,0.3);
+            }
+
+            .footer-bottom-content {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                flex-wrap: wrap;
+                gap: 1rem;
+            }
+
+            .footer-legal {
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+                flex-wrap: wrap;
+            }
+
+            .footer-legal p {
+                color: rgba(255,255,255,0.7);
+                font-size: 0.85rem;
+                margin: 0;
+            }
+
+            .footer-links {
+                display: flex;
+                gap: 1rem;
+            }
+
+            .footer-social {
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+                color: rgba(255,255,255,0.7);
+                font-size: 0.85rem;
+            }
+
+            .social-links {
+                display: flex;
+                gap: 0.5rem;
+            }
+
+            .social-link {
+                color: rgba(255,255,255,0.6);
+                text-decoration: none;
+                font-size: 1.2rem;
+                transition: all 0.3s ease;
+                padding: 0.25rem;
+                border-radius: 4px;
+            }
+
+            .social-link:hover {
+                color: var(--primary-color);
+                transform: translateY(-2px);
+            }
+
+            @media (max-width: 768px) {
+                .footer-main {
+                    padding: 3rem 0 1.5rem;
+                }
+
+                .footer-grid {
+                    gap: 2.5rem;
+                }
+
+                .footer-bottom-content {
+                    flex-direction: column;
+                    text-align: center;
+                    gap: 1.5rem;
+                }
+
+                .footer-legal {
+                    flex-direction: column;
+                    gap: 1rem;
+                }
+
+                .contact-row {
+                    flex-direction: column;
+                    align-items: flex-start;
+                    gap: 0.5rem;
+                }
+
+                .contact-row .footer-link,
+                .contact-row span {
+                    margin-left: 2rem;
+                }
+            }
+        </style>
+    </footer>
+  
+</body>
+</html>

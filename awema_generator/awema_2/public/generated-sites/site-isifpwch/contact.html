@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="fr" class="no-js">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Électricité Expert Pro</title>
+    <meta name="description" content="Contactez Électricité Expert Pro pour tous vos besoins en électricien. Devis gratuit et intervention rapide.">
+    
+    <!-- Ultra-Professional Elementor Pro Meta Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Contact - Électricité Expert Pro">
+    <meta property="og:description" content="Contactez notre équipe d'experts pour un devis gratuit">
+    <meta property="og:url" content="https://electricite-expert-pro.fr/contact.html">
+    
+    <!-- GSAP and Performance CSS -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"></noscript>
+    
+    <style>
+        :root {
+            --primary: #1e40af;
+            --secondary: #3b82f6;
+            --white: #ffffff;
+            --gray-50: #f9fafb;
+            --gray-100: #f3f4f6;
+            --gray-600: #4b5563;
+            --gray-800: #1f2937;
+            --gray-900: #111827;
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            color: var(--gray-800);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+        
+        /* Navigation identique */
+        .elementor-nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 1rem 0;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .nav-logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--primary);
+            text-decoration: none;
+        }
+        
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+        
+        .nav-link {
+            color: var(--gray-800);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        
+        .nav-link:hover, .nav-link.active {
+            color: var(--primary);
+        }
+        
+        /* Hero Contact */
+        .hero-contact {
+            padding: 8rem 0 6rem;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: var(--white);
+            text-align: center;
+        }
+        
+        .hero-contact h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+        }
+        
+        .hero-contact .subtitle {
+            font-size: 1.25rem;
+            opacity: 0.9;
+            margin-bottom: 2rem;
+        }
+        
+        /* Contact Section Ultra-Pro */
+        .contact-section {
+            padding: 6rem 0;
+            background: var(--gray-50);
+        }
+        
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: start;
+        }
+        
+        .contact-info-card {
+            background: var(--white);
+            padding: 3rem;
+            border-radius: 2rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        .contact-info-card h2 {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 2rem;
+            color: var(--primary);
+        }
+        
+        .contact-methods {
+            display: grid;
+            gap: 2rem;
+        }
+        
+        .contact-item {
+            display: flex;
+            gap: 1.5rem;
+            align-items: center;
+            padding: 1.5rem;
+            background: var(--gray-50);
+            border-radius: 1rem;
+            transition: all 0.3s ease;
+        }
+        
+        .contact-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        
+        .contact-icon {
+            font-size: 2rem;
+            width: 4rem;
+            height: 4rem;
+            background: var(--primary);
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+        
+        .contact-details h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        
+        .contact-value {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--primary);
+        }
+        
+        .contact-value a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+        
+        .contact-available {
+            font-size: 0.9rem;
+            color: var(--gray-600);
+        }
+        
+        /* Formulaire Ultra-Pro */
+        .contact-form {
+            background: var(--white);
+            padding: 3rem;
+            border-radius: 2rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        .contact-form h2 {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--primary);
+        }
+        
+        .form-subtitle {
+            color: var(--gray-600);
+            margin-bottom: 2rem;
+        }
+        
+        .form-grid {
+            display: grid;
+            gap: 1.5rem;
+        }
+        
+        .form-group {
+            display: grid;
+            gap: 0.5rem;
+        }
+        
+        .form-label {
+            font-weight: 600;
+            color: var(--gray-700);
+        }
+        
+        .form-input {
+            padding: 1rem;
+            border: 2px solid var(--gray-200);
+            border-radius: 0.75rem;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+        
+        .form-input:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(30, 64, 175, 0.1);
+        }
+        
+        .form-select {
+            padding: 1rem;
+            border: 2px solid var(--gray-200);
+            border-radius: 0.75rem;
+            font-size: 1rem;
+            background: var(--white);
+            cursor: pointer;
+        }
+        
+        .form-textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+        
+        .form-submit {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: var(--white);
+            padding: 1.25rem 2rem;
+            border: none;
+            border-radius: 0.75rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .form-submit:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(30, 64, 175, 0.3);
+        }
+        
+        /* CTA Section */
+        .cta-section {
+            padding: 6rem 0;
+            background: var(--gray-900);
+            color: var(--white);
+            text-align: center;
+        }
+        
+        .cta-section h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+        
+        .cta-section p {
+            font-size: 1.25rem;
+            opacity: 0.9;
+            margin-bottom: 2rem;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background: var(--primary);
+            color: var(--white);
+            text-decoration: none;
+            border-radius: 0.75rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+        
+        .cta-button.secondary {
+            background: transparent;
+            border: 2px solid var(--white);
+        }
+        
+        /* Footer identique */
+        .footer-mega {
+            background: var(--gray-900);
+            color: var(--white);
+            padding: 3rem 0 1rem;
+        }
+        
+        .footer-content {
+            text-align: center;
+        }
+        
+        .footer-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+        
+        .footer-description {
+            opacity: 0.8;
+            margin-bottom: 2rem;
+        }
+        
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 2rem;
+            margin-top: 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .footer-copyright {
+            opacity: 0.6;
+        }
+        
+        .footer-credits a {
+            color: var(--white);
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-contact h1 {
+                font-size: 2rem;
+            }
+            
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .footer-bottom {
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+
+<body class="elementor-pro-page">
+    <!-- Navigation Ultra-Moderne -->
+    <nav class="elementor-nav">
+        <div class="container">
+            <div class="nav-container">
+                <a href="index.html" class="nav-logo">Électricité Expert Pro</a>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">Accueil</a></li>
+                    <li><a href="index.html#services" class="nav-link">Services</a></li>
+                    <li><a href="contact.html" class="nav-link active">Contact</a></li>
+                    <li><a href="mentions-legales.html" class="nav-link">Mentions légales</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Contact -->
+    <section class="hero-contact">
+        <div class="container">
+            <h1>Contactez Électricité Expert Pro</h1>
+            <p class="subtitle">Devis gratuit et intervention rapide sur toute la région</p>
+        </div>
+    </section>
+
+    <!-- Contact Section Ultra-Pro -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-grid">
+                <!-- Informations de contact -->
+                <div class="contact-info-card">
+                    <h2>Nos coordonnées</h2>
+                    
+                    <div class="contact-methods">
+                        <div class="contact-item">
+                            <div class="contact-icon">📞</div>
+                            <div class="contact-details">
+                                <h3>Téléphone</h3>
+                                <div class="contact-value">
+                                    <a href="tel:01 85 76 32 18">01 85 76 32 18</a>
+                                </div>
+                                <div class="contact-available">Lundi-Vendredi 8h-19h, Samedi 9h-17h, Urgences 24h/7j</div>
+                                <div class="contact-available">Urgences 24h/7j</div>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">✉️</div>
+                            <div class="contact-details">
+                                <h3>Email</h3>
+                                <div class="contact-value">
+                                    <a href="mailto:contact@electricite-expert-pro.fr">contact@electricite-expert-pro.fr</a>
+                                </div>
+                                <div class="contact-available">Réponse sous 24h</div>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">📍</div>
+                            <div class="contact-details">
+                                <h3>Adresse</h3>
+                                <div class="contact-value">42 Avenue des Champs-Élysées</div>
+                                <div class="contact-available">Paris 8ème</div>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">🏙️</div>
+                            <div class="contact-details">
+                                <h3>Zone d'intervention</h3>
+                                <div class="contact-value">20 villes</div>
+                                <div class="contact-available">Déplacement gratuit</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Formulaire de contact -->
+                <div class="contact-form">
+                    <h2>Demande de devis gratuit</h2>
+                    <p class="form-subtitle">Remplissez ce formulaire pour recevoir votre devis personnalisé</p>
+                    
+                    <form class="form-grid">
+                        <div class="form-group">
+                            <label class="form-label">Nom complet *</label>
+                            <input type="text" class="form-input" placeholder="Votre nom et prénom" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label">Email *</label>
+                            <input type="email" class="form-input" placeholder="votre@email.fr" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label">Téléphone *</label>
+                            <input type="tel" class="form-input" placeholder="01 23 45 67 89" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label">Type de service</label>
+                            <select class="form-select">
+                                <option value="">Choisissez un service</option>
+                                <option value="installation-electrique">Installation Électrique Complète</option><option value="depannage-urgence">Dépannage Électrique 24h/7j</option><option value="domotique-intelligente">Domotique & Maison Connectée</option><option value="borne-recharge-vehicule">Borne de Recharge Véhicule Électrique</option><option value="mise-aux-normes">Mise aux Normes & Rénovation</option><option value="eclairage-led-design">Éclairage LED & Design</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label">Ville d'intervention</label>
+                            <select class="form-select">
+                                <option value="">Choisissez votre ville</option>
+                                <option value="Paris 8ème">Paris 8ème</option><option value="Paris 1er">Paris 1er</option><option value="Paris 2ème">Paris 2ème</option><option value="Paris 7ème">Paris 7ème</option><option value="Paris 16ème">Paris 16ème</option><option value="Paris 17ème">Paris 17ème</option><option value="Neuilly-sur-Seine">Neuilly-sur-Seine</option><option value="Levallois-Perret">Levallois-Perret</option><option value="Boulogne-Billancourt">Boulogne-Billancourt</option><option value="Issy-les-Moulineaux">Issy-les-Moulineaux</option><option value="Courbevoie">Courbevoie</option><option value="Puteaux">Puteaux</option><option value="Nanterre">Nanterre</option><option value="Suresnes">Suresnes</option><option value="Rueil-Malmaison">Rueil-Malmaison</option><option value="Saint-Cloud">Saint-Cloud</option><option value="Versailles">Versailles</option><option value="Le Vésinet">Le Vésinet</option><option value="Maisons-Laffitte">Maisons-Laffitte</option><option value="Saint-Germain-en-Laye">Saint-Germain-en-Laye</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label">Urgence</label>
+                            <select class="form-select">
+                                <option value="normal">Intervention normale</option>
+                                <option value="urgent">Urgent (sous 24h)</option>
+                                <option value="emergency">Urgence (immédiat)</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group" style="grid-column: 1 / -1;">
+                            <label class="form-label">Description du projet *</label>
+                            <textarea class="form-input form-textarea" placeholder="Décrivez votre projet en détail..." required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="form-submit" style="grid-column: 1 / -1;">
+                            📧 Envoyer ma demande de devis
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Besoin d'une intervention rapide ?</h2>
+            <p>Notre équipe est disponible pour toute urgence 24h/7j</p>
+            
+            <div class="cta-buttons">
+                <a href="tel:01 85 76 32 18" class="cta-button">
+                    📞 Appeler maintenant
+                </a>
+                <a href="index.html#services" class="cta-button secondary">
+                    🔧 Voir nos services
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Mega -->
+    <footer class="footer-mega">
+        <div class="container">
+            <div class="footer-content">
+                <h3 class="footer-title">Électricité Expert Pro</h3>
+                <p class="footer-description">
+                    Électricien professionnel depuis plus de 10 ans.<br>
+                    Intervention sur 20 villes.
+                </p>
+                
+                <div class="footer-bottom">
+                    <p class="footer-copyright">
+                        © 2025 Électricité Expert Pro. Tous droits réservés.
+                    </p>
+                    <p class="footer-credits">
+                        Site créé avec <a href="https://claude.ai/code" target="_blank">Claude Code</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- GSAP Animation Script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    
+    <script>
+        // Register GSAP plugins
+        gsap.registerPlugin(ScrollTrigger);
+        
+        // Animate elements on page load
+        gsap.timeline()
+            .from('.hero-contact h1', { opacity: 0, y: 50, duration: 1, ease: "power2.out" })
+            .from('.hero-contact .subtitle', { opacity: 0, y: 30, duration: 0.8, ease: "power2.out" }, "-=0.6")
+            .from('.contact-info-card', { opacity: 0, x: -50, duration: 0.8, ease: "power2.out" }, "-=0.4")
+            .from('.contact-form', { opacity: 0, x: 50, duration: 0.8, ease: "power2.out" }, "-=0.6");
+        
+        // Contact items hover animation
+        gsap.utils.toArray('.contact-item').forEach(item => {
+            item.addEventListener('mouseenter', () => {
+                gsap.to(item, { y: -3, duration: 0.3, ease: "power2.out" });
+            });
+            
+            item.addEventListener('mouseleave', () => {
+                gsap.to(item, { y: 0, duration: 0.3, ease: "power2.out" });
+            });
+        });
+        
+        console.log('🚀 Contact page Elementor Pro loaded successfully!');
+    </script>
+</body>
+</html>

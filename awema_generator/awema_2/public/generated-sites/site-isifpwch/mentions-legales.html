@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="fr" class="no-js">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mentions légales - Électricité Expert Pro</title>
+    <meta name="description" content="Mentions légales et informations légales de Électricité Expert Pro, Électricien professionnel">
+    
+    <!-- Ultra-Professional Elementor Pro Meta Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Mentions légales - Électricité Expert Pro">
+    <meta property="og:description" content="Informations légales et conditions d'utilisation">
+    <meta property="og:url" content="https://electricite-expert-pro.fr/mentions-legales.html">
+    
+    <!-- GSAP and Performance CSS -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"></noscript>
+    
+    <style>
+        :root {
+            --primary: #1e40af;
+            --secondary: #3b82f6;
+            --white: #ffffff;
+            --gray-50: #f9fafb;
+            --gray-100: #f3f4f6;
+            --gray-600: #4b5563;
+            --gray-700: #374151;
+            --gray-800: #1f2937;
+            --gray-900: #111827;
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            color: var(--gray-800);
+            background: var(--gray-50);
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+        
+        /* Navigation identique */
+        .elementor-nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 1rem 0;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .nav-logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--primary);
+            text-decoration: none;
+        }
+        
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+        
+        .nav-link {
+            color: var(--gray-800);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        
+        .nav-link:hover, .nav-link.active {
+            color: var(--primary);
+        }
+        
+        /* Hero Legal */
+        .hero-legal {
+            padding: 8rem 0 4rem;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: var(--white);
+            text-align: center;
+        }
+        
+        .hero-legal h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+        }
+        
+        .hero-legal .subtitle {
+            font-size: 1.25rem;
+            opacity: 0.9;
+        }
+        
+        /* Legal Content */
+        .legal-content {
+            padding: 6rem 0;
+        }
+        
+        .legal-card {
+            background: var(--white);
+            padding: 4rem;
+            border-radius: 2rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+        }
+        
+        .legal-section {
+            margin-bottom: 3rem;
+        }
+        
+        .legal-section:last-child {
+            margin-bottom: 0;
+        }
+        
+        .legal-section h2 {
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--gray-100);
+        }
+        
+        .legal-section h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--gray-800);
+            margin: 1.5rem 0 1rem;
+        }
+        
+        .legal-section p {
+            margin-bottom: 1rem;
+            color: var(--gray-700);
+            line-height: 1.7;
+        }
+        
+        .legal-section ul {
+            margin: 1rem 0;
+            padding-left: 2rem;
+        }
+        
+        .legal-section li {
+            margin-bottom: 0.5rem;
+            color: var(--gray-700);
+        }
+        
+        .company-info {
+            background: var(--gray-50);
+            padding: 2rem;
+            border-radius: 1rem;
+            margin: 2rem 0;
+        }
+        
+        .company-info h3 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+        
+        .company-info .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+        }
+        
+        .info-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .info-label {
+            font-weight: 600;
+            color: var(--gray-800);
+        }
+        
+        .info-value {
+            color: var(--gray-700);
+        }
+        
+        .info-value a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+        
+        /* Breadcrumb */
+        .breadcrumb {
+            background: var(--white);
+            padding: 2rem 0;
+            border-bottom: 1px solid var(--gray-100);
+            margin-top: 80px;
+        }
+        
+        .breadcrumb-nav {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--gray-600);
+        }
+        
+        .breadcrumb-nav a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+        
+        .breadcrumb-nav span {
+            margin: 0 0.5rem;
+        }
+        
+        /* CTA Section */
+        .cta-section {
+            padding: 4rem 0;
+            background: var(--gray-900);
+            color: var(--white);
+            text-align: center;
+        }
+        
+        .cta-section h2 {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+        
+        .cta-section p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            margin-bottom: 2rem;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background: var(--primary);
+            color: var(--white);
+            text-decoration: none;
+            border-radius: 0.75rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+        
+        .cta-button.secondary {
+            background: transparent;
+            border: 2px solid var(--white);
+        }
+        
+        /* Footer identique */
+        .footer-mega {
+            background: var(--gray-900);
+            color: var(--white);
+            padding: 3rem 0 1rem;
+        }
+        
+        .footer-content {
+            text-align: center;
+        }
+        
+        .footer-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+        
+        .footer-description {
+            opacity: 0.8;
+            margin-bottom: 2rem;
+        }
+        
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 2rem;
+            margin-top: 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .footer-copyright {
+            opacity: 0.6;
+        }
+        
+        .footer-credits a {
+            color: var(--white);
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-legal h1 {
+                font-size: 2rem;
+            }
+            
+            .legal-card {
+                padding: 2rem;
+            }
+            
+            .company-info .info-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-bottom {
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+
+<body class="elementor-pro-page">
+    <!-- Navigation Ultra-Moderne -->
+    <nav class="elementor-nav">
+        <div class="container">
+            <div class="nav-container">
+                <a href="index.html" class="nav-logo">Électricité Expert Pro</a>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">Accueil</a></li>
+                    <li><a href="index.html#services" class="nav-link">Services</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                    <li><a href="mentions-legales.html" class="nav-link active">Mentions légales</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <section class="breadcrumb">
+        <div class="container">
+            <nav class="breadcrumb-nav">
+                <a href="index.html">Accueil</a>
+                <span>></span>
+                <span>Mentions légales</span>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Hero Legal -->
+    <section class="hero-legal">
+        <div class="container">
+            <h1>Mentions légales</h1>
+            <p class="subtitle">Informations légales et conditions d'utilisation</p>
+        </div>
+    </section>
+
+    <!-- Legal Content -->
+    <section class="legal-content">
+        <div class="container">
+            <div class="legal-card">
+                <div class="legal-section">
+                    <h2>Éditeur du site</h2>
+                    
+                    <div class="company-info">
+                        <h3>Informations sur l'entreprise</h3>
+                        <div class="info-grid">
+                            <div class="info-item">
+                                <span class="info-label">Raison sociale :</span>
+                                <span class="info-value">Électricité Expert Pro</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Secteur d'activité :</span>
+                                <span class="info-value">Électricien</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Adresse :</span>
+                                <span class="info-value">42 Avenue des Champs-Élysées</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Ville :</span>
+                                <span class="info-value">Paris 8ème</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Téléphone :</span>
+                                <span class="info-value"><a href="tel:01 85 76 32 18">01 85 76 32 18</a></span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Email :</span>
+                                <span class="info-value"><a href="mailto:contact@electricite-expert-pro.fr">contact@electricite-expert-pro.fr</a></span>
+                            </div>
+                            
+                            <div class="info-item">
+                                <span class="info-label">SIRET :</span>
+                                <span class="info-value">12345678901234</span>
+                            </div>
+                            
+                            
+                            <div class="info-item">
+                                <span class="info-label">RCS :</span>
+                                <span class="info-value">Paris B 123 456 789</span>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    
+                    <p><strong>Directeur de la publication :</strong> Jean-Michel Voltaire</p>
+                </div>
+
+                <div class="legal-section">
+                    <h2>Hébergement du site</h2>
+                    <p>Le site web est hébergé par l'hébergeur choisi par le client.</p>
+                    <p>En cas de problème technique concernant l'hébergement, veuillez contacter directement l'hébergeur.</p>
+                </div>
+
+                <div class="legal-section">
+                    <h2>Propriété intellectuelle</h2>
+                    <p>L'ensemble de ce site relève de la législation française et internationale sur le droit d'auteur et la propriété intellectuelle. Tous les droits de reproduction sont réservés, y compris pour les documents téléchargeables et les représentations iconographiques et photographiques.</p>
+                    
+                    <h3>Contenu du site</h3>
+                    <p>Le contenu éditorial de ce site (textes, images, logos, etc.) est la propriété exclusive de <strong>Électricité Expert Pro</strong>.</p>
+                    
+                    <h3>Utilisation</h3>
+                    <p>Toute reproduction, distribution, modification, adaptation, retransmission ou publication de ces différents éléments est strictement interdite sans l'accord exprès par écrit de Électricité Expert Pro.</p>
+                </div>
+
+                <div class="legal-section">
+                    <h2>Protection des données personnelles (RGPD)</h2>
+                    
+                    <h3>Responsable du traitement</h3>
+                    <p>Électricité Expert Pro est responsable du traitement de vos données personnelles.</p>
+                    
+                    <h3>Données collectées</h3>
+                    <p>Nous collectons uniquement les données nécessaires à :</p>
+                    <ul>
+                        <li>Répondre à vos demandes de devis</li>
+                        <li>Vous contacter concernant nos services</li>
+                        <li>Améliorer notre service client</li>
+                    </ul>
+                    
+                    <h3>Vos droits</h3>
+                    <p>Conformément au Règlement Général sur la Protection des Données (RGPD), vous disposez des droits suivants :</p>
+                    <ul>
+                        <li><strong>Droit d'accès :</strong> Vous pouvez demander si nous traitons vos données personnelles</li>
+                        <li><strong>Droit de rectification :</strong> Vous pouvez demander la correction de données inexactes</li>
+                        <li><strong>Droit à l'effacement :</strong> Vous pouvez demander la suppression de vos données</li>
+                        <li><strong>Droit d'opposition :</strong> Vous pouvez vous opposer au traitement de vos données</li>
+                        <li><strong>Droit à la portabilité :</strong> Vous pouvez récupérer vos données dans un format structuré</li>
+                    </ul>
+                    
+                    <p>Pour exercer ces droits, contactez-nous à : <a href="mailto:contact@electricite-expert-pro.fr">contact@electricite-expert-pro.fr</a></p>
+                </div>
+
+                <div class="legal-section">
+                    <h2>Cookies et technologies similaires</h2>
+                    <p>Ce site peut utiliser des cookies pour améliorer l'expérience utilisateur et analyser le trafic. Vous pouvez paramétrer votre navigateur pour refuser les cookies.</p>
+                </div>
+
+                <div class="legal-section">
+                    <h2>Limitation de responsabilité</h2>
+                    <p>Électricité Expert Pro s'efforce de fournir des informations exactes et à jour sur ce site web. Cependant, nous ne pouvons garantir l'exactitude, la précision ou l'exhaustivité des informations mises à disposition.</p>
+                    
+                    <p>L'utilisation des informations de ce site se fait sous votre entière responsabilité.</p>
+                </div>
+
+                <div class="legal-section">
+                    <h2>Droit applicable et juridiction</h2>
+                    <p>Les présentes mentions légales sont régies par le droit français. En cas de litige, les tribunaux français seront seuls compétents.</p>
+                </div>
+
+                <div class="legal-section">
+                    <h2>Contact</h2>
+                    <p>Pour toute question concernant ces mentions légales, contactez-nous :</p>
+                    <ul>
+                        <li><strong>Email :</strong> <a href="mailto:contact@electricite-expert-pro.fr">contact@electricite-expert-pro.fr</a></li>
+                        <li><strong>Téléphone :</strong> <a href="tel:01 85 76 32 18">01 85 76 32 18</a></li>
+                        <li><strong>Adresse :</strong> 42 Avenue des Champs-Élysées, Paris 8ème</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Une question sur nos services ?</h2>
+            <p>N'hésitez pas à nous contacter pour un devis gratuit et personnalisé</p>
+            
+            <div class="cta-buttons">
+                <a href="contact.html" class="cta-button">
+                    📧 Nous contacter
+                </a>
+                <a href="index.html" class="cta-button secondary">
+                    🏠 Retour à l'accueil
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Mega -->
+    <footer class="footer-mega">
+        <div class="container">
+            <div class="footer-content">
+                <h3 class="footer-title">Électricité Expert Pro</h3>
+                <p class="footer-description">
+                    Électricien professionnel depuis plus de 10 ans.<br>
+                    Intervention sur 20 villes.
+                </p>
+                
+                <div class="footer-bottom">
+                    <p class="footer-copyright">
+                        © 2025 Électricité Expert Pro. Tous droits réservés.
+                    </p>
+                    <p class="footer-credits">
+                        Site créé avec <a href="https://claude.ai/code" target="_blank">Claude Code</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- GSAP Animation Script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    
+    <script>
+        // Register GSAP plugins
+        gsap.registerPlugin(ScrollTrigger);
+        
+        // Animate elements on page load
+        gsap.timeline()
+            .from('.hero-legal h1', { opacity: 0, y: 50, duration: 1, ease: "power2.out" })
+            .from('.hero-legal .subtitle', { opacity: 0, y: 30, duration: 0.8, ease: "power2.out" }, "-=0.6")
+            .from('.legal-card', { opacity: 0, y: 50, duration: 0.8, ease: "power2.out" }, "-=0.4");
+        
+        // Legal sections animation
+        gsap.utils.toArray('.legal-section').forEach((section, i) => {
+            gsap.fromTo(section, {
+                opacity: 0,
+                y: 30
+            }, {
+                opacity: 1,
+                y: 0,
+                duration: 0.6,
+                ease: "power2.out",
+                scrollTrigger: {
+                    trigger: section,
+                    start: "top 85%",
+                    toggleActions: "play none none reverse"
+                },
+                delay: i * 0.1
+            });
+        });
+        
+        console.log('🚀 Legal page Elementor Pro loaded successfully!');
+    </script>
+</body>
+</html>

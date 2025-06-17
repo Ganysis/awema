@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Électricité Révolution Paris - Votre Électricien Expert à Paris</title>
+    <meta name="description" content="✅ Électricien professionnel à Paris ⚡ Intervention rapide ✅ Devis gratuit ✅ Garantie décennale ☎️ 01 88 77 66 55">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; line-height: 1.6; color: #1f2937; }
+        
+        /* BLOC HERO ULTRA-PRO */
+        .hero-ultra-pro {
+            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero-ultra-pro::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><defs><radialGradient id="a" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="white" stop-opacity="0.1"/><stop offset="100%" stop-color="white" stop-opacity="0"/></radialGradient></defs><circle cx="200" cy="200" r="300" fill="url(%23a)"/><circle cx="800" cy="800" r="400" fill="url(%23a)"/></svg>') no-repeat center;
+            background-size: cover;
+            animation: float 6s ease-in-out infinite;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+        .hero-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            color: white;
+        }
+        .hero-title {
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            text-shadow: 0 4px 8px rgba(0,0,0,0.3);
+            animation: slideUp 0.8s ease-out;
+        }
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .hero-subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+            animation: slideUp 0.8s ease-out 0.2s both;
+        }
+        .hero-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 1rem;
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(255,255,255,0.2);
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            animation: slideUp 0.8s ease-out 0.4s both;
+        }
+        .hero-cta:hover {
+            background: rgba(255,255,255,0.2);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+        
+        /* BLOC SERVICES ULTRA-PRO */
+        .services-ultra-pro {
+            padding: 6rem 2rem;
+            background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);
+        }
+        .services-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .services-title {
+            text-align: center;
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 3rem;
+            background: linear-gradient(135deg, #1e40af, #3b82f6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+        .service-card {
+            background: white;
+            border-radius: 20px;
+            padding: 2.5rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(135deg, #1e40af, #3b82f6);
+        }
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+        .service-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #1e40af, #3b82f6);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            color: white;
+            font-size: 1.5rem;
+        }
+        .service-name {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: #1f2937;
+        }
+        .service-description {
+            color: #6b7280;
+            margin-bottom: 1.5rem;
+            line-height: 1.7;
+        }
+        .service-price {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #1e40af;
+        }
+        
+        /* BLOC CTA ULTRA-PRO */
+        .cta-ultra-pro {
+            background: linear-gradient(135deg, #1f2937 0%, #374151 100%);
+            padding: 6rem 2rem;
+            text-align: center;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+        .cta-ultra-pro::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+            animation: rotate 20s linear infinite;
+        }
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        .cta-content {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+        .cta-title {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+        }
+        .cta-subtitle {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .cta-button {
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .cta-primary {
+            background: #1e40af;
+            color: white;
+        }
+        .cta-primary:hover {
+            background: #3b82f6;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+        .cta-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+        .cta-secondary:hover {
+            background: white;
+            color: #1f2937;
+        }
+        
+        @media (max-width: 768px) {
+            .services-grid { grid-template-columns: 1fr; }
+            .cta-buttons { flex-direction: column; align-items: center; }
+        }
+    </style>
+</head>
+<body>
+    <!-- BLOC HERO ULTRA-PRO -->
+    <section class="hero-ultra-pro">
+        <div class="hero-content">
+            <h1 class="hero-title">Électricité Révolution Paris</h1>
+            <p class="hero-subtitle">Votre Électricien Expert à Paris</p>
+            <p class="hero-subtitle">Électricien ultra-moderne avec technologies 2025 et service premium</p>
+            <a href="tel:01 88 77 66 55" class="hero-cta">
+                📞 Appelez maintenant : 01 88 77 66 55
+            </a>
+        </div>
+    </section>
+
+    <!-- BLOC SERVICES ULTRA-PRO -->
+    <section class="services-ultra-pro">
+        <div class="services-container">
+            <h2 class="services-title">Nos Services Ultra-Professionnels</h2>
+            <div class="services-grid">
+                
+                <div class="service-card">
+                    <div class="service-icon">⚡</div>
+                    <h3 class="service-name">Installation Premium</h3>
+                    <p class="service-description">Installation électrique haut de gamme avec domotique</p>
+                    <div class="service-price">À partir de 2500€</div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">⚡</div>
+                    <h3 class="service-name">Dépannage Express 24h</h3>
+                    <p class="service-description">Intervention urgente sous 1h garantie</p>
+                    <div class="service-price">90€/h</div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">⚡</div>
+                    <h3 class="service-name">Rénovation Éco-Responsable</h3>
+                    <p class="service-description">Rénovation électrique écologique et économique</p>
+                    <div class="service-price">Sur devis</div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- BLOC CTA ULTRA-PRO -->
+    <section class="cta-ultra-pro">
+        <div class="cta-content">
+            <h2 class="cta-title">Besoin d'un Électricien Expert ?</h2>
+            <p class="cta-subtitle">Devis gratuit • Intervention rapide • Garantie décennale</p>
+            <div class="cta-buttons">
+                <a href="tel:01 88 77 66 55" class="cta-button cta-primary">
+                    📞 01 88 77 66 55
+                </a>
+                <a href="mailto:contact@electricite-revolution.fr" class="cta-button cta-secondary">
+                    ✉️ Devis par email
+                </a>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

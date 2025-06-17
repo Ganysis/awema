@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="fr" class="no-js">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - ÉlectroMax Pro | Électricien Toulouse</title>
+    <meta name="description" content="Contactez ÉlectroMax Pro pour vos travaux électricien à Toulouse. Devis gratuit, intervention rapide. ☎️ 05 61 23 45 67">
+    
+    <!-- Schema.org ContactPoint -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ContactPage",
+      "mainEntity": {
+        "@type": "LocalBusiness",
+        "name": "ÉlectroMax Pro",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "05 61 23 45 67",
+          "email": "contact@electromax-pro.fr",
+          "contactType": "customer service",
+          "availableLanguage": "French"
+        },
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "25 Avenue Jean Jaurès",
+          "addressLocality": "Toulouse",
+          "addressCountry": "FR"
+        }
+      }
+    }
+    </script>
+    
+    <style>
+    /* CSS partagé identique à la homepage */
+    :root {
+      --primary: #1e40af;
+      --secondary: #3b82f6;
+      --white: #ffffff;
+      --gray-50: #f8fafc;
+      --gray-100: #f1f5f9;
+      --gray-200: #e2e8f0;
+      --gray-600: #475569;
+      --gray-700: #334155;
+      --gray-800: #1e293b;
+      --gray-900: #0f172a;
+    }
+    
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      line-height: 1.6;
+      color: var(--gray-800);
+      overflow-x: hidden;
+    }
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 clamp(1rem, 3vw, 2rem);
+    }
+    
+    .text-center { text-align: center; }
+    
+    /* Navigation identique */
+    .divi-nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      background: rgba(255, 255, 255, 0.98);
+      backdrop-filter: blur(10px);
+      z-index: 1000;
+      padding: 1rem 0;
+      box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+    }
+    
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .nav-logo {
+      font-size: clamp(1.5rem, 3vw, 2rem);
+      font-weight: 800;
+      color: var(--primary);
+      text-decoration: none;
+    }
+    
+    .nav-menu {
+      display: flex;
+      list-style: none;
+      gap: clamp(1.5rem, 3vw, 3rem);
+    }
+    
+    .nav-link {
+      color: var(--gray-700);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: clamp(0.9rem, 2vw, 1rem);
+      padding: 0.5rem 1rem;
+      border-radius: 0.5rem;
+      transition: all 0.3s ease;
+    }
+    
+    .nav-link:hover, .nav-link.active {
+      color: var(--primary);
+      background: var(--gray-50);
+    }
+    
+    .nav-cta {
+      background: var(--primary);
+      color: var(--white);
+      padding: clamp(0.75rem, 2vw, 1rem) clamp(1.5rem, 3vw, 2rem);
+      border-radius: 0.5rem;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: clamp(0.9rem, 2vw, 1rem);
+      transition: all 0.3s ease;
+    }
+    
+    .nav-cta:hover {
+      background: var(--secondary);
+      transform: translateY(-2px);
+    }
+    
+    .nav-toggle {
+      display: none;
+      flex-direction: column;
+      gap: 4px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0.5rem;
+    }
+    
+    .nav-toggle span {
+      width: 25px;
+      height: 3px;
+      background: var(--gray-700);
+      transition: all 0.3s ease;
+    }
+    
+    /* Boutons */
+    .btn-primary {
+      background: var(--primary);
+      color: var(--white);
+      padding: clamp(1rem, 2vw, 1.5rem) clamp(2rem, 4vw, 3rem);
+      border-radius: 0.75rem;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: clamp(1rem, 2vw, 1.2rem);
+      transition: all 0.3s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    
+    .btn-primary:hover {
+      background: var(--secondary);
+      transform: translateY(-3px);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    }
+    
+    .hero-badge {
+      background: var(--primary);
+      color: var(--white);
+      padding: 0.75rem 2rem;
+      border-radius: 3rem;
+      display: inline-block;
+      font-weight: 700;
+      font-size: clamp(0.9rem, 2vw, 1rem);
+      margin-bottom: 2rem;
+    }
+    
+    /* Features */
+    .feature-item {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 0.75rem;
+      font-size: clamp(0.9rem, 2vw, 1rem);
+    }
+    
+    .feature-check {
+      width: 20px;
+      height: 20px;
+      background: var(--primary);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--white);
+      font-size: 0.75rem;
+      font-weight: bold;
+      flex-shrink: 0;
+    }
+    
+    /* Footer */
+    .footer-professional {
+      background: var(--gray-900);
+      color: var(--white);
+      padding: clamp(3rem, 6vw, 5rem) 0 clamp(1rem, 2vw, 2rem);
+    }
+    
+    .footer-content {
+      text-align: center;
+    }
+    
+    .footer-title {
+      font-size: clamp(1.5rem, 3vw, 2rem);
+      font-weight: 700;
+      margin-bottom: 1rem;
+      color: var(--primary);
+    }
+    
+    .footer-description {
+      opacity: 0.8;
+      margin-bottom: 2rem;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.1);
+      padding-top: 2rem;
+      margin-top: 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    
+    .footer-copyright {
+      opacity: 0.6;
+    }
+    
+    .footer-credits a {
+      color: var(--primary);
+      text-decoration: none;
+    }
+    
+    /* Responsive */
+    @media (max-width: 768px) {
+      .nav-menu {
+        position: fixed;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: var(--white);
+        flex-direction: column;
+        padding: 2rem;
+        box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        transform: translateY(-100%);
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+      }
+      
+      .nav-menu.active {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+      }
+      
+      .nav-toggle {
+        display: flex;
+      }
+      
+      .services-detailed-grid > div > div {
+        grid-template-columns: 1fr !important;
+        gap: 2rem !important;
+        text-align: center;
+      }
+      
+      .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+  </style>
+    
+    <style>
+      .contact-form {
+        background: var(--white);
+        padding: 3rem;
+        border-radius: 2rem;
+        box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+      }
+      
+      .form-group {
+        margin-bottom: 2rem;
+      }
+      
+      .form-label {
+        display: block;
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+        color: var(--gray-700);
+      }
+      
+      .form-input, .form-select, .form-textarea {
+        width: 100%;
+        padding: 1rem 1.5rem;
+        border: 2px solid var(--gray-200);
+        border-radius: 0.75rem;
+        font-size: 1rem;
+        transition: all 0.3s ease;
+        background: var(--white);
+      }
+      
+      .form-input:focus, .form-select:focus, .form-textarea:focus {
+        outline: none;
+        border-color: var(--primary);
+        box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+      }
+      
+      .form-textarea {
+        resize: vertical;
+        min-height: 120px;
+      }
+      
+      .form-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+      }
+      
+      .submit-btn {
+        background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+        color: var(--white);
+        padding: 1.25rem 3rem;
+        border: none;
+        border-radius: 0.75rem;
+        font-size: 1.1rem;
+        font-weight: 700;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        width: 100%;
+      }
+      
+      .submit-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+      }
+      
+      .contact-card {
+        background: var(--white);
+        padding: 3rem;
+        border-radius: 2rem;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        text-align: center;
+        transition: all 0.3s ease;
+      }
+      
+      .contact-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+      }
+      
+      .contact-icon {
+        width: 80px;
+        height: 80px;
+        background: var(--primary);
+        color: var(--white);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 2rem;
+        margin: 0 auto 2rem;
+      }
+      
+      .map-container {
+        background: var(--gray-100);
+        border-radius: 2rem;
+        overflow: hidden;
+        height: 400px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+      }
+      
+      @media (max-width: 768px) {
+        .form-grid {
+          grid-template-columns: 1fr;
+          gap: 1.5rem;
+        }
+        
+        .contact-grid {
+          grid-template-columns: 1fr !important;
+        }
+        
+        .contact-main-grid {
+          grid-template-columns: 1fr !important;
+        }
+      }
+    </style>
+</head>
+
+<body>
+    
+    <!-- Navigation -->
+    <nav class="divi-nav">
+        <div class="container">
+            <div class="nav-container">
+                <a href="index.html" class="nav-logo">ÉlectroMax Pro</a>
+                <button class="nav-toggle" id="navToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html" class="nav-link">Accueil</a></li>
+                    <li><a href="services.html" class="nav-link">Services</a></li>
+                    <li><a href="a-propos.html" class="nav-link">À propos</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                    <li><a href="tel:05 61 23 45 67" class="nav-cta">📞 05 61 23 45 67</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Hero Contact -->
+    <section style="padding: 8rem 0 4rem; background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%); color: var(--white);">
+        <div class="container">
+            <div class="text-center">
+                <span class="hero-badge">📞 Nous Contacter</span>
+                <h1 style="font-size: clamp(2.5rem, 6vw, 4rem); font-weight: 900; margin-bottom: 2rem;">
+                    Contactez ÉlectroMax Pro
+                </h1>
+                <p style="font-size: clamp(1.2rem, 3vw, 1.6rem); margin-bottom: 3rem; opacity: 0.9; max-width: 800px; margin-left: auto; margin-right: auto;">
+                    Votre projet électricien nous intéresse. Devis gratuit et conseil personnalisé
+                </p>
+                <div style="display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap;">
+                    <a href="tel:05 61 23 45 67" style="background: rgba(255,255,255,0.2); color: var(--white); padding: 1rem 2rem; border-radius: 0.75rem; text-decoration: none; font-weight: 700; backdrop-filter: blur(10px);">📞 Appel direct</a>
+                    <a href="mailto:contact@electromax-pro.fr" style="background: rgba(255,255,255,0.2); color: var(--white); padding: 1rem 2rem; border-radius: 0.75rem; text-decoration: none; font-weight: 700; backdrop-filter: blur(10px);">✉️ Email</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Informations de contact -->
+    <section style="padding: 6rem 0; background: var(--gray-50);">
+        <div class="container">
+            <div class="contact-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 3rem; margin-bottom: 6rem;">
+                <div class="contact-card">
+                    <div class="contact-icon">📞</div>
+                    <h3 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 1rem; color: var(--gray-900);">Téléphone</h3>
+                    <a href="tel:05 61 23 45 67" style="color: var(--primary); font-size: 1.3rem; font-weight: 700; text-decoration: none; margin-bottom: 1rem; display: block;">05 61 23 45 67</a>
+                    <p style="color: var(--gray-600);">Urgences 24h/7j</p>
+                    <p style="color: var(--gray-600); font-size: 0.9rem;">Intervention sous 1h</p>
+                </div>
+                
+                <div class="contact-card">
+                    <div class="contact-icon">✉️</div>
+                    <h3 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 1rem; color: var(--gray-900);">Email</h3>
+                    <a href="mailto:contact@electromax-pro.fr" style="color: var(--primary); font-size: 1.1rem; font-weight: 600; text-decoration: none; margin-bottom: 1rem; display: block; word-break: break-all;">contact@electromax-pro.fr</a>
+                    <p style="color: var(--gray-600);">Réponse sous 24h</p>
+                    <p style="color: var(--gray-600); font-size: 0.9rem;">Devis détaillé par email</p>
+                </div>
+                
+                <div class="contact-card">
+                    <div class="contact-icon">📍</div>
+                    <h3 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 1rem; color: var(--gray-900);">Adresse</h3>
+                    <p style="color: var(--gray-700); font-weight: 600; margin-bottom: 0.5rem;">25 Avenue Jean Jaurès</p>
+                    <p style="color: var(--gray-700); font-weight: 600; margin-bottom: 1rem;">Toulouse</p>
+                    <p style="color: var(--gray-600); font-size: 0.9rem;">Déplacement gratuit<br>dans un rayon de 15km</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Formulaire et carte -->
+    <section style="padding: 6rem 0; background: var(--white);">
+        <div class="container">
+            <div class="contact-main-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: start;">
+                
+                <!-- Formulaire de contact -->
+                <div>
+                    <h2 style="font-size: clamp(2rem, 5vw, 2.5rem); font-weight: 900; margin-bottom: 2rem; color: var(--gray-900);">Demande de devis gratuit</h2>
+                    <p style="font-size: 1.1rem; color: var(--gray-600); margin-bottom: 3rem;">
+                        Décrivez-nous votre projet, nous vous répondons rapidement avec un devis détaillé et personnalisé.
+                    </p>
+                    
+                    <form class="contact-form" action="#" method="POST">
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label class="form-label" for="name">Nom complet *</label>
+                                <input type="text" id="name" name="name" class="form-input" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="email">Email *</label>
+                                <input type="email" id="email" name="email" class="form-input" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label class="form-label" for="phone">Téléphone</label>
+                                <input type="tel" id="phone" name="phone" class="form-input">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="city">Ville</label>
+                                <input type="text" id="city" name="city" class="form-input" value="Toulouse">
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label" for="service">Type de service</label>
+                            <select id="service" name="service" class="form-select">
+                                <option value="">Choisissez un service</option>
+                                <option value="installation">Installation Électricien</option>
+                                <option value="depannage">Dépannage d'urgence</option>
+                                <option value="renovation">Rénovation / Mise aux normes</option>
+                                <option value="maintenance">Maintenance préventive</option>
+                                <option value="autre">Autre projet</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label" for="urgency">Urgence</label>
+                            <select id="urgency" name="urgency" class="form-select">
+                                <option value="normal">Planning normal</option>
+                                <option value="rapide">Sous 48h</option>
+                                <option value="urgent">Urgence (même jour)</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label" for="message">Description du projet *</label>
+                            <textarea id="message" name="message" class="form-textarea" placeholder="Décrivez votre projet en détail : type de travaux, surface, contraintes particulières, budget envisagé..." required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="submit-btn">
+                            🚀 Envoyer ma demande de devis
+                        </button>
+                        
+                        <p style="font-size: 0.9rem; color: var(--gray-500); text-align: center; margin-top: 1rem;">
+                            * Champs obligatoires. Vos données sont protégées et ne seront jamais partagées.
+                        </p>
+                    </form>
+                </div>
+                
+                <!-- Informations et carte -->
+                <div>
+                    <h3 style="font-size: 1.8rem; font-weight: 700; margin-bottom: 2rem; color: var(--gray-900);">Nos horaires</h3>
+                    
+                    <div style="background: var(--gray-50); padding: 2rem; border-radius: 1.5rem; margin-bottom: 3rem;">
+                        <div style="display: grid; gap: 1rem;">
+                            <div style="display: flex; justify-content: space-between;">
+                                <span style="font-weight: 600;">Lundi - Vendredi</span>
+                                <span style="color: var(--primary); font-weight: 600;">8h00 - 19h00</span>
+                            </div>
+                            <div style="display: flex; justify-content: space-between;">
+                                <span style="font-weight: 600;">Samedi</span>
+                                <span style="color: var(--primary); font-weight: 600;">9h00 - 17h00</span>
+                            </div>
+                            <div style="display: flex; justify-content: space-between;">
+                                <span style="font-weight: 600;">Dimanche</span>
+                                <span style="color: var(--gray-500);">Fermé</span>
+                            </div>
+                            <hr style="border: none; border-top: 1px solid var(--gray-200); margin: 0.5rem 0;">
+                            <div style="display: flex; justify-content: space-between;">
+                                <span style="font-weight: 600; color: #dc2626;">🚨 Urgences</span>
+                                <span style="color: #dc2626; font-weight: 700;">24h/7j</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <h3 style="font-size: 1.8rem; font-weight: 700; margin-bottom: 2rem; color: var(--gray-900);">Zone d'intervention</h3>
+                    
+                    <div class="map-container">
+                        <div style="text-align: center; color: var(--gray-600);">
+                            <div style="font-size: 4rem; margin-bottom: 1rem;">🗺️</div>
+                            <h4 style="font-size: 1.3rem; font-weight: 700; margin-bottom: 1rem; color: var(--gray-700);">Toulouse et environs</h4>
+                            <p style="margin-bottom: 1rem;">Rayon d'intervention : 30km</p>
+                            <p style="font-size: 0.9rem;">Déplacement gratuit dans un rayon de 15km</p>
+                        </div>
+                    </div>
+                    
+                    <div style="background: var(--primary); color: var(--white); padding: 2rem; border-radius: 1.5rem; margin-top: 3rem; text-align: center;">
+                        <h4 style="font-size: 1.3rem; font-weight: 700; margin-bottom: 1rem;">Garantie satisfaction</h4>
+                        <p style="opacity: 0.9; margin-bottom: 1.5rem;">Devis gratuit et sans engagement sous 24h</p>
+                        <a href="tel:05 61 23 45 67" style="background: rgba(255,255,255,0.2); color: var(--white); padding: 1rem 2rem; border-radius: 0.5rem; text-decoration: none; font-weight: 700; backdrop-filter: blur(10px);">📞 Appeler maintenant</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- FAQ Contact -->
+    <section style="padding: 6rem 0; background: var(--gray-50);">
+        <div class="container">
+            <div class="text-center" style="margin-bottom: 4rem;">
+                <h2 style="font-size: clamp(2rem, 5vw, 3rem); font-weight: 900; margin-bottom: 2rem; color: var(--gray-900);">Questions fréquentes</h2>
+                <p style="font-size: 1.2rem; color: var(--gray-600); max-width: 600px; margin: 0 auto;">
+                    Les réponses aux questions les plus courantes sur nos services
+                </p>
+            </div>
+            
+            <div style="max-width: 800px; margin: 0 auto; display: grid; gap: 2rem;">
+                <div style="background: var(--white); padding: 2rem; border-radius: 1.5rem; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+                    <h3 style="font-size: 1.3rem; font-weight: 700; margin-bottom: 1rem; color: var(--gray-900);">💰 Le devis est-il vraiment gratuit ?</h3>
+                    <p style="color: var(--gray-600); line-height: 1.7;">
+                        Oui, absolument ! Nous nous déplaçons gratuitement dans un rayon de 15km autour de Toulouse pour établir un devis détaillé et personnalisé. Aucun engagement de votre part.
+                    </p>
+                </div>
+                
+                <div style="background: var(--white); padding: 2rem; border-radius: 1.5rem; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+                    <h3 style="font-size: 1.3rem; font-weight: 700; margin-bottom: 1rem; color: var(--gray-900);">⚡ Que faire en cas d'urgence ?</h3>
+                    <p style="color: var(--gray-600); line-height: 1.7;">
+                        Pour toute urgence électricien, appelez directement le <strong>05 61 23 45 67</strong>. Nous intervenons 24h/7j avec un temps de réponse moyen de 1h.
+                    </p>
+                </div>
+                
+                <div style="background: var(--white); padding: 2rem; border-radius: 1.5rem; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+                    <h3 style="font-size: 1.3rem; font-weight: 700; margin-bottom: 1rem; color: var(--gray-900);">🛡️ Êtes-vous assurés ?</h3>
+                    <p style="color: var(--gray-600); line-height: 1.7;">
+                        Oui, nous disposons d'une assurance décennale complète et de toutes les certifications requises (RGE, Qualibat). Vos travaux sont garantis 10 ans.
+                    </p>
+                </div>
+                
+                <div style="background: var(--white); padding: 2rem; border-radius: 1.5rem; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+                    <h3 style="font-size: 1.3rem; font-weight: 700; margin-bottom: 1rem; color: var(--gray-900);">💳 Quels sont les moyens de paiement acceptés ?</h3>
+                    <p style="color: var(--gray-600); line-height: 1.7;">
+                        Nous acceptons tous les moyens de paiement : espèces, chèque, virement, CB. Possibilité de paiement en plusieurs fois pour les gros projets.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+    <!-- Footer -->
+    <footer class="footer-professional">
+        <div class="container">
+            <div class="footer-content">
+                <h3 class="footer-title">ÉlectroMax Pro</h3>
+                <p class="footer-description">
+                    Électricien professionnel depuis plus de 15 ans. Excellence, qualité et satisfaction client garanties.
+                </p>
+                
+                <div class="footer-bottom">
+                    <p class="footer-copyright">
+                        © 2025 ÉlectroMax Pro. Tous droits réservés.
+                    </p>
+                    <p class="footer-credits">
+                        Design Divi Construction - <a href="https://claude.ai/code" target="_blank">Claude Code</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Scripts -->
+    <script>
+        // Navigation mobile
+        const navToggle = document.getElementById('navToggle');
+        const navMenu = document.getElementById('navMenu');
+        
+        if (navToggle && navMenu) {
+            navToggle.addEventListener('click', () => {
+                navToggle.classList.toggle('active');
+                navMenu.classList.toggle('active');
+            });
+            
+            // Fermer le menu au clic sur lien
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.addEventListener('click', () => {
+                    navToggle.classList.remove('active');
+                    navMenu.classList.remove('active');
+                });
+            });
+        }
+        
+        // Smooth scroll pour les ancres
+        document.querySelectorAll('a[href^="#"]').forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const target = document.querySelector(link.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+        
+        console.log('🏗️ Divi Construction Professional page loaded successfully!');
+    </script>
+    
+    <script>
+        // Validation formulaire
+        document.querySelector('.contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Simulation envoi
+            const submitBtn = document.querySelector('.submit-btn');
+            const originalText = submitBtn.textContent;
+            
+            submitBtn.textContent = '⏳ Envoi en cours...';
+            submitBtn.disabled = true;
+            
+            setTimeout(() => {
+                submitBtn.textContent = '✅ Message envoyé !';
+                setTimeout(() => {
+                    submitBtn.textContent = originalText;
+                    submitBtn.disabled = false;
+                    this.reset();
+                }, 2000);
+            }, 2000);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Installation Électrique - Électricité Jean Pro</title>
+    <meta name="description" content="Installation complète : tableaux électriques, prises, éclairage, chauffage électrique. Travaux aux normes avec garantie.. Service de Électricité à Paris par Électricité Jean Pro">
+    <meta name="keywords" content="Installation Électrique, Électricité, Paris, Électricité Jean Pro">
+    
+    <style>
+        
+    :root {
+        --primary-color: #f59e0b;
+        --secondary-color: #d97706;
+        --text-dark: #1f2937;
+        --text-light: #6b7280;
+        --bg-light: #f9fafb;
+        --white: #ffffff;
+    }
+    
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    body {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        line-height: 1.6;
+        color: var(--text-dark);
+        background: var(--white);
+    }
+    
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+    
+    /* Navigation */
+    .header {
+        background: var(--white);
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+    }
+    
+    .header-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 0;
+    }
+    
+    .logo {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: var(--primary-color);
+        text-decoration: none;
+    }
+    
+    .nav-menu {
+        display: flex;
+        list-style: none;
+        gap: 2rem;
+        align-items: center;
+    }
+    
+    .nav-item {
+        position: relative;
+    }
+    
+    .nav-link {
+        text-decoration: none;
+        color: var(--text-dark);
+        font-weight: 500;
+        padding: 0.5rem 1rem;
+        border-radius: 4px;
+        transition: all 0.3s;
+    }
+    
+    .nav-link:hover {
+        color: var(--primary-color);
+        background: var(--bg-light);
+    }
+    
+    .dropdown {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background: var(--white);
+        box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        border-radius: 8px;
+        padding: 0.5rem 0;
+        min-width: 200px;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-10px);
+        transition: all 0.3s;
+    }
+    
+    .nav-item:hover .dropdown {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+    
+    .dropdown-link {
+        display: block;
+        padding: 0.5rem 1rem;
+        text-decoration: none;
+        color: var(--text-dark);
+        transition: all 0.3s;
+    }
+    
+    .dropdown-link:hover {
+        background: var(--bg-light);
+        color: var(--primary-color);
+    }
+    
+    .header-contact {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+    
+    .contact-item {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        color: var(--text-dark);
+        text-decoration: none;
+        font-weight: 500;
+    }
+    
+    .contact-item:hover {
+        color: var(--primary-color);
+    }
+    
+    .btn {
+        display: inline-block;
+        padding: 0.75rem 1.5rem;
+        background: var(--primary-color);
+        color: var(--white);
+        text-decoration: none;
+        border-radius: 6px;
+        font-weight: 600;
+        transition: all 0.3s;
+        border: none;
+        cursor: pointer;
+    }
+    
+    .btn:hover {
+        background: var(--secondary-color);
+        transform: translateY(-2px);
+    }
+    
+    .btn-secondary {
+        background: transparent;
+        color: var(--primary-color);
+        border: 2px solid var(--primary-color);
+    }
+    
+    .btn-secondary:hover {
+        background: var(--primary-color);
+        color: var(--white);
+    }
+    
+    /* Sections communes */
+    .page-header {
+        background: linear-gradient(135deg, var(--primary-color)15, var(--bg-light));
+        padding: 8rem 0 4rem;
+        text-align: center;
+    }
+    
+    .page-header h1 {
+        font-size: 3rem;
+        font-weight: 800;
+        color: var(--primary-color);
+        margin-bottom: 1rem;
+    }
+    
+    .page-header p {
+        font-size: 1.2rem;
+        color: var(--text-light);
+        max-width: 600px;
+        margin: 0 auto;
+    }
+    
+    .section {
+        padding: 4rem 0;
+    }
+    
+    .section-title {
+        text-align: center;
+        font-size: 2.5rem;
+        color: var(--primary-color);
+        margin-bottom: 3rem;
+    }
+    
+    /* Footer */
+    .footer {
+        background: var(--primary-color);
+        color: var(--white);
+        padding: 3rem 0 1rem;
+        text-align: center;
+    }
+    
+    .footer-content {
+        margin-bottom: 2rem;
+    }
+    
+    .footer h3 {
+        margin-bottom: 1rem;
+        font-size: 1.5rem;
+    }
+    
+    .footer p {
+        opacity: 0.9;
+        margin-bottom: 0.5rem;
+    }
+    
+    .footer-bottom {
+        border-top: 1px solid rgba(255,255,255,0.2);
+        padding-top: 1rem;
+        opacity: 0.8;
+        font-size: 0.9rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .footer-links {
+        display: flex;
+        gap: 1rem;
+    }
+    
+    .footer-links a {
+        color: var(--white);
+        text-decoration: none;
+        opacity: 0.8;
+        transition: opacity 0.3s;
+    }
+    
+    .footer-links a:hover {
+        opacity: 1;
+    }
+    
+    /* Responsive */
+    @media (max-width: 768px) {
+        .nav-menu {
+            display: none;
+        }
+        
+        .page-header h1 {
+            font-size: 2rem;
+        }
+        
+        .header-contact {
+            display: none;
+        }
+        
+        .footer-bottom {
+            flex-direction: column;
+            gap: 1rem;
+        }
+    }
+    
+    /* Animations */
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    
+    .animate-on-scroll {
+        animation: fadeInUp 0.6s ease forwards;
+    }
+  
+        
+        .service-hero {
+            background: linear-gradient(135deg, var(--primary-color)15, var(--bg-light));
+            padding: 8rem 0 4rem;
+        }
+        
+        .service-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 3rem;
+            align-items: start;
+        }
+        
+        .service-images {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+        
+        .service-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+        
+        .service-sidebar {
+            background: var(--bg-light);
+            padding: 2rem;
+            border-radius: 12px;
+            position: sticky;
+            top: 100px;
+        }
+        
+        .cta-box {
+            background: var(--primary-color);
+            color: var(--white);
+            padding: 2rem;
+            border-radius: 12px;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        
+        .related-services {
+            margin-top: 2rem;
+        }
+        
+        .related-service {
+            display: block;
+            padding: 1rem;
+            background: var(--white);
+            margin-bottom: 1rem;
+            border-radius: 8px;
+            text-decoration: none;
+            color: var(--text-dark);
+            transition: all 0.3s;
+        }
+        
+        .related-service:hover {
+            background: var(--primary-color);
+            color: var(--white);
+        }
+    </style>
+</head>
+<body>
+    
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">
+                    Électricité Jean Pro
+                </a>
+                
+                <nav>
+                    <ul class="nav-menu">
+                        
+                            <li class="nav-item">
+                                <a href="index.html" class="nav-link">Accueil</a>
+                                
+                            </li>
+                        
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">Services</a>
+                                
+                                    <div class="dropdown">
+                                        
+                                            <a href="service-depannage.html" class="dropdown-link">Dépannage Électrique</a>
+                                        
+                                            <a href="service-installation.html" class="dropdown-link">Installation Électrique</a>
+                                        
+                                    </div>
+                                
+                            </li>
+                        
+                            <li class="nav-item">
+                                <a href="contact.html" class="nav-link">Contact</a>
+                                
+                            </li>
+                        
+                    </ul>
+                </nav>
+                
+                <div class="header-contact">
+                    <a href="tel:01 45 67 89 12" class="contact-item">
+                        <span>📞</span>
+                        <span>01 45 67 89 12</span>
+                    </a>
+                    <a href="contact.html" class="btn">Devis Gratuit</a>
+                </div>
+            </div>
+        </div>
+    </header>
+  
+    
+    
+    <div class="breadcrumbs">
+        <div class="container">
+            <nav style="padding: 1rem 0; font-size: 0.9rem;">
+                
+                    
+                    <a href="index.html" style="color: var(--primary-color); text-decoration: none;">Accueil</a>
+                
+                    <span style="margin: 0 0.5rem; color: var(--text-light);">></span>
+                    <a href="index.html#services" style="color: var(--primary-color); text-decoration: none;">Services</a>
+                
+                    <span style="margin: 0 0.5rem; color: var(--text-light);">></span>
+                    <span style="color: var(--text-light);">Installation Électrique</span>
+                
+            </nav>
+        </div>
+    </div>
+  
+    
+    <section class="service-hero">
+        <div class="container">
+            <div class="page-header">
+                <h1>Installation Électrique</h1>
+                <p>Installation complète de vos équipements électriques</p>
+            </div>
+        </div>
+    </section>
+    
+    <section class="section">
+        <div class="container">
+            <div class="service-content">
+                <div class="service-main">
+                    <div class="service-description">
+                        <h2>Description détaillée</h2>
+                        <p>Installation complète : tableaux électriques, prises, éclairage, chauffage électrique. Travaux aux normes avec garantie.</p>
+                        
+                        
+                        
+                        <h3>Pourquoi choisir Électricité Jean Pro ?</h3>
+                        <ul>
+                            <li>Professionnel qualifié et expérimenté</li>
+                            <li>Devis gratuit et sans engagement</li>
+                            <li>Intervention rapide</li>
+                            <li>Garantie qualité</li>
+                            <li>Service d'urgence 24h/7j</li>
+                        </ul>
+                        
+                        <h3>Zones d'intervention pour Installation Électrique</h3>
+                        <p>Nous proposons le service Installation Électrique dans les villes suivantes :</p>
+                        <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 1rem 0;">
+                            
+                                <a href="installation-paris.html" 
+                                   style="background: var(--primary-color); color: white; padding: 0.3rem 0.8rem; border-radius: 15px; font-size: 0.9rem; text-decoration: none; transition: all 0.3s;"
+                                   onmouseover="this.style.background='var(--secondary-color)'"
+                                   onmouseout="this.style.background='var(--primary-color)'">
+                                   Installation Électrique Paris
+                                </a>
+                            
+                                <a href="installation-boulogne-billancourt.html" 
+                                   style="background: var(--primary-color); color: white; padding: 0.3rem 0.8rem; border-radius: 15px; font-size: 0.9rem; text-decoration: none; transition: all 0.3s;"
+                                   onmouseover="this.style.background='var(--secondary-color)'"
+                                   onmouseout="this.style.background='var(--primary-color)'">
+                                   Installation Électrique Boulogne-Billancourt
+                                </a>
+                            
+                                <a href="installation-neuilly-sur-seine.html" 
+                                   style="background: var(--primary-color); color: white; padding: 0.3rem 0.8rem; border-radius: 15px; font-size: 0.9rem; text-decoration: none; transition: all 0.3s;"
+                                   onmouseover="this.style.background='var(--secondary-color)'"
+                                   onmouseout="this.style.background='var(--primary-color)'">
+                                   Installation Électrique Neuilly-sur-Seine
+                                </a>
+                            
+                        </div>
+                        <p style="margin-top: 1rem; font-size: 0.9rem; color: var(--text-light);">
+                            💡 Cliquez sur une ville pour voir notre page dédiée au Installation Électrique dans cette zone
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="service-sidebar">
+                    <div class="cta-box">
+                        <h3>Besoin de ce service ?</h3>
+                        <p>Contactez-nous pour un devis gratuit</p>
+                        <div style="font-size: 1.2rem; font-weight: bold; margin: 1rem 0;">Devis gratuit</div>
+                        <a href="tel:01 45 67 89 12" class="btn" style="background: var(--white); color: var(--primary-color); width: 100%; margin-bottom: 1rem;">📞 01 45 67 89 12</a>
+                        <a href="contact.html" class="btn" style="background: var(--secondary-color); width: 100%;">Demander un devis</a>
+                    </div>
+                    
+                    <div class="related-services">
+                        <h4>Nos autres services</h4>
+                        
+                            <a href="service-depannage.html" class="related-service">
+                                <strong>Dépannage Électrique</strong><br>
+                                <small>Intervention rapide pour tous vos problèmes électriques</small>
+                            </a>
+                        
+                    </div>
+                    
+                    <div class="local-services" style="margin-top: 2rem;">
+                        <h4>Installation Électrique dans vos villes</h4>
+                        <p style="font-size: 0.9rem; color: var(--text-light); margin-bottom: 1rem;">
+                            Découvrez notre service Installation Électrique près de chez vous
+                        </p>
+                        
+                            <a href="installation-paris.html" 
+                               style="display: block; padding: 0.8rem; background: var(--bg-light); margin-bottom: 0.5rem; border-radius: 6px; text-decoration: none; color: var(--text-dark); font-size: 0.9rem; transition: all 0.3s;"
+                               onmouseover="this.style.background='var(--primary-color)'; this.style.color='white'"
+                               onmouseout="this.style.background='var(--bg-light)'; this.style.color='var(--text-dark)'">
+                                📍 Installation Électrique Paris
+                            </a>
+                        
+                            <a href="installation-boulogne-billancourt.html" 
+                               style="display: block; padding: 0.8rem; background: var(--bg-light); margin-bottom: 0.5rem; border-radius: 6px; text-decoration: none; color: var(--text-dark); font-size: 0.9rem; transition: all 0.3s;"
+                               onmouseover="this.style.background='var(--primary-color)'; this.style.color='white'"
+                               onmouseout="this.style.background='var(--bg-light)'; this.style.color='var(--text-dark)'">
+                                📍 Installation Électrique Boulogne-Billancourt
+                            </a>
+                        
+                            <a href="installation-neuilly-sur-seine.html" 
+                               style="display: block; padding: 0.8rem; background: var(--bg-light); margin-bottom: 0.5rem; border-radius: 6px; text-decoration: none; color: var(--text-dark); font-size: 0.9rem; transition: all 0.3s;"
+                               onmouseover="this.style.background='var(--primary-color)'; this.style.color='white'"
+                               onmouseout="this.style.background='var(--bg-light)'; this.style.color='var(--text-dark)'">
+                                📍 Installation Électrique Neuilly-sur-Seine
+                            </a>
+                        
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <h3>Électricité Jean Pro</h3>
+                <p>Électricité professionnel à Paris</p>
+                <p>📞 01 45 67 89 12 • ✉️ jean.electricien.1749128794696@test.fr</p>
+                <p>📍 789 Rue de l'Électricité, Paris</p>
+            </div>
+            <div class="footer-bottom">
+                <div>
+                    <p>&copy; 2025 Électricité Jean Pro. Tous droits réservés.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="mentions-legales.html">Mentions légales</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+  
+</body>
+</html>

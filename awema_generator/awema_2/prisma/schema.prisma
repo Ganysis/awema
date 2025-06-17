@@ -1,0 +1,286 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        String    @id @default(cuid())
+  email     String    @unique
+  name      String
+  password  String
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+  clients   Client[]
+  projects  Project[]
+
+  @@map("users")
+}
+
+model Client {
+  id        String       @id @default(cuid())
+  name      String
+  email     String       @unique
+  phone     String?
+  company   String
+  domain    String?
+  trade     String?
+  status    String       @default("NOUVEAU")
+  createdAt DateTime     @default(now())
+  updatedAt DateTime     @updatedAt
+  userId    String
+  forms     ClientForm[]
+  user      User         @relation(fields: [userId], references: [id])
+  projects  Project[]
+
+  @@map("clients")
+}
+
+model ClientForm {
+  id          String    @id @default(cuid())
+  token       String    @unique
+  clientId    String
+  currentStep Int       @default(1)
+  formData    String?
+  completedAt DateTime?
+  expiresAt   DateTime
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+  client      Client    @relation(fields: [clientId], references: [id])
+
+  @@map("client_forms")
+}
+
+model Project {
+  id           String        @id @default(cuid())
+  name         String
+  clientId     String
+  userId       String
+  status       String        @default("COLLECTE")
+  formData     String?
+  siteData     String?
+  domain       String?
+  previewUrl   String?
+  siteFolder   String?
+  createdAt    DateTime      @default(now())
+  updatedAt    DateTime      @updatedAt
+  deliveredAt  DateTime?
+  user         User          @relation(fields: [userId], references: [id])
+  client       Client        @relation(fields: [clientId], references: [id])
+  siteInstance SiteInstance?
+
+  @@map("projects")
+}
+
+model Template {
+  id            String   @id @default(cuid())
+  name          String
+  description   String
+  htmlStructure String
+  cssStyles     String
+  jsScripts     String?
+  seoConfig     String
+  isActive      Boolean  @default(true)
+  isDefault     Boolean  @default(false)
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+
+  @@map("templates")
+}
+
+model SiteInstance {
+  id              String        @id @default(cuid())
+  projectId       String        @unique
+  domain          String        @unique
+  isLive          Boolean       @default(false)
+  homeTemplate    String        @default("home-modern-pro")
+  serviceTemplate String        @default("service-detail-pro")
+  contactTemplate String        @default("contact-simple-direct")
+  templateData    String
+  customCSS       String?
+  customJS        String?
+  cmsEnabled      Boolean       @default(true)
+  cmsSettings     String
+  clientUsername  String
+  clientPassword  String
+  createdAt       DateTime      @default(now())
+  updatedAt       DateTime      @updatedAt
+  articles        Article[]
+  pages           CustomPage[]
+  mediaFiles      MediaFile[]
+  pageContents    PageContent[]
+  project         Project       @relation(fields: [projectId], references: [id])
+
+  @@map("site_instances")
+}
+
+model Article {
+  id              String       @id @default(cuid())
+  siteId          String
+  title           String
+  slug            String
+  excerpt         String?
+  content         String
+  featuredImage   String?
+  metaTitle       String?
+  metaDescription String?
+  keywords        String?
+  status          String       @default("DRAFT")
+  publishedAt     DateTime?
+  authorName      String
+  authorEmail     String
+  createdAt       DateTime     @default(now())
+  updatedAt       DateTime     @updatedAt
+  site            SiteInstance @relation(fields: [siteId], references: [id])
+
+  @@unique([siteId, slug])
+  @@map("articles")
+}
+
+model CustomPage {
+  id              String       @id @default(cuid())
+  siteId          String
+  title           String
+  slug            String
+  content         String
+  template        String       @default("default")
+  metaTitle       String?
+  metaDescription String?
+  keywords        String?
+  isHomePage      Boolean      @default(false)
+  inNavigation    Boolean      @default(true)
+  navOrder        Int?
+  status          String       @default("PUBLISHED")
+  createdAt       DateTime     @default(now())
+  updatedAt       DateTime     @updatedAt
+  site            SiteInstance @relation(fields: [siteId], references: [id])
+
+  @@unique([siteId, slug])
+  @@map("custom_pages")
+}
+
+model MediaFile {
+  id          String       @id @default(cuid())
+  siteId      String
+  filename    String
+  storedName  String
+  path        String
+  url         String
+  mimeType    String
+  size        Int
+  title       String?
+  altText     String?
+  description String?
+  uploadedBy  String
+  createdAt   DateTime     @default(now())
+  site        SiteInstance @relation(fields: [siteId], references: [id])
+
+  @@map("media_files")
+}
+
+model PageContent {
+  id              String        @id @default(cuid())
+  siteId          String
+  pageType        String
+  pageSlug        String?
+  sections        String
+  title           String?
+  metaTitle       String?
+  metaDescription String?
+  version         Int           @default(1)
+  isPublished     Boolean       @default(true)
+  createdAt       DateTime      @default(now())
+  updatedAt       DateTime      @updatedAt
+  site            SiteInstance  @relation(fields: [siteId], references: [id])
+  blocks          PageBlock[]
+  versions        PageVersion[]
+
+  @@unique([siteId, pageType, pageSlug])
+  @@map("page_contents")
+}
+
+model PageBlock {
+  id            String      @id @default(cuid())
+  pageContentId String
+  blockType     String      // 'hero', 'services', 'contact', 'text', 'image', etc.
+  order         Int
+  config        String      // JSON config du bloc
+  content       String      // Contenu du bloc
+  styles        String?     // CSS personnalisé du bloc
+  isVisible     Boolean     @default(true)
+  createdAt     DateTime    @default(now())
+  updatedAt     DateTime    @updatedAt
+  pageContent   PageContent @relation(fields: [pageContentId], references: [id], onDelete: Cascade)
+
+  @@map("page_blocks")
+}
+
+model PageVersion {
+  id            String      @id @default(cuid())
+  pageContentId String
+  version       Int
+  title         String?
+  blocksData    String      // JSON snapshot des blocs
+  sectionsData  String      // JSON snapshot des sections (backward compatibility)
+  changes       String?     // Description des changements
+  editorEmail   String
+  editorType    String      @default("ADMIN") // ADMIN, CLIENT
+  createdAt     DateTime    @default(now())
+  pageContent   PageContent @relation(fields: [pageContentId], references: [id], onDelete: Cascade)
+
+  @@unique([pageContentId, version])
+  @@map("page_versions")
+}
+
+model BlockTemplate {
+  id          String   @id @default(cuid())
+  name        String
+  category    String   // 'hero', 'services', 'content', 'contact', etc.
+  description String
+  config      String   // Configuration par défaut du bloc
+  template    String   // Template HTML du bloc
+  styles      String   // CSS par défaut du bloc
+  isGlobal    Boolean  @default(true) // Disponible pour tous les sites
+  siteId      String?  // Si spécifique à un site
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@map("block_templates")
+}
+
+model TemplateSource {
+  id             String   @id @default(cuid())
+  templateId     String   @unique
+  category       String
+  name           String
+  description    String
+  htmlStructure  String
+  cssStyles      String
+  jsScripts      String?
+  editableFields String
+  defaultData    String
+  sectors        String
+  style          String
+  isActive       Boolean  @default(true)
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+
+  @@map("template_sources")
+}
+
+model EditHistory {
+  id          String   @id @default(cuid())
+  siteId      String
+  entityType  String
+  entityId    String
+  action      String
+  changes     String
+  editorEmail String
+  editorType  String
+  createdAt   DateTime @default(now())
+
+  @@map("edit_history")
+}

@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="fr" class="no-js">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Électricité Expert Pro - Électricien professionnel à Paris 8ème</title>
+    <meta name="description" content="Spécialiste en installations électriques haute performance, domotique intelligente et solutions énergétiques durables. Expert certifié RGE avec plus de 15 ans d'expérience.">
+    <meta name="keywords" content="Électricien Paris 8ème, installation électrique, dépannage électricien urgence, devis gratuit">
+    
+    <!-- Meta tags OpenGraph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Électricité Expert Pro - Électricien professionnel">
+    <meta property="og:description" content="Spécialiste en installations électriques haute performance, domotique intelligente et solutions énergétiques durables. Expert certifié RGE avec plus de 15 ans d'expérience.">
+    <meta property="og:url" content="https://electricite-expert-pro.fr">
+    
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Électricité Expert Pro",
+      "description": "Spécialiste en installations électriques haute performance, domotique intelligente et solutions énergétiques durables. Expert certifié RGE avec plus de 15 ans d'expérience.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "42 Avenue des Champs-Élysées",
+        "addressLocality": "Paris 8ème",
+        "addressCountry": "FR"
+      },
+      "telephone": "01 85 76 32 18",
+      "email": "contact@electricite-expert-pro.fr",
+      "url": "https://electricite-expert-pro.fr",
+      "priceRange": "€€",
+      "openingHours": "Lundi-Vendredi 8h-19h, Samedi 9h-17h, Urgences 24h/7j"
+    }
+    </script>
+    
+    <!-- Fonts et CSS -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"></noscript>
+    
+    <style>
+        
+    :root {
+      --primary: #374151;
+      --secondary: #6b7280;
+      --white: #ffffff;
+      --gray-50: #f9fafb;
+      --gray-100: #f3f4f6;
+      --gray-200: #e5e7eb;
+      --gray-600: #4b5563;
+      --gray-700: #374151;
+      --gray-800: #1f2937;
+      --gray-900: #111827;
+      --success: #10b981;
+      --warning: #f59e0b;
+    }
+    
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      line-height: 1.6;
+      color: var(--gray-800);
+    }
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+    
+    /* Navigation responsive */
+    .elementor-nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      z-index: 1000;
+      padding: 1rem 0;
+      transition: all 0.3s ease;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .nav-logo {
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: var(--primary);
+      text-decoration: none;
+    }
+    
+    .nav-menu {
+      display: flex;
+      list-style: none;
+      gap: 2rem;
+    }
+    
+    .nav-link {
+      color: var(--gray-800);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+    
+    .nav-link:hover, .nav-link.active {
+      color: var(--primary);
+    }
+    
+    .nav-toggle {
+      display: none;
+      flex-direction: column;
+      gap: 4px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0.5rem;
+    }
+    
+    .nav-toggle span {
+      width: 25px;
+      height: 3px;
+      background: var(--gray-800);
+      transition: all 0.3s ease;
+    }
+    
+    .nav-toggle.active span:nth-child(1) {
+      transform: translateY(7px) rotate(45deg);
+    }
+    
+    .nav-toggle.active span:nth-child(2) {
+      opacity: 0;
+    }
+    
+    .nav-toggle.active span:nth-child(3) {
+      transform: translateY(-7px) rotate(-45deg);
+    }
+    
+    /* Footer */
+    .footer-mega {
+      background: var(--gray-900);
+      color: var(--white);
+      padding: 3rem 0 1rem;
+    }
+    
+    .footer-content {
+      text-align: center;
+    }
+    
+    .footer-title {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+    
+    .footer-description {
+      opacity: 0.8;
+      margin-bottom: 2rem;
+    }
+    
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.1);
+      padding-top: 2rem;
+      margin-top: 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .footer-copyright {
+      opacity: 0.6;
+    }
+    
+    .footer-credits a {
+      color: var(--white);
+    }
+    
+    /* Responsive */
+    @media (max-width: 768px) {
+      .nav-menu {
+        position: fixed;
+        top: 80px;
+        left: 0;
+        right: 0;
+        background: var(--white);
+        flex-direction: column;
+        padding: 2rem;
+        box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        transform: translateY(-100%);
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+      }
+      
+      .nav-menu.active {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+      }
+      
+      .nav-toggle {
+        display: flex;
+      }
+      
+      .footer-bottom {
+        flex-direction: column;
+        gap: 1rem;
+      }
+    }
+  
+    </style>
+</head>
+
+<body class="elementor-pro-page modern">
+    <!-- Navigation responsive -->
+    <nav class="elementor-nav">
+        <div class="container">
+            <div class="nav-container">
+                <a href="index.html" class="nav-logo">Électricité Expert Pro</a>
+                <button class="nav-toggle" id="navToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="#accueil" class="nav-link">Accueil</a></li>
+                    <li><a href="#services" class="nav-link">Services</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                    <li><a href="mentions-legales.html" class="nav-link">Mentions légales</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Section Hero unique -->
+    
+      <section class="hero-split-image" style="min-height: 100vh; background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%); display: flex; align-items: center; color: var(--white);">
+        <div class="container">
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;">
+            <div style="padding-right: 2rem;">
+              <h1 style="font-size: 3.5rem; font-weight: 800; line-height: 1.1; margin-bottom: 1.5rem;">Électricité Expert Pro</h1>
+              <p style="font-size: 1.5rem; margin-bottom: 1rem; opacity: 0.9;">Électricien professionnel à Paris 8ème</p>
+              <p style="font-size: 1.1rem; margin-bottom: 2rem; opacity: 0.8;">Spécialiste en installations électriques haute performance, domotique intelligente et solutions énergétiques durables. Expert certifié RGE avec plus de 15 ans d'expérience.</p>
+              <div style="display: flex; gap: 1rem;">
+                <a href="#services" style="display: inline-block; padding: 1rem 2rem; background: var(--white); color: var(--primary); text-decoration: none; border-radius: 0.5rem; font-weight: 600;">Nos Services</a>
+                <a href="contact.html" style="display: inline-block; padding: 1rem 2rem; background: transparent; color: var(--white); border: 2px solid var(--white); text-decoration: none; border-radius: 0.5rem; font-weight: 600;">Devis Gratuit</a>
+              </div>
+            </div>
+            <div style="position: relative;">
+              <img src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=600&h=400&fit=crop" alt="Électricien professionnel" style="width: 100%; border-radius: 2rem; box-shadow: 0 20px 40px rgba(0,0,0,0.15);">
+            </div>
+          </div>
+        </div>
+      </section>
+    
+
+    <!-- Section Services unique -->
+    
+      <section class="services-masonry" style="padding: 6rem 0; background: var(--gray-50);">
+        <div class="container">
+          <div style="text-align: center; margin-bottom: 4rem;">
+            <h2 style="font-size: 2.5rem; font-weight: 700; margin-bottom: 1rem; color: var(--primary);">Nos Services Électricien</h2>
+            <p style="font-size: 1.2rem; color: var(--gray-600); max-width: 600px; margin: 0 auto;">Solutions professionnelles adaptées à tous vos besoins</p>
+          </div>
+          
+          <div style="columns: 3; column-gap: 2rem; break-inside: avoid;">
+            
+              <div style="break-inside: avoid; margin-bottom: 2rem; background: var(--white); padding: 2.5rem; border-radius: 1.5rem; box-shadow: 0 5px 15px rgba(0,0,0,0.08); transition: transform 0.3s ease; margin-top: 2rem;">
+                <div style="font-size: 3rem; margin-bottom: 1.5rem;">⚡</div>
+                <h3 style="font-size: 1.4rem; font-weight: 600; margin-bottom: 1rem; color: var(--primary);">Installation Électrique Complète</h3>
+                <p style="color: var(--gray-600); margin-bottom: 1.5rem; line-height: 1.6;">Installation électrique neuve aux normes NF C 15-100 avec tableau dernière génération</p>
+                <div style="background: var(--gray-50); padding: 1rem; border-radius: 0.75rem; margin-bottom: 1.5rem;">
+                  <div style="font-weight: 600; color: var(--primary); margin-bottom: 0.5rem;">✨ Inclus:</div>
+                  <ul style="list-style: none; padding: 0; margin: 0;">
+                    <li style="padding: 0.25rem 0; color: var(--gray-600); position: relative; padding-left: 1.5rem;"><span style="position: absolute; left: 0; color: var(--primary);">•</span> Devis gratuit</li><li style="padding: 0.25rem 0; color: var(--gray-600); position: relative; padding-left: 1.5rem;"><span style="position: absolute; left: 0; color: var(--primary);">•</span> Normes NF C 15-100</li><li style="padding: 0.25rem 0; color: var(--gray-600); position: relative; padding-left: 1.5rem;"><span style="position: absolute; left: 0; color: var(--primary);">•</span> Garantie décennale</li><li style="padding: 0.25rem 0; color: var(--gray-600); position: relative; padding-left: 1.5rem;"><span style="position: absolute; left: 0; color: var(--primary);">•</span> Matériel Schneider/Legrand</li>
+                  </ul>
+                </div>
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
+                  <div style="font-size: 1.2rem; font-weight: 700; color: var(--primary);">À partir de 85€/h</div>
+                </div>
+                <div style="display: flex; gap: 0.75rem;">
+                  <a href="service-installation-electrique.html" style="flex: 1; text-align: center; padding: 0.75rem; background: var(--primary); color: var(--white); text-decoration: none; border-radius: 0.5rem; font-weight: 600; font-size: 0.9rem;">Détails</a>
+                  <a href="contact.html" style="flex: 1; text-align: center; padding: 0.75rem; background: transparent; color: var(--primary); border: 2px solid var(--primary); text-decoration: none; border-radius: 0.5rem; font-weight: 600; font-size: 0.9rem;">Devis</a>
+                </div>
+              </div>
+            
+              <div style="break-inside: avoid; margin-bottom: 2rem; background: var(--white); padding: 2.5rem; border-radius: 1.5rem; box-shadow: 0 5px 15px rgba(0,0,0,0.08); transition: transform 0.3s ease; ">
+                <div style="font-size: 3rem; margin-bottom: 1.5rem;">🚨</div>
+                <h3 style="font-size: 1.4rem; font-weight: 600; margin-bottom: 1rem; color: var(--primary);">Dépannage Électrique 24h/7j</h3>
+                <p style="color: var(--gray-600); margin-bottom: 1.5rem; line-height: 1.6;">Intervention d'urgence pour panne électrique, disjoncteur, court-circuit</p>
+                <div style="background: var(--gray-50); padding: 1rem; border-radius: 0.75rem; margin-bottom: 1.5rem;">
+                  <div style="font-weight: 600; color: var(--primary); margin-bottom: 0.5rem;">✨ Inclus:</div>
+                  <ul style="list-style: none; padding: 0; margin: 0;">
+                    <li style="padding: 0.25rem 0; color: var(--gray-600); position: relative; padding-left: 1.5rem;"><span style="position: absolute; left: 0; color: var(--primary);">•</span> Intervention 24h/7j</li><li style="padding: 0.25rem 0; color: var(--gray-600); position: relative; padding-left: 1.5rem;"><span style="position: absolute; left: 0; color: var(--primary);">•</span> Déplacement sous 1h</li><li style="padding: 0.25rem 0; color: var(--gray-600); position: relative; padding-left: 1.5rem;"><span style="position: absolute; left: 0; color: var(--primary);">•</span> Diagnostic inclus</li><li style="padding: 0.25rem 0; color: var(--gray-600); position: relative; padding-left: 1.5rem;"><span style="position: absolute; left: 0; color: var(--primary);">•</span> Réparation immédiate</li>
+                  </ul>
+                </div>
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
+                  <div style="font-size: 1.2rem; font-weight: 700; color: var(--primary);">Déplacement 75€ + tarif intervention</div>
+                </div>
+                <div style="display: flex; gap: 0.75rem;">
+                  <a href="service-depannage-urgence.html" style="flex: 1; text-align: center; padding: 0.75rem; background: var(--primary); color: var(--white); text-decoration: none; border-radius: 0.5rem; font-weight: 600; font-size: 0.9rem;">Détails</a>
+                  <a href="contact.html" style="flex: 1; text-align: center; padding: 0.75rem; background: transparent; color: var(--primary); border: 2px solid var(--primary); text-decoration: none; border-radius: 0.5rem; font-weight: 600; font-size: 0.9rem;">Devis</a>
+                </div>
+              </div>
+            
+              <div style="break-inside: avoid; margin-bottom: 2rem; background: var(--white); padding: 2.5rem; border-radius: 1.5rem; box-shadow: 0 5px 15px rgba(0,0,0,0.08); transition: transform 0.3s ease; margin-top: 2rem;">
+                <div style="font-size: 3rem; margin-bottom: 1.5rem;">🏠</div>
+                <h3 style="font-size: 1.4rem; font-weight: 600; margin-bottom: 1rem; color: var(--primary);">Domotique & Maison Connectée</h3>
+                <p style="color: var(--gray-600); margin-bottom: 1.5rem; line-height: 1.6;">Installation de systèmes domotiques intelligents pour optimiser confort et économies</p>
+                <div style="background: var(--gray-50); padding: 1rem; border-radius: 0.75rem; margin-bottom: 1.5rem;">
+                  <div style="font-weight: 600; color: var(--primary); margin-bottom: 0.5rem;">✨ Inclus:</div>
+                  <ul style="list-style: none; padding: 0; margin: 0;">
+                    <li style="padding: 0.25rem 0; color: var(--gray-600); position: relative; padding-left: 1.5rem;"><span style="position: absolute; left: 0; color: var(--primary);">•</span> Système sur-mesure</li><li style="padding: 0.25rem 0; color: var(--gray-600); position: relative; padding-left: 1.5rem;"><span style="position: absolute; left: 0; color: var(--primary);">•</span> Compatible iOS/Android</li><li style="padding: 0.25rem 0; color: var(--gray-600); position: relative; padding-left: 1.5rem;"><span style="position: absolute; left: 0; color: var(--primary);">•</span> Formation incluse</li><li style="padding: 0.25rem 0; color: var(--gray-600); position: relative; padding-left: 1.5rem;"><span style="position: absolute; left: 0; color: var(--primary);">•</span> SAV 2 ans</li>
+                  </ul>
+                </div>
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
+                  <div style="font-size: 1.2rem; font-weight: 700; color: var(--primary);">Sur devis personnalisé</div>
+                </div>
+                <div style="display: flex; gap: 0.75rem;">
+                  <a href="service-domotique-intelligente.html" style="flex: 1; text-align: center; padding: 0.75rem; background: var(--primary); color: var(--white); text-decoration: none; border-radius: 0.5rem; font-weight: 600; font-size: 0.9rem;">Détails</a>
+                  <a href="contact.html" style="flex: 1; text-align: center; padding: 0.75rem; background: transparent; color: var(--primary); border: 2px solid var(--primary); text-decoration: none; border-radius: 0.5rem; font-weight: 600; font-size: 0.9rem;">Devis</a>
+                </div>
+              </div>
+            
+              <div style="break-inside: avoid; margin-bottom: 2rem; background: var(--white); padding: 2.5rem; border-radius: 1.5rem; box-shadow: 0 5px 15px rgba(0,0,0,0.08); transition: transform 0.3s ease; ">
+                <div style="font-size: 3rem; margin-bottom: 1.5rem;">🔌</div>
+                <h3 style="font-size: 1.4rem; font-weight: 600; margin-bottom: 1rem; color: var(--primary);">Borne de Recharge Véhicule Électrique</h3>
+                <p style="color: var(--gray-600); margin-bottom: 1.5rem; line-height: 1.6;">Installation de bornes de recharge pour véhicules électriques et hybrides</p>
+                <div style="background: var(--gray-50); padding: 1rem; border-radius: 0.75rem; margin-bottom: 1.5rem;">
+                  <div style="font-weight: 600; color: var(--primary); margin-bottom: 0.5rem;">✨ Inclus:</div>
+                  <ul style="list-style: none; padding: 0; margin: 0;">
+                    <li style="padding: 0.25rem 0; color: var(--gray-600); position: relative; padding-left: 1.5rem;"><span style="position: absolute; left: 0; color: var(--primary);">•</span> Éligible aides ADVENIR</li><li style="padding: 0.25rem 0; color: var(--gray-600); position: relative; padding-left: 1.5rem;"><span style="position: absolute; left: 0; color: var(--primary);">•</span> Installation certifiée IRVE</li><li style="padding: 0.25rem 0; color: var(--gray-600); position: relative; padding-left: 1.5rem;"><span style="position: absolute; left: 0; color: var(--primary);">•</span> Garantie constructeur</li><li style="padding: 0.25rem 0; color: var(--gray-600); position: relative; padding-left: 1.5rem;"><span style="position: absolute; left: 0; color: var(--primary);">•</span> Maintenance préventive</li>
+                  </ul>
+                </div>
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
+                  <div style="font-size: 1.2rem; font-weight: 700; color: var(--primary);">À partir de 1200€ pose incluse</div>
+                </div>
+                <div style="display: flex; gap: 0.75rem;">
+                  <a href="service-borne-recharge-vehicule.html" style="flex: 1; text-align: center; padding: 0.75rem; background: var(--primary); color: var(--white); text-decoration: none; border-radius: 0.5rem; font-weight: 600; font-size: 0.9rem;">Détails</a>
+                  <a href="contact.html" style="flex: 1; text-align: center; padding: 0.75rem; background: transparent; color: var(--primary); border: 2px solid var(--primary); text-decoration: none; border-radius: 0.5rem; font-weight: 600; font-size: 0.9rem;">Devis</a>
+                </div>
+              </div>
+            
+          </div>
+        </div>
+        
+        <style>
+          @media (max-width: 768px) {
+            .services-masonry [style*="columns: 3"] {
+              columns: 1 !important;
+            }
+          }
+        </style>
+      </section>
+    
+
+    <!-- Section Contact unique -->
+    
+      <section class="contact-floating-form" style="padding: 6rem 0; background: linear-gradient(135deg, var(--gray-900) 0%, var(--primary) 100%); color: var(--white); position: relative;">
+        <div class="container">
+          <div style="text-align: center; margin-bottom: 4rem;">
+            <h2 style="font-size: 2.5rem; font-weight: 700; margin-bottom: 1rem;">Contactez Électricité Expert Pro</h2>
+            <p style="font-size: 1.2rem; opacity: 0.9;">Votre projet nous intéresse</p>
+          </div>
+          
+          <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin: 4rem 0;">
+            <!-- Carte téléphone -->
+            <div style="background: rgba(255,255,255,0.1); padding: 3rem; border-radius: 2rem; text-align: center; backdrop-filter: blur(10px); transition: transform 0.3s ease;" onmouseover="this.style.transform='translateY(-10px) rotate(2deg)'" onmouseout="this.style.transform='translateY(0) rotate(0deg)'">
+              <div style="font-size: 3rem; margin-bottom: 1.5rem;">📞</div>
+              <h3 style="font-size: 1.5rem; font-weight: 600; margin-bottom: 1rem;">Appelez-nous</h3>
+              <a href="tel:01 85 76 32 18" style="color: var(--white); font-size: 1.2rem; font-weight: 600; text-decoration: none;">01 85 76 32 18</a>
+              <p style="opacity: 0.8; margin-top: 0.5rem; font-size: 0.9rem;">Urgences 24h/7j</p>
+            </div>
+            
+            <!-- Carte email -->
+            <div style="background: rgba(255,255,255,0.1); padding: 3rem; border-radius: 2rem; text-align: center; backdrop-filter: blur(10px); transition: transform 0.3s ease;" onmouseover="this.style.transform='translateY(-10px) rotate(-2deg)'" onmouseout="this.style.transform='translateY(0) rotate(0deg)'">
+              <div style="font-size: 3rem; margin-bottom: 1.5rem;">✉️</div>
+              <h3 style="font-size: 1.5rem; font-weight: 600; margin-bottom: 1rem;">Écrivez-nous</h3>
+              <a href="mailto:contact@electricite-expert-pro.fr" style="color: var(--white); font-size: 1.1rem; font-weight: 600; text-decoration: none; word-break: break-all;">contact@electricite-expert-pro.fr</a>
+              <p style="opacity: 0.8; margin-top: 0.5rem; font-size: 0.9rem;">Réponse sous 24h</p>
+            </div>
+            
+            <!-- Carte localisation -->
+            <div style="background: rgba(255,255,255,0.1); padding: 3rem; border-radius: 2rem; text-align: center; backdrop-filter: blur(10px); transition: transform 0.3s ease;" onmouseover="this.style.transform='translateY(-10px) rotate(1deg)'" onmouseout="this.style.transform='translateY(0) rotate(0deg)'">
+              <div style="font-size: 3rem; margin-bottom: 1.5rem;">📍</div>
+              <h3 style="font-size: 1.5rem; font-weight: 600; margin-bottom: 1rem;">Rendez-vous</h3>
+              <p style="font-weight: 600; margin-bottom: 0.5rem;">42 Avenue des Champs-Élysées</p>
+              <p style="opacity: 0.8; font-size: 0.9rem;">Paris 8ème</p>
+            </div>
+          </div>
+          
+          <!-- Formulaire central flottant -->
+          <div style="max-width: 600px; margin: 4rem auto 0; background: var(--white); padding: 3rem; border-radius: 3rem; box-shadow: 0 20px 60px rgba(0,0,0,0.3); transform: translateY(-50px);">
+            <h3 style="color: var(--primary); font-size: 2rem; font-weight: 700; text-align: center; margin-bottom: 2rem;">Demande de devis gratuit</h3>
+            
+            <form style="display: grid; gap: 1.5rem;">
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                <input type="text" placeholder="Votre nom" style="padding: 1rem; border: 2px solid var(--gray-200); border-radius: 1rem; font-size: 1rem; transition: border-color 0.3s ease;" onfocus="this.style.borderColor='var(--primary)'" onblur="this.style.borderColor='var(--gray-200)'">
+                <input type="email" placeholder="Votre email" style="padding: 1rem; border: 2px solid var(--gray-200); border-radius: 1rem; font-size: 1rem; transition: border-color 0.3s ease;" onfocus="this.style.borderColor='var(--primary)'" onblur="this.style.borderColor='var(--gray-200)'">
+              </div>
+              <input type="tel" placeholder="Votre téléphone" style="padding: 1rem; border: 2px solid var(--gray-200); border-radius: 1rem; font-size: 1rem; transition: border-color 0.3s ease;" onfocus="this.style.borderColor='var(--primary)'" onblur="this.style.borderColor='var(--gray-200)'">
+              <select style="padding: 1rem; border: 2px solid var(--gray-200); border-radius: 1rem; font-size: 1rem; background: var(--white); cursor: pointer;">
+                <option value="">Choisissez un service</option>
+                <option value="installation-electrique">Installation Électrique Complète</option><option value="depannage-urgence">Dépannage Électrique 24h/7j</option><option value="domotique-intelligente">Domotique & Maison Connectée</option><option value="borne-recharge-vehicule">Borne de Recharge Véhicule Électrique</option>
+              </select>
+              <textarea placeholder="Décrivez votre projet en détail..." rows="4" style="padding: 1rem; border: 2px solid var(--gray-200); border-radius: 1rem; font-size: 1rem; resize: vertical; transition: border-color 0.3s ease;" onfocus="this.style.borderColor='var(--primary)'" onblur="this.style.borderColor='var(--gray-200)'"></textarea>
+              <button type="submit" style="padding: 1.5rem; background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%); color: var(--white); border: none; border-radius: 1rem; font-size: 1.2rem; font-weight: 600; cursor: pointer; transition: transform 0.3s ease;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">
+                🚀 Envoyer ma demande
+              </button>
+            </form>
+          </div>
+        </div>
+        
+        <style>
+          @media (max-width: 768px) {
+            .contact-floating-form [style*="grid-template-columns: repeat(3, 1fr)"] {
+              grid-template-columns: 1fr !important;
+            }
+            .contact-floating-form [style*="grid-template-columns: 1fr 1fr"] {
+              grid-template-columns: 1fr !important;
+            }
+          }
+        </style>
+      </section>
+    
+
+    <!-- Footer -->
+    <footer class="footer-mega">
+        <div class="container">
+            <div class="footer-content">
+                <h3 class="footer-title">Électricité Expert Pro</h3>
+                <p class="footer-description">
+                    Électricien professionnel depuis plus de 10 ans.<br>
+                    Intervention sur 8 villes.
+                </p>
+                
+                <div class="footer-bottom">
+                    <p class="footer-copyright">
+                        © 2025 Électricité Expert Pro. Tous droits réservés.
+                    </p>
+                    <p class="footer-credits">
+                        Modern Split - <a href="https://claude.ai/code" target="_blank">Claude Code</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    
+    <script>
+        // Navigation mobile
+        const navToggle = document.getElementById('navToggle');
+        const navMenu = document.getElementById('navMenu');
+        
+        if (navToggle && navMenu) {
+            navToggle.addEventListener('click', () => {
+                navToggle.classList.toggle('active');
+                navMenu.classList.toggle('active');
+            });
+            
+            // Fermer le menu au clic sur lien
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.addEventListener('click', () => {
+                    navToggle.classList.remove('active');
+                    navMenu.classList.remove('active');
+                });
+            });
+        }
+        
+        // Animations GSAP si disponible
+        if (typeof gsap !== 'undefined') {
+            gsap.registerPlugin(ScrollTrigger);
+            
+            // Animation des éléments au scroll
+            gsap.utils.toArray('[style*="opacity: 0"]').forEach(element => {
+                gsap.fromTo(element, {
+                    opacity: 0,
+                    y: 30
+                }, {
+                    opacity: 1,
+                    y: 0,
+                    duration: 0.8,
+                    ease: "power2.out",
+                    scrollTrigger: {
+                        trigger: element,
+                        start: "top 80%",
+                        toggleActions: "play none none reverse"
+                    }
+                });
+            });
+        }
+        
+        // Smooth scroll pour les ancres
+        document.querySelectorAll('a[href^="#"]').forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const target = document.querySelector(link.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+        
+        console.log('🚀 Modern Split (Design moderne avec mise en page divisée) loaded successfully!');
+    </script>
+</body>
+</html>

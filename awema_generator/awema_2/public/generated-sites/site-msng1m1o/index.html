@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plomberie Dubois - Plomberie Paris</title>
+    <meta name="description" content="Plomberie professionnelle et dépannage urgent à Paris et région parisienne. Intervention rapide 24h/7j.. Plomberie professionnel à Paris. Contactez Pierre Dubois au 01 23 45 67 89">
+    <meta name="keywords" content="plomberie, dépannage, installation, rénovation, Paris, urgence">
+    
+    <!-- SEO -->
+    <meta property="og:title" content="Plomberie Dubois - Plomberie Paris">
+    <meta property="og:description" content="Plomberie professionnelle et dépannage urgent à Paris et région parisienne. Intervention rapide 24h/7j.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://plomberie-dubois.fr">
+    
+    <!-- Schema.org -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Plomberie Dubois",
+      "description": "Plomberie professionnelle et dépannage urgent à Paris et région parisienne. Intervention rapide 24h/7j.",
+      "telephone": "01 23 45 67 89",
+      "email": "pierre.dubois@plomberie-test.fr",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "123 Rue de la République",
+        "addressLocality": "Paris",
+        "addressCountry": "FR"
+      },
+      "url": "https://plomberie-dubois.fr",
+      "priceRange": "€€",
+      "openingHours": "Lun-Ven 8h-18h, Sam 9h-12h",
+      "areaServed": ["Paris", "Boulogne-Billancourt", "Neuilly-sur-Seine", "Levallois-Perret", "Courbevoie", "Nanterre"]
+    }
+    </script>
+    
+    <style>
+        
+    :root {
+        --primary-color: #2563eb;
+        --secondary-color: #1d4ed8;
+        --text-dark: #1f2937;
+        --text-light: #6b7280;
+        --bg-light: #f9fafb;
+        --white: #ffffff;
+    }
+    
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    body {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        line-height: 1.6;
+        color: var(--text-dark);
+        background: var(--white);
+    }
+    
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+    
+    /* Navigation */
+    .header {
+        background: var(--white);
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+    }
+    
+    .header-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 0;
+    }
+    
+    .logo {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: var(--primary-color);
+        text-decoration: none;
+    }
+    
+    .nav-menu {
+        display: flex;
+        list-style: none;
+        gap: 2rem;
+        align-items: center;
+    }
+    
+    .nav-item {
+        position: relative;
+    }
+    
+    .nav-link {
+        text-decoration: none;
+        color: var(--text-dark);
+        font-weight: 500;
+        padding: 0.5rem 1rem;
+        border-radius: 4px;
+        transition: all 0.3s;
+    }
+    
+    .nav-link:hover {
+        color: var(--primary-color);
+        background: var(--bg-light);
+    }
+    
+    .dropdown {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background: var(--white);
+        box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        border-radius: 8px;
+        padding: 0.5rem 0;
+        min-width: 200px;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-10px);
+        transition: all 0.3s;
+    }
+    
+    .nav-item:hover .dropdown {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+    
+    .dropdown-link {
+        display: block;
+        padding: 0.5rem 1rem;
+        text-decoration: none;
+        color: var(--text-dark);
+        transition: all 0.3s;
+    }
+    
+    .dropdown-link:hover {
+        background: var(--bg-light);
+        color: var(--primary-color);
+    }
+    
+    .header-contact {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+    
+    .contact-item {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        color: var(--text-dark);
+        text-decoration: none;
+        font-weight: 500;
+    }
+    
+    .contact-item:hover {
+        color: var(--primary-color);
+    }
+    
+    .btn {
+        display: inline-block;
+        padding: 0.75rem 1.5rem;
+        background: var(--primary-color);
+        color: var(--white);
+        text-decoration: none;
+        border-radius: 6px;
+        font-weight: 600;
+        transition: all 0.3s;
+        border: none;
+        cursor: pointer;
+    }
+    
+    .btn:hover {
+        background: var(--secondary-color);
+        transform: translateY(-2px);
+    }
+    
+    .btn-secondary {
+        background: transparent;
+        color: var(--primary-color);
+        border: 2px solid var(--primary-color);
+    }
+    
+    .btn-secondary:hover {
+        background: var(--primary-color);
+        color: var(--white);
+    }
+    
+    /* Sections communes */
+    .page-header {
+        background: linear-gradient(135deg, var(--primary-color)15, var(--bg-light));
+        padding: 8rem 0 4rem;
+        text-align: center;
+    }
+    
+    .page-header h1 {
+        font-size: 3rem;
+        font-weight: 800;
+        color: var(--primary-color);
+        margin-bottom: 1rem;
+    }
+    
+    .page-header p {
+        font-size: 1.2rem;
+        color: var(--text-light);
+        max-width: 600px;
+        margin: 0 auto;
+    }
+    
+    .section {
+        padding: 4rem 0;
+    }
+    
+    .section-title {
+        text-align: center;
+        font-size: 2.5rem;
+        color: var(--primary-color);
+        margin-bottom: 3rem;
+    }
+    
+    /* Footer */
+    .footer {
+        background: var(--primary-color);
+        color: var(--white);
+        padding: 3rem 0 1rem;
+        text-align: center;
+    }
+    
+    .footer-content {
+        margin-bottom: 2rem;
+    }
+    
+    .footer h3 {
+        margin-bottom: 1rem;
+        font-size: 1.5rem;
+    }
+    
+    .footer p {
+        opacity: 0.9;
+        margin-bottom: 0.5rem;
+    }
+    
+    .footer-bottom {
+        border-top: 1px solid rgba(255,255,255,0.2);
+        padding-top: 1rem;
+        opacity: 0.8;
+        font-size: 0.9rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .footer-links {
+        display: flex;
+        gap: 1rem;
+    }
+    
+    .footer-links a {
+        color: var(--white);
+        text-decoration: none;
+        opacity: 0.8;
+        transition: opacity 0.3s;
+    }
+    
+    .footer-links a:hover {
+        opacity: 1;
+    }
+    
+    /* Responsive */
+    @media (max-width: 768px) {
+        .nav-menu {
+            display: none;
+        }
+        
+        .page-header h1 {
+            font-size: 2rem;
+        }
+        
+        .header-contact {
+            display: none;
+        }
+        
+        .footer-bottom {
+            flex-direction: column;
+            gap: 1rem;
+        }
+    }
+    
+    /* Animations */
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    
+    .animate-on-scroll {
+        animation: fadeInUp 0.6s ease forwards;
+    }
+  
+        
+        /* Styles spécifiques à la page d'accueil */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-color)15, var(--bg-light));
+            padding: 8rem 0 4rem;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--text-light);
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .hero-actions {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .service-card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .service-card h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+        
+        .service-card p {
+            color: var(--text-light);
+            margin-bottom: 1rem;
+        }
+        
+        .service-price {
+            font-weight: 600;
+            color: var(--secondary-color);
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+        }
+        
+        .zone-intervention {
+            background: var(--bg-light);
+            padding: 4rem 0;
+        }
+        
+        .zones-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+        }
+        
+        .zone-tag {
+            background: var(--primary-color);
+            color: var(--white);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body>
+    
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">
+                    <img src="https://via.placeholder.com/200x80/2563eb/ffffff?text=Plomberie+Dubois" alt="Plomberie Dubois" style="height: 40px;">
+                </a>
+                
+                <nav>
+                    <ul class="nav-menu">
+                        
+                            <li class="nav-item">
+                                <a href="index.html" class="nav-link">Accueil</a>
+                                
+                            </li>
+                        
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">Services</a>
+                                
+                                    <div class="dropdown">
+                                        
+                                            <a href="service-service-depannage.html" class="dropdown-link">Dépannage urgence</a>
+                                        
+                                            <a href="service-service-installation.html" class="dropdown-link">Installation sanitaire</a>
+                                        
+                                            <a href="service-service-renovation.html" class="dropdown-link">Rénovation plomberie</a>
+                                        
+                                    </div>
+                                
+                            </li>
+                        
+                            <li class="nav-item">
+                                <a href="contact.html" class="nav-link">Contact</a>
+                                
+                            </li>
+                        
+                    </ul>
+                </nav>
+                
+                <div class="header-contact">
+                    <a href="tel:01 23 45 67 89" class="contact-item">
+                        <span>📞</span>
+                        <span>01 23 45 67 89</span>
+                    </a>
+                    <a href="contact.html" class="btn">Devis Gratuit</a>
+                </div>
+            </div>
+        </div>
+    </header>
+  
+    
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Plomberie Dubois</h1>
+            <p>Plomberie professionnelle et dépannage urgent à Paris et région parisienne. Intervention rapide 24h/7j.</p>
+            <div class="hero-actions">
+                <a href="tel:01 23 45 67 89" class="btn">📞 Appeler maintenant</a>
+                <a href="contact.html" class="btn btn-secondary">Demander un devis</a>
+            </div>
+            <p style="margin-top: 1rem; font-weight: bold; color: var(--primary-color);">🚨 Service d'urgence 24h/7j</p>
+        </div>
+    </section>
+    
+    <!-- Services Section -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Nos Services</h2>
+            <div class="services-grid">
+                
+                    <div class="service-card">
+                        <h3>Dépannage urgence</h3>
+                        <p>Intervention rapide 24h/7j pour tous vos problèmes de plomberie</p>
+                        <div class="service-price">À partir de 80€</div>
+                        <a href="service-service-depannage.html" class="btn">En savoir plus</a>
+                    </div>
+                
+                    <div class="service-card">
+                        <h3>Installation sanitaire</h3>
+                        <p>Installation complète de salles de bains, cuisines et équipements sanitaires</p>
+                        <div class="service-price">Devis gratuit</div>
+                        <a href="service-service-installation.html" class="btn">En savoir plus</a>
+                    </div>
+                
+                    <div class="service-card">
+                        <h3>Rénovation plomberie</h3>
+                        <p>Rénovation complète de vos installations de plomberie</p>
+                        <div class="service-price">Sur devis</div>
+                        <a href="service-service-renovation.html" class="btn">En savoir plus</a>
+                    </div>
+                
+            </div>
+        </div>
+    </section>
+    
+    <!-- Zone d'intervention -->
+    <section class="zone-intervention">
+        <div class="container">
+            <h2 class="section-title">Zones d'intervention</h2>
+            <p style="text-align: center; margin-bottom: 2rem; color: var(--text-light);">
+                Nous intervenons dans les villes suivantes :
+            </p>
+            <div class="zones-list">
+                
+                    <span class="zone-tag">Paris</span>
+                
+                    <span class="zone-tag">Boulogne-Billancourt</span>
+                
+                    <span class="zone-tag">Neuilly-sur-Seine</span>
+                
+                    <span class="zone-tag">Levallois-Perret</span>
+                
+                    <span class="zone-tag">Courbevoie</span>
+                
+                    <span class="zone-tag">Nanterre</span>
+                
+            </div>
+        </div>
+    </section>
+    
+    <!-- Services par ville -->
+    <section class="section" style="background: var(--bg-light);">
+        <div class="container">
+            <h2 class="section-title">Nos services dans vos villes</h2>
+            <p style="text-align: center; margin-bottom: 3rem; color: var(--text-light);">
+                Découvrez nos services spécialisés pour chaque ville
+            </p>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem;">
+                
+                    <div style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.1);">
+                        <h3 style="color: var(--primary-color); margin-bottom: 1rem;">Dépannage urgence</h3>
+                        <p style="color: var(--text-light); margin-bottom: 1.5rem; font-size: 0.9rem;">Intervention rapide 24h/7j pour tous vos problèmes de plomberie</p>
+                        <div style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
+                            
+                                <a href="service-depannage-paris.html"
+                                   style="background: var(--primary-color); color: white; padding: 0.4rem 0.8rem; border-radius: 20px; text-decoration: none; font-size: 0.8rem; transition: all 0.3s;"
+                                   onmouseover="this.style.background='var(--secondary-color)'"
+                                   onmouseout="this.style.background='var(--primary-color)'">
+                                   Paris
+                                </a>
+                            
+                                <a href="service-depannage-boulogne-billancourt.html"
+                                   style="background: var(--primary-color); color: white; padding: 0.4rem 0.8rem; border-radius: 20px; text-decoration: none; font-size: 0.8rem; transition: all 0.3s;"
+                                   onmouseover="this.style.background='var(--secondary-color)'"
+                                   onmouseout="this.style.background='var(--primary-color)'">
+                                   Boulogne-Billancourt
+                                </a>
+                            
+                                <a href="service-depannage-neuilly-sur-seine.html"
+                                   style="background: var(--primary-color); color: white; padding: 0.4rem 0.8rem; border-radius: 20px; text-decoration: none; font-size: 0.8rem; transition: all 0.3s;"
+                                   onmouseover="this.style.background='var(--secondary-color)'"
+                                   onmouseout="this.style.background='var(--primary-color)'">
+                                   Neuilly-sur-Seine
+                                </a>
+                            
+                                <a href="service-depannage-levallois-perret.html"
+                                   style="background: var(--primary-color); color: white; padding: 0.4rem 0.8rem; border-radius: 20px; text-decoration: none; font-size: 0.8rem; transition: all 0.3s;"
+                                   onmouseover="this.style.background='var(--secondary-color)'"
+                                   onmouseout="this.style.background='var(--primary-color)'">
+                                   Levallois-Perret
+                                </a>
+                            
+                            
+                                <span style="color: var(--text-light); font-size: 0.8rem; padding: 0.4rem 0.8rem;">
+                                    +2 autres...
+                                </span>
+                            
+                        </div>
+                        <a href="service-service-depannage.html" class="btn" style="width: 100%; margin-top: 1rem; font-size: 0.9rem;">
+                            Voir toutes les villes pour Dépannage urgence
+                        </a>
+                    </div>
+                
+                    <div style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.1);">
+                        <h3 style="color: var(--primary-color); margin-bottom: 1rem;">Installation sanitaire</h3>
+                        <p style="color: var(--text-light); margin-bottom: 1.5rem; font-size: 0.9rem;">Installation complète de salles de bains, cuisines et équipements sanitaires</p>
+                        <div style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
+                            
+                                <a href="service-installation-paris.html"
+                                   style="background: var(--primary-color); color: white; padding: 0.4rem 0.8rem; border-radius: 20px; text-decoration: none; font-size: 0.8rem; transition: all 0.3s;"
+                                   onmouseover="this.style.background='var(--secondary-color)'"
+                                   onmouseout="this.style.background='var(--primary-color)'">
+                                   Paris
+                                </a>
+                            
+                                <a href="service-installation-boulogne-billancourt.html"
+                                   style="background: var(--primary-color); color: white; padding: 0.4rem 0.8rem; border-radius: 20px; text-decoration: none; font-size: 0.8rem; transition: all 0.3s;"
+                                   onmouseover="this.style.background='var(--secondary-color)'"
+                                   onmouseout="this.style.background='var(--primary-color)'">
+                                   Boulogne-Billancourt
+                                </a>
+                            
+                                <a href="service-installation-neuilly-sur-seine.html"
+                                   style="background: var(--primary-color); color: white; padding: 0.4rem 0.8rem; border-radius: 20px; text-decoration: none; font-size: 0.8rem; transition: all 0.3s;"
+                                   onmouseover="this.style.background='var(--secondary-color)'"
+                                   onmouseout="this.style.background='var(--primary-color)'">
+                                   Neuilly-sur-Seine
+                                </a>
+                            
+                                <a href="service-installation-levallois-perret.html"
+                                   style="background: var(--primary-color); color: white; padding: 0.4rem 0.8rem; border-radius: 20px; text-decoration: none; font-size: 0.8rem; transition: all 0.3s;"
+                                   onmouseover="this.style.background='var(--secondary-color)'"
+                                   onmouseout="this.style.background='var(--primary-color)'">
+                                   Levallois-Perret
+                                </a>
+                            
+                            
+                                <span style="color: var(--text-light); font-size: 0.8rem; padding: 0.4rem 0.8rem;">
+                                    +2 autres...
+                                </span>
+                            
+                        </div>
+                        <a href="service-service-installation.html" class="btn" style="width: 100%; margin-top: 1rem; font-size: 0.9rem;">
+                            Voir toutes les villes pour Installation sanitaire
+                        </a>
+                    </div>
+                
+            </div>
+            
+                <div style="text-align: center; margin-top: 2rem;">
+                    <p style="color: var(--text-light); margin-bottom: 1rem;">
+                        Et tous nos autres services dans chaque ville
+                    </p>
+                    <a href="#services" class="btn btn-secondary">Voir tous nos services</a>
+                </div>
+            
+        </div>
+    </section>
+    
+    
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <h3>Plomberie Dubois</h3>
+                <p>Plomberie professionnel à Paris</p>
+                <p>📞 01 23 45 67 89 • ✉️ pierre.dubois@plomberie-test.fr</p>
+                <p>📍 123 Rue de la République, Paris</p>
+            </div>
+            <div class="footer-bottom">
+                <div>
+                    <p>&copy; 2025 Plomberie Dubois. Tous droits réservés.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="mentions-legales.html">Mentions légales</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+  
+    
+    <script>
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+        
+        // Animation au scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-on-scroll');
+                }
+            });
+        }, observerOptions);
+        
+        document.querySelectorAll('.service-card').forEach(card => {
+            observer.observe(card);
+        });
+    </script>
+</body>
+</html>

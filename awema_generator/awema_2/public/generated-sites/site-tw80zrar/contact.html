@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - GoGo</title>
+    <meta name="description" content="Contactez GoGo pour vos besoins en Plomberie. Devis gratuit au 0102030405">
+    
+    <style>
+        
+    :root {
+        --primary-color: #2563eb;
+        --secondary-color: #813d9c;
+        --text-dark: #1f2937;
+        --text-light: #6b7280;
+        --bg-light: #f9fafb;
+        --white: #ffffff;
+    }
+    
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    body {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        line-height: 1.6;
+        color: var(--text-dark);
+        background: var(--white);
+    }
+    
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+    
+    /* Navigation */
+    .header {
+        background: var(--white);
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+    }
+    
+    .header-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 0;
+    }
+    
+    .logo {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: var(--primary-color);
+        text-decoration: none;
+    }
+    
+    .nav-menu {
+        display: flex;
+        list-style: none;
+        gap: 2rem;
+        align-items: center;
+    }
+    
+    .nav-item {
+        position: relative;
+    }
+    
+    .nav-link {
+        text-decoration: none;
+        color: var(--text-dark);
+        font-weight: 500;
+        padding: 0.5rem 1rem;
+        border-radius: 4px;
+        transition: all 0.3s;
+    }
+    
+    .nav-link:hover {
+        color: var(--primary-color);
+        background: var(--bg-light);
+    }
+    
+    .dropdown {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background: var(--white);
+        box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        border-radius: 8px;
+        padding: 0.5rem 0;
+        min-width: 200px;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-10px);
+        transition: all 0.3s;
+    }
+    
+    .nav-item:hover .dropdown {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+    
+    .dropdown-link {
+        display: block;
+        padding: 0.5rem 1rem;
+        text-decoration: none;
+        color: var(--text-dark);
+        transition: all 0.3s;
+    }
+    
+    .dropdown-link:hover {
+        background: var(--bg-light);
+        color: var(--primary-color);
+    }
+    
+    .header-contact {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+    
+    .contact-item {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        color: var(--text-dark);
+        text-decoration: none;
+        font-weight: 500;
+    }
+    
+    .contact-item:hover {
+        color: var(--primary-color);
+    }
+    
+    .btn {
+        display: inline-block;
+        padding: 0.75rem 1.5rem;
+        background: var(--primary-color);
+        color: var(--white);
+        text-decoration: none;
+        border-radius: 6px;
+        font-weight: 600;
+        transition: all 0.3s;
+        border: none;
+        cursor: pointer;
+    }
+    
+    .btn:hover {
+        background: var(--secondary-color);
+        transform: translateY(-2px);
+    }
+    
+    .btn-secondary {
+        background: transparent;
+        color: var(--primary-color);
+        border: 2px solid var(--primary-color);
+    }
+    
+    .btn-secondary:hover {
+        background: var(--primary-color);
+        color: var(--white);
+    }
+    
+    /* Sections communes */
+    .page-header {
+        background: linear-gradient(135deg, var(--primary-color)15, var(--bg-light));
+        padding: 8rem 0 4rem;
+        text-align: center;
+    }
+    
+    .page-header h1 {
+        font-size: 3rem;
+        font-weight: 800;
+        color: var(--primary-color);
+        margin-bottom: 1rem;
+    }
+    
+    .page-header p {
+        font-size: 1.2rem;
+        color: var(--text-light);
+        max-width: 600px;
+        margin: 0 auto;
+    }
+    
+    .section {
+        padding: 4rem 0;
+    }
+    
+    .section-title {
+        text-align: center;
+        font-size: 2.5rem;
+        color: var(--primary-color);
+        margin-bottom: 3rem;
+    }
+    
+    /* Footer */
+    .footer {
+        background: var(--primary-color);
+        color: var(--white);
+        padding: 3rem 0 1rem;
+        text-align: center;
+    }
+    
+    .footer-content {
+        margin-bottom: 2rem;
+    }
+    
+    .footer h3 {
+        margin-bottom: 1rem;
+        font-size: 1.5rem;
+    }
+    
+    .footer p {
+        opacity: 0.9;
+        margin-bottom: 0.5rem;
+    }
+    
+    .footer-bottom {
+        border-top: 1px solid rgba(255,255,255,0.2);
+        padding-top: 1rem;
+        opacity: 0.8;
+        font-size: 0.9rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .footer-links {
+        display: flex;
+        gap: 1rem;
+    }
+    
+    .footer-links a {
+        color: var(--white);
+        text-decoration: none;
+        opacity: 0.8;
+        transition: opacity 0.3s;
+    }
+    
+    .footer-links a:hover {
+        opacity: 1;
+    }
+    
+    /* Responsive */
+    @media (max-width: 768px) {
+        .nav-menu {
+            display: none;
+        }
+        
+        .page-header h1 {
+            font-size: 2rem;
+        }
+        
+        .header-contact {
+            display: none;
+        }
+        
+        .footer-bottom {
+            flex-direction: column;
+            gap: 1rem;
+        }
+    }
+    
+    /* Animations */
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    
+    .animate-on-scroll {
+        animation: fadeInUp 0.6s ease forwards;
+    }
+  
+        
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+        }
+        
+        .contact-form {
+            background: var(--bg-light);
+            padding: 2rem;
+            border-radius: 12px;
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            color: var(--text-dark);
+        }
+        
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 1rem;
+            border: 1px solid #d1d5db;
+            border-radius: 6px;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+        }
+        
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--primary-color);
+        }
+        
+        .contact-info {
+            space-y: 2rem;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            padding: 1rem;
+            background: var(--bg-light);
+            border-radius: 8px;
+        }
+        
+        .contact-icon {
+            background: var(--primary-color);
+            color: var(--white);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">
+                    GoGo
+                </a>
+                
+                <nav>
+                    <ul class="nav-menu">
+                        
+                            <li class="nav-item">
+                                <a href="index.html" class="nav-link">Accueil</a>
+                                
+                            </li>
+                        
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">Services</a>
+                                
+                                    <div class="dropdown">
+                                        
+                                            <a href="service-service-fcpaklk49.html" class="dropdown-link">Création de salle de bains</a>
+                                        
+                                    </div>
+                                
+                            </li>
+                        
+                            <li class="nav-item">
+                                <a href="contact.html" class="nav-link">Contact</a>
+                                
+                            </li>
+                        
+                    </ul>
+                </nav>
+                
+                <div class="header-contact">
+                    <a href="tel:0102030405" class="contact-item">
+                        <span>📞</span>
+                        <span>0102030405</span>
+                    </a>
+                    <a href="contact.html" class="btn">Devis Gratuit</a>
+                </div>
+            </div>
+        </div>
+    </header>
+  
+    
+    <section class="page-header">
+        <div class="container">
+            <h1>Contactez-nous</h1>
+            <p>Demandez votre devis gratuit et sans engagement</p>
+        </div>
+    </section>
+    
+    <section class="section">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-form">
+                    <h3>Demande de devis gratuit</h3>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Nom complet *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Téléphone</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                        <div class="form-group">
+                            <label for="service">Service souhaité</label>
+                            <select id="service" name="service">
+                                <option value="">Choisir un service</option>
+                                
+                                    <option value="Création de salle de bains">Création de salle de bains</option>
+                                
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="city">Ville d'intervention</label>
+                            <select id="city" name="city">
+                                <option value="">Choisir une ville</option>
+                                
+                                    <option value="Aix">Aix</option>
+                                
+                                    <option value="Marseille">Marseille</option>
+                                
+                                    <option value="Pertuis">Pertuis</option>
+                                
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Description de votre projet *</label>
+                            <textarea id="message" name="message" rows="4" required></textarea>
+                        </div>
+                        <button type="submit" class="btn" style="width: 100%;">Envoyer ma demande</button>
+                    </form>
+                </div>
+                
+                <div class="contact-info">
+                    <h3>Informations de contact</h3>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">📞</div>
+                        <div>
+                            <strong>Téléphone</strong><br>
+                            <a href="tel:0102030405" style="color: inherit;">0102030405</a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">✉️</div>
+                        <div>
+                            <strong>Email</strong><br>
+                            <a href="mailto:GoGo@contact.pro" style="color: inherit;">GoGo@contact.pro</a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">📍</div>
+                        <div>
+                            <strong>Adresse</strong><br>
+                            019823<br>
+                            Melaux
+                        </div>
+                    </div>
+                    
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">⏰</div>
+                        <div>
+                            <strong>Horaires</strong><br>
+                            Lun-Ven 9h-18h
+                        </div>
+                    </div>
+                    
+                    
+                    <div class="contact-item" style="background: var(--primary-color); color: var(--white);">
+                        <div class="contact-icon" style="background: var(--white); color: var(--primary-color);">🏢</div>
+                        <div>
+                            <strong>Zones d'intervention</strong><br>
+                            Aix, Marseille, Pertuis
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <h3>GoGo</h3>
+                <p>Plomberie professionnel à Melaux</p>
+                <p>📞 0102030405 • ✉️ GoGo@contact.pro</p>
+                <p>📍 019823, Melaux</p>
+            </div>
+            <div class="footer-bottom">
+                <div>
+                    <p>&copy; 2025 GoGo. Tous droits réservés.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="mentions-legales.html">Mentions légales</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+  
+    
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const formData = new FormData(this);
+            const data = {
+                name: formData.get('name'),
+                email: formData.get('email'),
+                phone: formData.get('phone'),
+                service: formData.get('service'),
+                city: formData.get('city'),
+                message: formData.get('message'),
+                company: 'GoGo',
+                contactEmail: 'GoGo@contact.pro'
+            };
+            
+            const subject = encodeURIComponent('Demande de devis - ' + data.name);
+            const body = encodeURIComponent(
+                'Nom: ' + data.name + '\n' +
+                'Email: ' + data.email + '\n' +
+                'Téléphone: ' + (data.phone || 'Non renseigné') + '\n' +
+                'Service: ' + (data.service || 'Non spécifié') + '\n' +
+                'Ville: ' + (data.city || 'Non spécifiée') + '\n\n' +
+                'Message: ' + data.message
+            );
+            
+            window.location.href = 'mailto:GoGo@contact.pro?subject=' + subject + '&body=' + body;
+            alert('Merci pour votre demande ! Votre client email va s'ouvrir pour finaliser l'envoi.');
+            this.reset();
+        });
+    </script>
+</body>
+</html>

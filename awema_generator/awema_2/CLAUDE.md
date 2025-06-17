@@ -1,0 +1,1 @@
+- Créer un fichier de suivi pour reprendre le travail demain, noter l'état actuel du projet et les prochaines étapes

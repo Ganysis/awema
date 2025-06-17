@@ -1,0 +1,838 @@
+<!DOCTYPE html>
+<html lang="fr" class="no-js">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ÉlectroMax Pro - Électricien professionnel à Toulouse</title>
+    <meta name="description" content="Électricien expert à Toulouse, spécialisé dans l'installation, dépannage et rénovation électrique avec plus de 15 ans d'expérience.">
+    <meta name="keywords" content="Électricien Toulouse, électricien professionnel, devis gratuit électricien">
+    
+    <!-- Schema.org LocalBusiness -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "ÉlectroMax Pro",
+      "description": "Électricien expert à Toulouse, spécialisé dans l'installation, dépannage et rénovation électrique avec plus de 15 ans d'expérience.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "25 Avenue Jean Jaurès",
+        "addressLocality": "Toulouse",
+        "addressCountry": "FR"
+      },
+      "telephone": "05 61 23 45 67",
+      "email": "contact@electromax-pro.fr",
+      "url": "https://electromax-pro.fr",
+      "priceRange": "€€",
+      "serviceArea": "Toulouse",
+      "openingHours": "Lundi-Vendredi 8h-19h, Samedi 9h-17h, Urgences 24h/7j"
+    }
+    </script>
+    
+    <style>
+    :root {
+      --primary: #1e40af;
+      --secondary: #3b82f6;
+      --white: #ffffff;
+      --gray-50: #f8fafc;
+      --gray-100: #f1f5f9;
+      --gray-200: #e2e8f0;
+      --gray-600: #475569;
+      --gray-700: #334155;
+      --gray-800: #1e293b;
+      --gray-900: #0f172a;
+    }
+    
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      line-height: 1.6;
+      color: var(--gray-800);
+      overflow-x: hidden;
+    }
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 clamp(1rem, 3vw, 2rem);
+    }
+    
+    /* Navigation Divi-style */
+    .divi-nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      background: rgba(255, 255, 255, 0.98);
+      backdrop-filter: blur(10px);
+      z-index: 1000;
+      padding: 1rem 0;
+      box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+      transition: all 0.3s ease;
+    }
+    
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .nav-logo {
+      font-size: clamp(1.5rem, 3vw, 2rem);
+      font-weight: 800;
+      color: var(--primary);
+      text-decoration: none;
+    }
+    
+    .nav-menu {
+      display: flex;
+      list-style: none;
+      gap: clamp(1.5rem, 3vw, 3rem);
+    }
+    
+    .nav-link {
+      color: var(--gray-700);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: clamp(0.9rem, 2vw, 1rem);
+      padding: 0.5rem 1rem;
+      border-radius: 0.5rem;
+      transition: all 0.3s ease;
+    }
+    
+    .nav-link:hover, .nav-link.active {
+      color: var(--primary);
+      background: var(--gray-50);
+    }
+    
+    .nav-cta {
+      background: var(--primary);
+      color: var(--white);
+      padding: clamp(0.75rem, 2vw, 1rem) clamp(1.5rem, 3vw, 2rem);
+      border-radius: 0.5rem;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: clamp(0.9rem, 2vw, 1rem);
+      transition: all 0.3s ease;
+    }
+    
+    .nav-cta:hover {
+      background: var(--secondary);
+      transform: translateY(-2px);
+    }
+    
+    .nav-toggle {
+      display: none;
+      flex-direction: column;
+      gap: 4px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0.5rem;
+    }
+    
+    .nav-toggle span {
+      width: 25px;
+      height: 3px;
+      background: var(--gray-700);
+      transition: all 0.3s ease;
+    }
+    
+    /* Hero Section Divi Construction Style */
+    .hero-construction {
+      min-height: 100vh;
+      background: linear-gradient(135deg, var(--gray-900) 0%, var(--gray-800) 100%);
+      position: relative;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+    }
+    
+    .hero-bg-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url('https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?w=1920&h=1080&fit=crop') center/cover;
+      opacity: 0.2;
+      z-index: 1;
+    }
+    
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      color: var(--white);
+    }
+    
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: clamp(3rem, 6vw, 6rem);
+      align-items: center;
+    }
+    
+    .hero-badge {
+      background: var(--primary);
+      color: var(--white);
+      padding: 0.75rem 2rem;
+      border-radius: 3rem;
+      display: inline-block;
+      font-weight: 700;
+      font-size: clamp(0.9rem, 2vw, 1rem);
+      margin-bottom: 2rem;
+    }
+    
+    .hero-title {
+      font-size: clamp(2.5rem, 6vw, 4.5rem);
+      font-weight: 900;
+      line-height: 1.1;
+      margin-bottom: 2rem;
+    }
+    
+    .hero-subtitle {
+      font-size: clamp(1.2rem, 3vw, 1.8rem);
+      font-weight: 300;
+      margin-bottom: 1.5rem;
+      opacity: 0.9;
+    }
+    
+    .hero-description {
+      font-size: clamp(1rem, 2vw, 1.2rem);
+      margin-bottom: 3rem;
+      opacity: 0.8;
+      line-height: 1.7;
+    }
+    
+    .hero-stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      margin: 3rem 0;
+    }
+    
+    .stat-item {
+      text-align: center;
+      padding: 1.5rem;
+      background: rgba(255,255,255,0.1);
+      border-radius: 1rem;
+      backdrop-filter: blur(10px);
+    }
+    
+    .stat-number {
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 900;
+      color: var(--primary);
+      margin-bottom: 0.5rem;
+    }
+    
+    .stat-label {
+      font-size: clamp(0.9rem, 2vw, 1rem);
+      opacity: 0.8;
+    }
+    
+    .hero-cta-group {
+      display: flex;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+    
+    .btn-primary {
+      background: var(--primary);
+      color: var(--white);
+      padding: clamp(1rem, 2vw, 1.5rem) clamp(2rem, 4vw, 3rem);
+      border-radius: 0.75rem;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: clamp(1rem, 2vw, 1.2rem);
+      transition: all 0.3s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    
+    .btn-primary:hover {
+      background: var(--secondary);
+      transform: translateY(-3px);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    }
+    
+    .btn-secondary {
+      background: transparent;
+      color: var(--white);
+      border: 2px solid var(--white);
+      padding: clamp(1rem, 2vw, 1.5rem) clamp(2rem, 4vw, 3rem);
+      border-radius: 0.75rem;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: clamp(1rem, 2vw, 1.2rem);
+      transition: all 0.3s ease;
+    }
+    
+    .btn-secondary:hover {
+      background: var(--white);
+      color: var(--primary);
+    }
+    
+    .hero-visual {
+      position: relative;
+    }
+    
+    .hero-card {
+      background: rgba(255,255,255,0.15);
+      padding: clamp(2rem, 4vw, 3rem);
+      border-radius: 2rem;
+      backdrop-filter: blur(15px);
+      border: 1px solid rgba(255,255,255,0.2);
+    }
+    
+    .hero-card img {
+      width: 100%;
+      border-radius: 1rem;
+      margin-bottom: 1.5rem;
+    }
+    
+    .hero-card h3 {
+      font-size: clamp(1.3rem, 3vw, 1.8rem);
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+    
+    .hero-card p {
+      opacity: 0.9;
+      font-size: clamp(1rem, 2vw, 1.1rem);
+    }
+    
+    /* Services Section */
+    .services-showcase {
+      padding: clamp(4rem, 8vw, 8rem) 0;
+      background: var(--gray-50);
+    }
+    
+    .section-header {
+      text-align: center;
+      margin-bottom: clamp(3rem, 6vw, 5rem);
+    }
+    
+    .section-badge {
+      background: var(--primary);
+      color: var(--white);
+      padding: 0.5rem 1.5rem;
+      border-radius: 2rem;
+      font-weight: 600;
+      font-size: clamp(0.9rem, 2vw, 1rem);
+      margin-bottom: 1rem;
+      display: inline-block;
+    }
+    
+    .section-title {
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      font-weight: 900;
+      margin-bottom: 1.5rem;
+      color: var(--gray-900);
+    }
+    
+    .section-description {
+      font-size: clamp(1.1rem, 2vw, 1.3rem);
+      color: var(--gray-600);
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: clamp(2rem, 4vw, 3rem);
+    }
+    
+    .service-card {
+      background: var(--white);
+      border-radius: 1.5rem;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      transition: all 0.3s ease;
+    }
+    
+    .service-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+    }
+    
+    .service-image {
+      height: 250px;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--white);
+    }
+    
+    .service-icon {
+      font-size: 4rem;
+      margin-bottom: 1rem;
+    }
+    
+    .service-overlay {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      background: rgba(255,255,255,0.2);
+      padding: 0.5rem 1rem;
+      border-radius: 2rem;
+      font-weight: 600;
+      backdrop-filter: blur(10px);
+    }
+    
+    .service-content {
+      padding: clamp(1.5rem, 3vw, 2.5rem);
+    }
+    
+    .service-title {
+      font-size: clamp(1.3rem, 3vw, 1.6rem);
+      font-weight: 700;
+      margin-bottom: 1rem;
+      color: var(--gray-900);
+    }
+    
+    .service-description {
+      color: var(--gray-600);
+      margin-bottom: 2rem;
+      line-height: 1.7;
+    }
+    
+    .service-features {
+      margin-bottom: 2rem;
+    }
+    
+    .feature-item {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 0.75rem;
+      font-size: clamp(0.9rem, 2vw, 1rem);
+    }
+    
+    .feature-check {
+      width: 20px;
+      height: 20px;
+      background: var(--primary);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--white);
+      font-size: 0.75rem;
+      font-weight: bold;
+    }
+    
+    .service-price {
+      background: var(--gray-50);
+      padding: 1.5rem;
+      border-radius: 1rem;
+      margin-bottom: 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .price-label {
+      color: var(--gray-600);
+      font-size: clamp(0.9rem, 2vw, 1rem);
+    }
+    
+    .price-value {
+      font-size: clamp(1.3rem, 3vw, 1.8rem);
+      font-weight: 900;
+      color: var(--primary);
+    }
+    
+    .service-cta {
+      background: var(--primary);
+      color: var(--white);
+      padding: 1rem 2rem;
+      border-radius: 0.75rem;
+      text-decoration: none;
+      font-weight: 600;
+      text-align: center;
+      display: block;
+      transition: all 0.3s ease;
+    }
+    
+    .service-cta:hover {
+      background: var(--secondary);
+      transform: translateY(-2px);
+    }
+    
+    /* Footer */
+    .footer-professional {
+      background: var(--gray-900);
+      color: var(--white);
+      padding: clamp(3rem, 6vw, 5rem) 0 clamp(1rem, 2vw, 2rem);
+    }
+    
+    .footer-content {
+      text-align: center;
+    }
+    
+    .footer-title {
+      font-size: clamp(1.5rem, 3vw, 2rem);
+      font-weight: 700;
+      margin-bottom: 1rem;
+      color: var(--primary);
+    }
+    
+    .footer-description {
+      opacity: 0.8;
+      margin-bottom: 2rem;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.1);
+      padding-top: 2rem;
+      margin-top: 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    
+    .footer-copyright {
+      opacity: 0.6;
+    }
+    
+    .footer-credits a {
+      color: var(--primary);
+      text-decoration: none;
+    }
+    
+    /* Responsive */
+    @media (max-width: 768px) {
+      .nav-menu {
+        position: fixed;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: var(--white);
+        flex-direction: column;
+        padding: 2rem;
+        box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        transform: translateY(-100%);
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+      }
+      
+      .nav-menu.active {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+      }
+      
+      .nav-toggle {
+        display: flex;
+      }
+      
+      .hero-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+      
+      .hero-stats {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+      }
+      
+      .hero-cta-group {
+        justify-content: center;
+      }
+      
+      .services-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .hero-cta-group {
+        flex-direction: column;
+        align-items: center;
+      }
+      
+      .btn-primary, .btn-secondary {
+        width: 100%;
+        text-align: center;
+      }
+    }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="divi-nav">
+        <div class="container">
+            <div class="nav-container">
+                <a href="index.html" class="nav-logo">ÉlectroMax Pro</a>
+                <button class="nav-toggle" id="navToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html" class="nav-link active">Accueil</a></li>
+                    <li><a href="services.html" class="nav-link">Services</a></li>
+                    <li><a href="a-propos.html" class="nav-link">À propos</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                    <li><a href="tel:05 61 23 45 67" class="nav-cta">📞 05 61 23 45 67</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-construction">
+        <div class="hero-bg-overlay"></div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-grid">
+                    <div>
+                        <span class="hero-badge">🏗️ Électricien Expert Certifié</span>
+                        <h1 class="hero-title">ÉlectroMax Pro</h1>
+                        <h2 class="hero-subtitle">Excellence électricien à Toulouse</h2>
+                        <p class="hero-description">Électricien expert à Toulouse, spécialisé dans l'installation, dépannage et rénovation électrique avec plus de 15 ans d'expérience.</p>
+                        
+                        <div class="hero-stats">
+                            <div class="stat-item">
+                                <div class="stat-number">15+</div>
+                                <div class="stat-label">Années d'expérience</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">500+</div>
+                                <div class="stat-label">Projets réalisés</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">24h/7j</div>
+                                <div class="stat-label">Service urgence</div>
+                            </div>
+                        </div>
+                        
+                        <div class="hero-cta-group">
+                            <a href="contact.html" class="btn-primary">
+                                📋 Devis gratuit
+                            </a>
+                            <a href="tel:05 61 23 45 67" class="btn-secondary">
+                                📞 Appeler maintenant
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="hero-visual">
+                        <div class="hero-card">
+                            <img src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=400&h=300&fit=crop" alt="Électricien professionnel">
+                            <h3>Expert certifié RGE</h3>
+                            <p>Qualifications professionnelles et garanties complètes pour tous vos projets électricien.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services-showcase">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">🔧 Nos Spécialités</span>
+                <h2 class="section-title">Services Électricien Professionnels</h2>
+                <p class="section-description">
+                    Solutions complètes et sur-mesure pour tous vos besoins électricien à Toulouse et région
+                </p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-image">
+                        <div>
+                            <div class="service-icon">⚡</div>
+                            <h3>Installation</h3>
+                        </div>
+                        <div class="service-overlay">Premium</div>
+                    </div>
+                    <div class="service-content">
+                        <h3 class="service-title">Installation Électricien Complète</h3>
+                        <p class="service-description">
+                            Installation professionnelle aux normes avec matériel de qualité et garantie décennale incluse.
+                        </p>
+                        <div class="service-features">
+                            <div class="feature-item">
+                                <span class="feature-check">✓</span>
+                                <span>Devis gratuit et détaillé</span>
+                            </div>
+                            <div class="feature-item">
+                                <span class="feature-check">✓</span>
+                                <span>Normes professionnelles</span>
+                            </div>
+                            <div class="feature-item">
+                                <span class="feature-check">✓</span>
+                                <span>Garantie décennale</span>
+                            </div>
+                            <div class="feature-item">
+                                <span class="feature-check">✓</span>
+                                <span>Matériel premium</span>
+                            </div>
+                        </div>
+                        <div class="service-price">
+                            <span class="price-label">À partir de</span>
+                            <span class="price-value">85€/h</span>
+                        </div>
+                        <a href="services.html" class="service-cta">Voir les détails</a>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-image">
+                        <div>
+                            <div class="service-icon">🚨</div>
+                            <h3>Dépannage</h3>
+                        </div>
+                        <div class="service-overlay">24h/7j</div>
+                    </div>
+                    <div class="service-content">
+                        <h3 class="service-title">Dépannage Électricien Urgence</h3>
+                        <p class="service-description">
+                            Intervention d'urgence 24h/7j pour toute panne ou problème technique nécessitant une solution rapide.
+                        </p>
+                        <div class="service-features">
+                            <div class="feature-item">
+                                <span class="feature-check">✓</span>
+                                <span>Intervention sous 1h</span>
+                            </div>
+                            <div class="feature-item">
+                                <span class="feature-check">✓</span>
+                                <span>Diagnostic gratuit</span>
+                            </div>
+                            <div class="feature-item">
+                                <span class="feature-check">✓</span>
+                                <span>Disponible 24h/7j</span>
+                            </div>
+                            <div class="feature-item">
+                                <span class="feature-check">✓</span>
+                                <span>Pièces détachées</span>
+                            </div>
+                        </div>
+                        <div class="service-price">
+                            <span class="price-label">Déplacement</span>
+                            <span class="price-value">75€</span>
+                        </div>
+                        <a href="tel:05 61 23 45 67" class="service-cta">Appeler maintenant</a>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-image">
+                        <div>
+                            <div class="service-icon">🏠</div>
+                            <h3>Rénovation</h3>
+                        </div>
+                        <div class="service-overlay">Sur mesure</div>
+                    </div>
+                    <div class="service-content">
+                        <h3 class="service-title">Rénovation & Mise aux Normes</h3>
+                        <p class="service-description">
+                            Rénovation complète et mise aux normes de vos installations avec solutions modernes et efficaces.
+                        </p>
+                        <div class="service-features">
+                            <div class="feature-item">
+                                <span class="feature-check">✓</span>
+                                <span>Étude personnalisée</span>
+                            </div>
+                            <div class="feature-item">
+                                <span class="feature-check">✓</span>
+                                <span>Conformité CONSUEL</span>
+                            </div>
+                            <div class="feature-item">
+                                <span class="feature-check">✓</span>
+                                <span>Solutions modernes</span>
+                            </div>
+                            <div class="feature-item">
+                                <span class="feature-check">✓</span>
+                                <span>Financement possible</span>
+                            </div>
+                        </div>
+                        <div class="service-price">
+                            <span class="price-label">Sur devis</span>
+                            <span class="price-value">Gratuit</span>
+                        </div>
+                        <a href="contact.html" class="service-cta">Demander un devis</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-professional">
+        <div class="container">
+            <div class="footer-content">
+                <h3 class="footer-title">ÉlectroMax Pro</h3>
+                <p class="footer-description">
+                    Électricien professionnel depuis plus de 15 ans. Excellence, qualité et satisfaction client garanties.
+                </p>
+                
+                <div class="footer-bottom">
+                    <p class="footer-copyright">
+                        © 2025 ÉlectroMax Pro. Tous droits réservés.
+                    </p>
+                    <p class="footer-credits">
+                        Design Divi Construction - <a href="https://claude.ai/code" target="_blank">Claude Code</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Navigation mobile
+        const navToggle = document.getElementById('navToggle');
+        const navMenu = document.getElementById('navMenu');
+        
+        if (navToggle && navMenu) {
+            navToggle.addEventListener('click', () => {
+                navToggle.classList.toggle('active');
+                navMenu.classList.toggle('active');
+            });
+            
+            // Fermer le menu au clic sur lien
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.addEventListener('click', () => {
+                    navToggle.classList.remove('active');
+                    navMenu.classList.remove('active');
+                });
+            });
+        }
+        
+        // Smooth scroll pour les ancres
+        document.querySelectorAll('a[href^="#"]').forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const target = document.querySelector(link.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+        
+        console.log('🏗️ Divi Construction Professional homepage loaded successfully!');
+    </script>
+</body>
+</html>

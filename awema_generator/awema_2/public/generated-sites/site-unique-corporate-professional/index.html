@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html lang="fr" class="no-js">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Électricité Expert Pro - Électricien professionnel à Paris 8ème</title>
+    <meta name="description" content="Spécialiste en installations électriques haute performance, domotique intelligente et solutions énergétiques durables. Expert certifié RGE avec plus de 15 ans d'expérience.">
+    <meta name="keywords" content="Électricien Paris 8ème, installation électrique, dépannage électricien urgence, devis gratuit">
+    
+    <!-- Meta tags OpenGraph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Électricité Expert Pro - Électricien professionnel">
+    <meta property="og:description" content="Spécialiste en installations électriques haute performance, domotique intelligente et solutions énergétiques durables. Expert certifié RGE avec plus de 15 ans d'expérience.">
+    <meta property="og:url" content="https://electricite-expert-pro.fr">
+    
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Électricité Expert Pro",
+      "description": "Spécialiste en installations électriques haute performance, domotique intelligente et solutions énergétiques durables. Expert certifié RGE avec plus de 15 ans d'expérience.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "42 Avenue des Champs-Élysées",
+        "addressLocality": "Paris 8ème",
+        "addressCountry": "FR"
+      },
+      "telephone": "01 85 76 32 18",
+      "email": "contact@electricite-expert-pro.fr",
+      "url": "https://electricite-expert-pro.fr",
+      "priceRange": "€€",
+      "openingHours": "Lundi-Vendredi 8h-19h, Samedi 9h-17h, Urgences 24h/7j"
+    }
+    </script>
+    
+    <!-- Fonts et CSS -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"></noscript>
+    
+    <style>
+        
+    :root {
+      --primary: #059669;
+      --secondary: #10b981;
+      --white: #ffffff;
+      --gray-50: #f9fafb;
+      --gray-100: #f3f4f6;
+      --gray-200: #e5e7eb;
+      --gray-600: #4b5563;
+      --gray-700: #374151;
+      --gray-800: #1f2937;
+      --gray-900: #111827;
+      --success: #10b981;
+      --warning: #f59e0b;
+    }
+    
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      line-height: 1.6;
+      color: var(--gray-800);
+    }
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+    
+    /* Navigation responsive */
+    .elementor-nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      z-index: 1000;
+      padding: 1rem 0;
+      transition: all 0.3s ease;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .nav-logo {
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: var(--primary);
+      text-decoration: none;
+    }
+    
+    .nav-menu {
+      display: flex;
+      list-style: none;
+      gap: 2rem;
+    }
+    
+    .nav-link {
+      color: var(--gray-800);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+    
+    .nav-link:hover, .nav-link.active {
+      color: var(--primary);
+    }
+    
+    .nav-toggle {
+      display: none;
+      flex-direction: column;
+      gap: 4px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0.5rem;
+    }
+    
+    .nav-toggle span {
+      width: 25px;
+      height: 3px;
+      background: var(--gray-800);
+      transition: all 0.3s ease;
+    }
+    
+    .nav-toggle.active span:nth-child(1) {
+      transform: translateY(7px) rotate(45deg);
+    }
+    
+    .nav-toggle.active span:nth-child(2) {
+      opacity: 0;
+    }
+    
+    .nav-toggle.active span:nth-child(3) {
+      transform: translateY(-7px) rotate(-45deg);
+    }
+    
+    /* Footer */
+    .footer-mega {
+      background: var(--gray-900);
+      color: var(--white);
+      padding: 3rem 0 1rem;
+    }
+    
+    .footer-content {
+      text-align: center;
+    }
+    
+    .footer-title {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+    
+    .footer-description {
+      opacity: 0.8;
+      margin-bottom: 2rem;
+    }
+    
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.1);
+      padding-top: 2rem;
+      margin-top: 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .footer-copyright {
+      opacity: 0.6;
+    }
+    
+    .footer-credits a {
+      color: var(--white);
+    }
+    
+    /* Responsive */
+    @media (max-width: 768px) {
+      .nav-menu {
+        position: fixed;
+        top: 80px;
+        left: 0;
+        right: 0;
+        background: var(--white);
+        flex-direction: column;
+        padding: 2rem;
+        box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        transform: translateY(-100%);
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+      }
+      
+      .nav-menu.active {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+      }
+      
+      .nav-toggle {
+        display: flex;
+      }
+      
+      .footer-bottom {
+        flex-direction: column;
+        gap: 1rem;
+      }
+    }
+  
+    </style>
+</head>
+
+<body class="elementor-pro-page corporate">
+    <!-- Navigation responsive -->
+    <nav class="elementor-nav">
+        <div class="container">
+            <div class="nav-container">
+                <a href="index.html" class="nav-logo">Électricité Expert Pro</a>
+                <button class="nav-toggle" id="navToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="#accueil" class="nav-link">Accueil</a></li>
+                    <li><a href="#services" class="nav-link">Services</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                    <li><a href="mentions-legales.html" class="nav-link">Mentions légales</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Section Hero unique -->
+    
+      <section class="hero-timeline-process" style="min-height: 100vh; background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%); display: flex; align-items: center; color: var(--white);">
+        <div class="container">
+          <div style="text-align: center; margin-bottom: 4rem;">
+            <h1 style="font-size: 3.5rem; font-weight: 800; margin-bottom: 1rem;">Électricité Expert Pro</h1>
+            <p style="font-size: 1.5rem; opacity: 0.9; margin-bottom: 0.5rem;">Électricien professionnel à Paris 8ème</p>
+            <p style="font-size: 1.1rem; opacity: 0.8; max-width: 600px; margin: 0 auto;">Spécialiste en installations électriques haute performance, domotique intelligente et solutions énergétiques durables. Expert certifié RGE avec plus de 15 ans d'expérience.</p>
+          </div>
+          
+          <!-- Timeline horizontale -->
+          <div style="position: relative; margin: 4rem 0;">
+            <div style="position: absolute; top: 50%; left: 10%; right: 10%; height: 4px; background: rgba(255,255,255,0.3); transform: translateY(-50%);"></div>
+            
+            <div style="display: flex; justify-content: space-between; padding: 0 10%; position: relative; z-index: 2;">
+              <div style="background: rgba(255,255,255,0.15); padding: 2rem; border-radius: 1rem; width: 200px; text-align: center; backdrop-filter: blur(10px); position: relative;">
+                <div style="position: absolute; bottom: -20px; left: 50%; transform: translateX(-50%); width: 40px; height: 40px; background: var(--white); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--primary); font-weight: bold;">1</div>
+                <div style="font-size: 2rem; margin-bottom: 1rem;">📞</div>
+                <h3 style="font-size: 1.2rem; font-weight: 600; margin-bottom: 0.5rem;">Contact</h3>
+                <p style="font-size: 0.9rem; opacity: 0.8;">Appelez-nous ou remplissez le formulaire</p>
+              </div>
+              
+              <div style="background: rgba(255,255,255,0.15); padding: 2rem; border-radius: 1rem; width: 200px; text-align: center; backdrop-filter: blur(10px); position: relative;">
+                <div style="position: absolute; bottom: -20px; left: 50%; transform: translateX(-50%); width: 40px; height: 40px; background: var(--white); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--primary); font-weight: bold;">2</div>
+                <div style="font-size: 2rem; margin-bottom: 1rem;">📋</div>
+                <h3 style="font-size: 1.2rem; font-weight: 600; margin-bottom: 0.5rem;">Devis</h3>
+                <p style="font-size: 0.9rem; opacity: 0.8;">Évaluation gratuite et devis détaillé</p>
+              </div>
+              
+              <div style="background: rgba(255,255,255,0.15); padding: 2rem; border-radius: 1rem; width: 200px; text-align: center; backdrop-filter: blur(10px); position: relative;">
+                <div style="position: absolute; bottom: -20px; left: 50%; transform: translateX(-50%); width: 40px; height: 40px; background: var(--white); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--primary); font-weight: bold;">3</div>
+                <div style="font-size: 2rem; margin-bottom: 1rem;">🔧</div>
+                <h3 style="font-size: 1.2rem; font-weight: 600; margin-bottom: 0.5rem;">Intervention</h3>
+                <p style="font-size: 0.9rem; opacity: 0.8;">Réalisation professionnelle</p>
+              </div>
+              
+              <div style="background: rgba(255,255,255,0.15); padding: 2rem; border-radius: 1rem; width: 200px; text-align: center; backdrop-filter: blur(10px); position: relative;">
+                <div style="position: absolute; bottom: -20px; left: 50%; transform: translateX(-50%); width: 40px; height: 40px; background: var(--white); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--primary); font-weight: bold;">4</div>
+                <div style="font-size: 2rem; margin-bottom: 1rem;">✅</div>
+                <h3 style="font-size: 1.2rem; font-weight: 600; margin-bottom: 0.5rem;">Garantie</h3>
+                <p style="font-size: 0.9rem; opacity: 0.8;">Suivi et service après-vente</p>
+              </div>
+            </div>
+          </div>
+          
+          <div style="text-align: center; margin-top: 4rem;">
+            <a href="contact.html" style="display: inline-block; padding: 1.25rem 3rem; background: var(--white); color: var(--primary); text-decoration: none; border-radius: 3rem; font-weight: 600; font-size: 1.1rem;">🚀 Commencer maintenant</a>
+          </div>
+        </div>
+      </section>
+    
+
+    <!-- Section Services unique -->
+    
+      <section class="services-accordion" style="padding: 6rem 0; background: var(--gray-50);">
+        <div class="container">
+          <div style="text-align: center; margin-bottom: 4rem;">
+            <h2 style="font-size: 2.5rem; font-weight: 700; margin-bottom: 1rem; color: var(--primary);">Services Électricien Détaillés</h2>
+            <p style="font-size: 1.2rem; color: var(--gray-600);">Cliquez pour découvrir nos prestations</p>
+          </div>
+          
+          <div style="max-width: 900px; margin: 0 auto;">
+            
+              <div style="border: 1px solid var(--gray-200); margin-bottom: 1rem; border-radius: 1rem; overflow: hidden; background: var(--white); box-shadow: 0 2px 10px rgba(0,0,0,0.05);">
+                <!-- En-tête accordéon -->
+                <div onclick="toggleAccordion('installation-electrique')" style="padding: 2rem; background: var(--primary); cursor: pointer; display: flex; justify-content: space-between; align-items: center; transition: all 0.3s ease;" onmouseover="this.style.background='var(--primary)'; this.style.color='var(--white)'" onmouseout="this.style.background='var(--primary)'; this.style.color='var(--white)'">
+                  <div style="display: flex; align-items: center; gap: 1.5rem;">
+                    <div style="font-size: 2rem;">⚡</div>
+                    <div>
+                      <h3 style="font-size: 1.5rem; font-weight: 600; margin-bottom: 0.5rem; color: var(--white);">Installation Électrique Complète</h3>
+                      <p style="color: rgba(255,255,255,0.8); margin: 0; font-weight: 600;">À partir de 85€/h</p>
+                    </div>
+                  </div>
+                  <div id="arrow-installation-electrique" style="font-size: 1.5rem; transform: rotate(180deg); transition: transform 0.3s ease;">▼</div>
+                </div>
+                
+                <!-- Contenu accordéon -->
+                <div id="content-installation-electrique" style="display: block; padding: 0 2rem 2rem; background: var(--white);">
+                  <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 3rem; align-items: start;">
+                    <div>
+                      <p style="font-size: 1.1rem; color: var(--gray-700); margin-bottom: 2rem; line-height: 1.6;">Installation électrique neuve aux normes NF C 15-100 avec tableau dernière génération</p>
+                      
+                      
+                        <div style="background: var(--gray-50); padding: 2rem; border-radius: 1rem;">
+                          <h4 style="font-weight: 600; color: var(--primary); margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;">
+                            <span>✨</span> Ce qui est inclus
+                          </h4>
+                          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem;">
+                            
+                              <div style="display: flex; align-items: center; gap: 0.75rem; padding: 0.5rem 0;">
+                                <div style="width: 20px; height: 20px; background: var(--primary); color: var(--white); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.7rem; font-weight: bold; flex-shrink: 0;">✓</div>
+                                <span style="color: var(--gray-700); font-size: 0.95rem;">Devis gratuit</span>
+                              </div>
+                            
+                              <div style="display: flex; align-items: center; gap: 0.75rem; padding: 0.5rem 0;">
+                                <div style="width: 20px; height: 20px; background: var(--primary); color: var(--white); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.7rem; font-weight: bold; flex-shrink: 0;">✓</div>
+                                <span style="color: var(--gray-700); font-size: 0.95rem;">Normes NF C 15-100</span>
+                              </div>
+                            
+                              <div style="display: flex; align-items: center; gap: 0.75rem; padding: 0.5rem 0;">
+                                <div style="width: 20px; height: 20px; background: var(--primary); color: var(--white); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.7rem; font-weight: bold; flex-shrink: 0;">✓</div>
+                                <span style="color: var(--gray-700); font-size: 0.95rem;">Garantie décennale</span>
+                              </div>
+                            
+                              <div style="display: flex; align-items: center; gap: 0.75rem; padding: 0.5rem 0;">
+                                <div style="width: 20px; height: 20px; background: var(--primary); color: var(--white); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.7rem; font-weight: bold; flex-shrink: 0;">✓</div>
+                                <span style="color: var(--gray-700); font-size: 0.95rem;">Matériel Schneider/Legrand</span>
+                              </div>
+                            
+                          </div>
+                        </div>
+                      
+                    </div>
+                    
+                    <div style="text-align: center;">
+                      <div style="background: linear-gradient(135deg, var(--primary), var(--secondary)); padding: 2rem; border-radius: 1rem; color: var(--white); margin-bottom: 1.5rem;">
+                        <div style="font-size: 3rem; margin-bottom: 1rem;">⚡</div>
+                        <h4 style="font-size: 1.2rem; font-weight: 600; margin-bottom: 0.5rem;">Service professionnel</h4>
+                        <p style="opacity: 0.9; font-size: 0.9rem;">Garantie et expertise</p>
+                      </div>
+                      
+                      <div style="display: grid; gap: 0.75rem;">
+                        <a href="service-installation-electrique.html" style="padding: 0.75rem 1rem; background: var(--primary); color: var(--white); text-decoration: none; border-radius: 0.5rem; font-weight: 600; font-size: 0.9rem;">📄 Voir détails</a>
+                        <a href="contact.html" style="padding: 0.75rem 1rem; background: transparent; color: var(--primary); border: 2px solid var(--primary); text-decoration: none; border-radius: 0.5rem; font-weight: 600; font-size: 0.9rem;">📧 Devis gratuit</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            
+              <div style="border: 1px solid var(--gray-200); margin-bottom: 1rem; border-radius: 1rem; overflow: hidden; background: var(--white); box-shadow: 0 2px 10px rgba(0,0,0,0.05);">
+                <!-- En-tête accordéon -->
+                <div onclick="toggleAccordion('depannage-urgence')" style="padding: 2rem; background: var(--gray-50); cursor: pointer; display: flex; justify-content: space-between; align-items: center; transition: all 0.3s ease;" onmouseover="this.style.background='var(--primary)'; this.style.color='var(--white)'" onmouseout="this.style.background='var(--gray-50)'; this.style.color='var(--gray-800)'">
+                  <div style="display: flex; align-items: center; gap: 1.5rem;">
+                    <div style="font-size: 2rem;">🚨</div>
+                    <div>
+                      <h3 style="font-size: 1.5rem; font-weight: 600; margin-bottom: 0.5rem; color: var(--primary);">Dépannage Électrique 24h/7j</h3>
+                      <p style="color: var(--gray-600); margin: 0; font-weight: 600;">Déplacement 75€ + tarif intervention</p>
+                    </div>
+                  </div>
+                  <div id="arrow-depannage-urgence" style="font-size: 1.5rem; transform: rotate(0deg); transition: transform 0.3s ease;">▼</div>
+                </div>
+                
+                <!-- Contenu accordéon -->
+                <div id="content-depannage-urgence" style="display: none; padding: 0 2rem 2rem; background: var(--white);">
+                  <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 3rem; align-items: start;">
+                    <div>
+                      <p style="font-size: 1.1rem; color: var(--gray-700); margin-bottom: 2rem; line-height: 1.6;">Intervention d'urgence pour panne électrique, disjoncteur, court-circuit</p>
+                      
+                      
+                        <div style="background: var(--gray-50); padding: 2rem; border-radius: 1rem;">
+                          <h4 style="font-weight: 600; color: var(--primary); margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;">
+                            <span>✨</span> Ce qui est inclus
+                          </h4>
+                          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem;">
+                            
+                              <div style="display: flex; align-items: center; gap: 0.75rem; padding: 0.5rem 0;">
+                                <div style="width: 20px; height: 20px; background: var(--primary); color: var(--white); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.7rem; font-weight: bold; flex-shrink: 0;">✓</div>
+                                <span style="color: var(--gray-700); font-size: 0.95rem;">Intervention 24h/7j</span>
+                              </div>
+                            
+                              <div style="display: flex; align-items: center; gap: 0.75rem; padding: 0.5rem 0;">
+                                <div style="width: 20px; height: 20px; background: var(--primary); color: var(--white); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.7rem; font-weight: bold; flex-shrink: 0;">✓</div>
+                                <span style="color: var(--gray-700); font-size: 0.95rem;">Déplacement sous 1h</span>
+                              </div>
+                            
+                              <div style="display: flex; align-items: center; gap: 0.75rem; padding: 0.5rem 0;">
+                                <div style="width: 20px; height: 20px; background: var(--primary); color: var(--white); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.7rem; font-weight: bold; flex-shrink: 0;">✓</div>
+                                <span style="color: var(--gray-700); font-size: 0.95rem;">Diagnostic inclus</span>
+                              </div>
+                            
+                              <div style="display: flex; align-items: center; gap: 0.75rem; padding: 0.5rem 0;">
+                                <div style="width: 20px; height: 20px; background: var(--primary); color: var(--white); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.7rem; font-weight: bold; flex-shrink: 0;">✓</div>
+                                <span style="color: var(--gray-700); font-size: 0.95rem;">Réparation immédiate</span>
+                              </div>
+                            
+                          </div>
+                        </div>
+                      
+                    </div>
+                    
+                    <div style="text-align: center;">
+                      <div style="background: linear-gradient(135deg, var(--primary), var(--secondary)); padding: 2rem; border-radius: 1rem; color: var(--white); margin-bottom: 1.5rem;">
+                        <div style="font-size: 3rem; margin-bottom: 1rem;">🚨</div>
+                        <h4 style="font-size: 1.2rem; font-weight: 600; margin-bottom: 0.5rem;">Service professionnel</h4>
+                        <p style="opacity: 0.9; font-size: 0.9rem;">Garantie et expertise</p>
+                      </div>
+                      
+                      <div style="display: grid; gap: 0.75rem;">
+                        <a href="service-depannage-urgence.html" style="padding: 0.75rem 1rem; background: var(--primary); color: var(--white); text-decoration: none; border-radius: 0.5rem; font-weight: 600; font-size: 0.9rem;">📄 Voir détails</a>
+                        <a href="contact.html" style="padding: 0.75rem 1rem; background: transparent; color: var(--primary); border: 2px solid var(--primary); text-decoration: none; border-radius: 0.5rem; font-weight: 600; font-size: 0.9rem;">📧 Devis gratuit</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            
+              <div style="border: 1px solid var(--gray-200); margin-bottom: 1rem; border-radius: 1rem; overflow: hidden; background: var(--white); box-shadow: 0 2px 10px rgba(0,0,0,0.05);">
+                <!-- En-tête accordéon -->
+                <div onclick="toggleAccordion('domotique-intelligente')" style="padding: 2rem; background: var(--gray-50); cursor: pointer; display: flex; justify-content: space-between; align-items: center; transition: all 0.3s ease;" onmouseover="this.style.background='var(--primary)'; this.style.color='var(--white)'" onmouseout="this.style.background='var(--gray-50)'; this.style.color='var(--gray-800)'">
+                  <div style="display: flex; align-items: center; gap: 1.5rem;">
+                    <div style="font-size: 2rem;">🏠</div>
+                    <div>
+                      <h3 style="font-size: 1.5rem; font-weight: 600; margin-bottom: 0.5rem; color: var(--primary);">Domotique & Maison Connectée</h3>
+                      <p style="color: var(--gray-600); margin: 0; font-weight: 600;">Sur devis personnalisé</p>
+                    </div>
+                  </div>
+                  <div id="arrow-domotique-intelligente" style="font-size: 1.5rem; transform: rotate(0deg); transition: transform 0.3s ease;">▼</div>
+                </div>
+                
+                <!-- Contenu accordéon -->
+                <div id="content-domotique-intelligente" style="display: none; padding: 0 2rem 2rem; background: var(--white);">
+                  <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 3rem; align-items: start;">
+                    <div>
+                      <p style="font-size: 1.1rem; color: var(--gray-700); margin-bottom: 2rem; line-height: 1.6;">Installation de systèmes domotiques intelligents pour optimiser confort et économies</p>
+                      
+                      
+                        <div style="background: var(--gray-50); padding: 2rem; border-radius: 1rem;">
+                          <h4 style="font-weight: 600; color: var(--primary); margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;">
+                            <span>✨</span> Ce qui est inclus
+                          </h4>
+                          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem;">
+                            
+                              <div style="display: flex; align-items: center; gap: 0.75rem; padding: 0.5rem 0;">
+                                <div style="width: 20px; height: 20px; background: var(--primary); color: var(--white); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.7rem; font-weight: bold; flex-shrink: 0;">✓</div>
+                                <span style="color: var(--gray-700); font-size: 0.95rem;">Système sur-mesure</span>
+                              </div>
+                            
+                              <div style="display: flex; align-items: center; gap: 0.75rem; padding: 0.5rem 0;">
+                                <div style="width: 20px; height: 20px; background: var(--primary); color: var(--white); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.7rem; font-weight: bold; flex-shrink: 0;">✓</div>
+                                <span style="color: var(--gray-700); font-size: 0.95rem;">Compatible iOS/Android</span>
+                              </div>
+                            
+                              <div style="display: flex; align-items: center; gap: 0.75rem; padding: 0.5rem 0;">
+                                <div style="width: 20px; height: 20px; background: var(--primary); color: var(--white); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.7rem; font-weight: bold; flex-shrink: 0;">✓</div>
+                                <span style="color: var(--gray-700); font-size: 0.95rem;">Formation incluse</span>
+                              </div>
+                            
+                              <div style="display: flex; align-items: center; gap: 0.75rem; padding: 0.5rem 0;">
+                                <div style="width: 20px; height: 20px; background: var(--primary); color: var(--white); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.7rem; font-weight: bold; flex-shrink: 0;">✓</div>
+                                <span style="color: var(--gray-700); font-size: 0.95rem;">SAV 2 ans</span>
+                              </div>
+                            
+                          </div>
+                        </div>
+                      
+                    </div>
+                    
+                    <div style="text-align: center;">
+                      <div style="background: linear-gradient(135deg, var(--primary), var(--secondary)); padding: 2rem; border-radius: 1rem; color: var(--white); margin-bottom: 1.5rem;">
+                        <div style="font-size: 3rem; margin-bottom: 1rem;">🏠</div>
+                        <h4 style="font-size: 1.2rem; font-weight: 600; margin-bottom: 0.5rem;">Service professionnel</h4>
+                        <p style="opacity: 0.9; font-size: 0.9rem;">Garantie et expertise</p>
+                      </div>
+                      
+                      <div style="display: grid; gap: 0.75rem;">
+                        <a href="service-domotique-intelligente.html" style="padding: 0.75rem 1rem; background: var(--primary); color: var(--white); text-decoration: none; border-radius: 0.5rem; font-weight: 600; font-size: 0.9rem;">📄 Voir détails</a>
+                        <a href="contact.html" style="padding: 0.75rem 1rem; background: transparent; color: var(--primary); border: 2px solid var(--primary); text-decoration: none; border-radius: 0.5rem; font-weight: 600; font-size: 0.9rem;">📧 Devis gratuit</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            
+              <div style="border: 1px solid var(--gray-200); margin-bottom: 1rem; border-radius: 1rem; overflow: hidden; background: var(--white); box-shadow: 0 2px 10px rgba(0,0,0,0.05);">
+                <!-- En-tête accordéon -->
+                <div onclick="toggleAccordion('borne-recharge-vehicule')" style="padding: 2rem; background: var(--gray-50); cursor: pointer; display: flex; justify-content: space-between; align-items: center; transition: all 0.3s ease;" onmouseover="this.style.background='var(--primary)'; this.style.color='var(--white)'" onmouseout="this.style.background='var(--gray-50)'; this.style.color='var(--gray-800)'">
+                  <div style="display: flex; align-items: center; gap: 1.5rem;">
+                    <div style="font-size: 2rem;">🔌</div>
+                    <div>
+                      <h3 style="font-size: 1.5rem; font-weight: 600; margin-bottom: 0.5rem; color: var(--primary);">Borne de Recharge Véhicule Électrique</h3>
+                      <p style="color: var(--gray-600); margin: 0; font-weight: 600;">À partir de 1200€ pose incluse</p>
+                    </div>
+                  </div>
+                  <div id="arrow-borne-recharge-vehicule" style="font-size: 1.5rem; transform: rotate(0deg); transition: transform 0.3s ease;">▼</div>
+                </div>
+                
+                <!-- Contenu accordéon -->
+                <div id="content-borne-recharge-vehicule" style="display: none; padding: 0 2rem 2rem; background: var(--white);">
+                  <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 3rem; align-items: start;">
+                    <div>
+                      <p style="font-size: 1.1rem; color: var(--gray-700); margin-bottom: 2rem; line-height: 1.6;">Installation de bornes de recharge pour véhicules électriques et hybrides</p>
+                      
+                      
+                        <div style="background: var(--gray-50); padding: 2rem; border-radius: 1rem;">
+                          <h4 style="font-weight: 600; color: var(--primary); margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;">
+                            <span>✨</span> Ce qui est inclus
+                          </h4>
+                          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem;">
+                            
+                              <div style="display: flex; align-items: center; gap: 0.75rem; padding: 0.5rem 0;">
+                                <div style="width: 20px; height: 20px; background: var(--primary); color: var(--white); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.7rem; font-weight: bold; flex-shrink: 0;">✓</div>
+                                <span style="color: var(--gray-700); font-size: 0.95rem;">Éligible aides ADVENIR</span>
+                              </div>
+                            
+                              <div style="display: flex; align-items: center; gap: 0.75rem; padding: 0.5rem 0;">
+                                <div style="width: 20px; height: 20px; background: var(--primary); color: var(--white); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.7rem; font-weight: bold; flex-shrink: 0;">✓</div>
+                                <span style="color: var(--gray-700); font-size: 0.95rem;">Installation certifiée IRVE</span>
+                              </div>
+                            
+                              <div style="display: flex; align-items: center; gap: 0.75rem; padding: 0.5rem 0;">
+                                <div style="width: 20px; height: 20px; background: var(--primary); color: var(--white); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.7rem; font-weight: bold; flex-shrink: 0;">✓</div>
+                                <span style="color: var(--gray-700); font-size: 0.95rem;">Garantie constructeur</span>
+                              </div>
+                            
+                              <div style="display: flex; align-items: center; gap: 0.75rem; padding: 0.5rem 0;">
+                                <div style="width: 20px; height: 20px; background: var(--primary); color: var(--white); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.7rem; font-weight: bold; flex-shrink: 0;">✓</div>
+                                <span style="color: var(--gray-700); font-size: 0.95rem;">Maintenance préventive</span>
+                              </div>
+                            
+                          </div>
+                        </div>
+                      
+                    </div>
+                    
+                    <div style="text-align: center;">
+                      <div style="background: linear-gradient(135deg, var(--primary), var(--secondary)); padding: 2rem; border-radius: 1rem; color: var(--white); margin-bottom: 1.5rem;">
+                        <div style="font-size: 3rem; margin-bottom: 1rem;">🔌</div>
+                        <h4 style="font-size: 1.2rem; font-weight: 600; margin-bottom: 0.5rem;">Service professionnel</h4>
+                        <p style="opacity: 0.9; font-size: 0.9rem;">Garantie et expertise</p>
+                      </div>
+                      
+                      <div style="display: grid; gap: 0.75rem;">
+                        <a href="service-borne-recharge-vehicule.html" style="padding: 0.75rem 1rem; background: var(--primary); color: var(--white); text-decoration: none; border-radius: 0.5rem; font-weight: 600; font-size: 0.9rem;">📄 Voir détails</a>
+                        <a href="contact.html" style="padding: 0.75rem 1rem; background: transparent; color: var(--primary); border: 2px solid var(--primary); text-decoration: none; border-radius: 0.5rem; font-weight: 600; font-size: 0.9rem;">📧 Devis gratuit</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            
+          </div>
+        </div>
+        
+        <script>
+          function toggleAccordion(serviceSlug) {
+            const content = document.getElementById('content-' + serviceSlug);
+            const arrow = document.getElementById('arrow-' + serviceSlug);
+            
+            if (content.style.display === 'none') {
+              // Fermer tous les autres
+              document.querySelectorAll('[id^="content-"]').forEach(el => {
+                if (el.id !== 'content-' + serviceSlug) {
+                  el.style.display = 'none';
+                  const otherArrow = document.getElementById(el.id.replace('content-', 'arrow-'));
+                  if (otherArrow) otherArrow.style.transform = 'rotate(0deg)';
+                }
+              });
+              
+              content.style.display = 'block';
+              arrow.style.transform = 'rotate(180deg)';
+            } else {
+              content.style.display = 'none';
+              arrow.style.transform = 'rotate(0deg)';
+            }
+          }
+        </script>
+        
+        <style>
+          @media (max-width: 768px) {
+            .services-accordion [style*="grid-template-columns: 2fr 1fr"] {
+              grid-template-columns: 1fr !important;
+            }
+            .services-accordion [style*="grid-template-columns: 1fr 1fr"] {
+              grid-template-columns: 1fr !important;
+            }
+          }
+        </style>
+      </section>
+    
+
+    <!-- Section Contact unique -->
+    
+      <section class="contact-split-modern" style="padding: 6rem 0; background: var(--gray-50);">
+        <div class="container">
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start;">
+            <!-- Informations contact -->
+            <div style="background: var(--gray-900); color: var(--white); padding: 4rem; border-radius: 3rem; position: relative; overflow: hidden;">
+              <!-- Motif décoratif -->
+              <div style="position: absolute; top: -50%; right: -50%; width: 200%; height: 200%; background: radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px); background-size: 20px 20px; opacity: 0.3;"></div>
+              
+              <div style="position: relative; z-index: 2;">
+                <h2 style="font-size: 2.5rem; font-weight: 700; margin-bottom: 1rem;">Parlons de votre projet</h2>
+                <p style="font-size: 1.2rem; opacity: 0.9; margin-bottom: 3rem; line-height: 1.6;">Notre équipe d'experts électricien est à votre écoute pour vous accompagner dans la réalisation de vos projets.</p>
+                
+                <!-- Méthodes de contact -->
+                <div style="display: grid; gap: 2rem;">
+                  <div style="display: flex; gap: 1.5rem; align-items: center; padding: 1.5rem; background: rgba(255,255,255,0.1); border-radius: 1rem; backdrop-filter: blur(10px);">
+                    <div style="width: 60px; height: 60px; background: var(--primary); color: var(--white); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; flex-shrink: 0;">📞</div>
+                    <div>
+                      <h3 style="font-size: 1.2rem; font-weight: 600; margin-bottom: 0.5rem;">Téléphone</h3>
+                      <a href="tel:01 85 76 32 18" style="color: var(--white); font-size: 1.1rem; font-weight: 600; text-decoration: none;">01 85 76 32 18</a>
+                      <p style="opacity: 0.8; font-size: 0.9rem; margin-top: 0.25rem;">Lundi-Vendredi 8h-19h • Urgences 24h/7j</p>
+                    </div>
+                  </div>
+                  
+                  <div style="display: flex; gap: 1.5rem; align-items: center; padding: 1.5rem; background: rgba(255,255,255,0.1); border-radius: 1rem; backdrop-filter: blur(10px);">
+                    <div style="width: 60px; height: 60px; background: var(--primary); color: var(--white); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; flex-shrink: 0;">✉️</div>
+                    <div>
+                      <h3 style="font-size: 1.2rem; font-weight: 600; margin-bottom: 0.5rem;">Email</h3>
+                      <a href="mailto:contact@electricite-expert-pro.fr" style="color: var(--white); font-size: 1rem; font-weight: 600; text-decoration: none; word-break: break-all;">contact@electricite-expert-pro.fr</a>
+                      <p style="opacity: 0.8; font-size: 0.9rem; margin-top: 0.25rem;">Réponse garantie sous 24h</p>
+                    </div>
+                  </div>
+                  
+                  <div style="display: flex; gap: 1.5rem; align-items: center; padding: 1.5rem; background: rgba(255,255,255,0.1); border-radius: 1rem; backdrop-filter: blur(10px);">
+                    <div style="width: 60px; height: 60px; background: var(--primary); color: var(--white); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; flex-shrink: 0;">📍</div>
+                    <div>
+                      <h3 style="font-size: 1.2rem; font-weight: 600; margin-bottom: 0.5rem;">Adresse</h3>
+                      <p style="font-weight: 600; margin-bottom: 0.25rem;">42 Avenue des Champs-Élysées</p>
+                      <p style="opacity: 0.8; font-size: 0.9rem;">Paris 8ème</p>
+                    </div>
+                  </div>
+                  
+                  <div style="display: flex; gap: 1.5rem; align-items: center; padding: 1.5rem; background: rgba(255,255,255,0.1); border-radius: 1rem; backdrop-filter: blur(10px);">
+                    <div style="width: 60px; height: 60px; background: var(--primary); color: var(--white); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; flex-shrink: 0;">🏙️</div>
+                    <div>
+                      <h3 style="font-size: 1.2rem; font-weight: 600; margin-bottom: 0.5rem;">Zone d'intervention</h3>
+                      <p style="font-weight: 600; margin-bottom: 0.25rem;">8 villes</p>
+                      <p style="opacity: 0.8; font-size: 0.9rem;">Déplacement gratuit pour devis</p>
+                    </div>
+                  </div>
+                </div>
+                
+                <!-- Call-to-action d'urgence -->
+                <div style="margin-top: 3rem; padding: 2rem; background: linear-gradient(135deg, #f59e0b, #f97316); border-radius: 1rem; text-align: center;">
+                  <h4 style="font-size: 1.3rem; font-weight: 700; margin-bottom: 0.5rem;">🚨 Urgence 24h/7j</h4>
+                  <p style="opacity: 0.9; margin-bottom: 1rem;">Panne ou problème urgent ? Nous intervenons immédiatement !</p>
+                  <a href="tel:01 85 76 32 18" style="display: inline-block; padding: 1rem 2rem; background: var(--white); color: #f59e0b; text-decoration: none; border-radius: 0.5rem; font-weight: 600;">Appel d'urgence</a>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Formulaire -->
+            <div style="background: var(--white); padding: 4rem; border-radius: 3rem; box-shadow: 0 20px 60px rgba(0,0,0,0.1);">
+              <h2 style="color: var(--primary); font-size: 2.5rem; font-weight: 700; margin-bottom: 1rem;">Demande de devis</h2>
+              <p style="color: var(--gray-600); font-size: 1.1rem; margin-bottom: 3rem; line-height: 1.6;">Remplissez ce formulaire détaillé pour recevoir un devis personnalisé adapté à vos besoins.</p>
+              
+              <form style="display: grid; gap: 2rem;">
+                <div>
+                  <label style="display: block; font-weight: 600; color: var(--gray-700); margin-bottom: 0.5rem;">Nom complet *</label>
+                  <input type="text" placeholder="Votre nom et prénom" style="width: 100%; padding: 1.25rem; border: 2px solid var(--gray-200); border-radius: 1rem; font-size: 1rem; transition: all 0.3s ease;" onfocus="this.style.borderColor='var(--primary)'; this.style.boxShadow='0 0 0 3px rgba(30, 64, 175, 0.1)'" onblur="this.style.borderColor='var(--gray-200)'; this.style.boxShadow='none'">
+                </div>
+                
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                  <div>
+                    <label style="display: block; font-weight: 600; color: var(--gray-700); margin-bottom: 0.5rem;">Email *</label>
+                    <input type="email" placeholder="votre@email.fr" style="width: 100%; padding: 1.25rem; border: 2px solid var(--gray-200); border-radius: 1rem; font-size: 1rem; transition: all 0.3s ease;" onfocus="this.style.borderColor='var(--primary)'; this.style.boxShadow='0 0 0 3px rgba(30, 64, 175, 0.1)'" onblur="this.style.borderColor='var(--gray-200)'; this.style.boxShadow='none'">
+                  </div>
+                  <div>
+                    <label style="display: block; font-weight: 600; color: var(--gray-700); margin-bottom: 0.5rem;">Téléphone *</label>
+                    <input type="tel" placeholder="01 23 45 67 89" style="width: 100%; padding: 1.25rem; border: 2px solid var(--gray-200); border-radius: 1rem; font-size: 1rem; transition: all 0.3s ease;" onfocus="this.style.borderColor='var(--primary)'; this.style.boxShadow='0 0 0 3px rgba(30, 64, 175, 0.1)'" onblur="this.style.borderColor='var(--gray-200)'; this.style.boxShadow='none'">
+                  </div>
+                </div>
+                
+                <div>
+                  <label style="display: block; font-weight: 600; color: var(--gray-700); margin-bottom: 0.5rem;">Type de service</label>
+                  <select style="width: 100%; padding: 1.25rem; border: 2px solid var(--gray-200); border-radius: 1rem; font-size: 1rem; background: var(--white); cursor: pointer;">
+                    <option value="">Choisissez un service</option>
+                    <option value="installation-electrique">Installation Électrique Complète</option><option value="depannage-urgence">Dépannage Électrique 24h/7j</option><option value="domotique-intelligente">Domotique & Maison Connectée</option><option value="borne-recharge-vehicule">Borne de Recharge Véhicule Électrique</option>
+                  </select>
+                </div>
+                
+                <div>
+                  <label style="display: block; font-weight: 600; color: var(--gray-700); margin-bottom: 0.5rem;">Urgence</label>
+                  <select style="width: 100%; padding: 1.25rem; border: 2px solid var(--gray-200); border-radius: 1rem; font-size: 1rem; background: var(--white); cursor: pointer;">
+                    <option value="normal">Intervention normale</option>
+                    <option value="urgent">Urgent (sous 24h)</option>
+                    <option value="emergency">Urgence (immédiat)</option>
+                  </select>
+                </div>
+                
+                <div>
+                  <label style="display: block; font-weight: 600; color: var(--gray-700); margin-bottom: 0.5rem;">Description du projet *</label>
+                  <textarea placeholder="Décrivez votre projet en détail : type de travaux, contraintes, délais souhaités..." rows="5" style="width: 100%; padding: 1.25rem; border: 2px solid var(--gray-200); border-radius: 1rem; font-size: 1rem; resize: vertical; transition: all 0.3s ease;" onfocus="this.style.borderColor='var(--primary)'; this.style.boxShadow='0 0 0 3px rgba(30, 64, 175, 0.1)'" onblur="this.style.borderColor='var(--gray-200)'; this.style.boxShadow='none'"></textarea>
+                </div>
+                
+                <button type="submit" style="padding: 1.5rem; background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%); color: var(--white); border: none; border-radius: 1rem; font-size: 1.2rem; font-weight: 600; cursor: pointer; transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 10px 25px rgba(30, 64, 175, 0.3)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">
+                  📧 Envoyer ma demande de devis
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+        
+        <style>
+          @media (max-width: 768px) {
+            .contact-split-modern [style*="grid-template-columns: 1fr 1fr"] {
+              grid-template-columns: 1fr !important;
+            }
+          }
+        </style>
+      </section>
+    
+
+    <!-- Footer -->
+    <footer class="footer-mega">
+        <div class="container">
+            <div class="footer-content">
+                <h3 class="footer-title">Électricité Expert Pro</h3>
+                <p class="footer-description">
+                    Électricien professionnel depuis plus de 10 ans.<br>
+                    Intervention sur 8 villes.
+                </p>
+                
+                <div class="footer-bottom">
+                    <p class="footer-copyright">
+                        © 2025 Électricité Expert Pro. Tous droits réservés.
+                    </p>
+                    <p class="footer-credits">
+                        Corporate Professional - <a href="https://claude.ai/code" target="_blank">Claude Code</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    
+    <script>
+        // Navigation mobile
+        const navToggle = document.getElementById('navToggle');
+        const navMenu = document.getElementById('navMenu');
+        
+        if (navToggle && navMenu) {
+            navToggle.addEventListener('click', () => {
+                navToggle.classList.toggle('active');
+                navMenu.classList.toggle('active');
+            });
+            
+            // Fermer le menu au clic sur lien
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.addEventListener('click', () => {
+                    navToggle.classList.remove('active');
+                    navMenu.classList.remove('active');
+                });
+            });
+        }
+        
+        // Animations GSAP si disponible
+        if (typeof gsap !== 'undefined') {
+            gsap.registerPlugin(ScrollTrigger);
+            
+            // Animation des éléments au scroll
+            gsap.utils.toArray('[style*="opacity: 0"]').forEach(element => {
+                gsap.fromTo(element, {
+                    opacity: 0,
+                    y: 30
+                }, {
+                    opacity: 1,
+                    y: 0,
+                    duration: 0.8,
+                    ease: "power2.out",
+                    scrollTrigger: {
+                        trigger: element,
+                        start: "top 80%",
+                        toggleActions: "play none none reverse"
+                    }
+                });
+            });
+        }
+        
+        // Smooth scroll pour les ancres
+        document.querySelectorAll('a[href^="#"]').forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const target = document.querySelector(link.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+        
+        console.log('🚀 Corporate Professional (Design corporate professionnel avec processus) loaded successfully!');
+    </script>
+</body>
+</html>

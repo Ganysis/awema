@@ -1,0 +1,36 @@
+{
+  "timestamp": "2025-06-09T19:33:50.747Z",
+  "status": "SUCCESS",
+  "summary": {
+    "totalPages": 24,
+    "homePages": 1,
+    "servicePages": 3,
+    "localSeoPages": 18,
+    "performanceScore": 115
+  },
+  "details": {
+    "testData": {
+      "companyName": "ElectroPro Services",
+      "trade": "Électricien",
+      "servicesCount": 3,
+      "citiesCount": 6
+    },
+    "homePageStructure": {
+      "blocksCount": 2,
+      "style": "electricien",
+      "seoTitle": "ElectroPro Services - Électricien Expert Paris"
+    },
+    "localSeoSample": {
+      "service": "Installation Électrique",
+      "city": "Neuilly-sur-Seine",
+      "blocksCount": 2
+    },
+    "performance": {
+      "score": 115,
+      "recommendations": [
+        "Ajouter plus de blocs pour enrichir le contenu"
+      ],
+      "issues": []
+    }
+  }
+}

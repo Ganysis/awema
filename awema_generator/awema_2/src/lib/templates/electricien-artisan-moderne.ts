@@ -1,0 +1,788 @@
+import { TemplateData } from '../template'
+import { NavigationItem } from '../multi-page-generator'
+import { PROFESSIONAL_IMAGES } from './ultra-pro-templates'
+
+export function generateElectricienArtisanModerneTemplate(data: TemplateData, navigation: NavigationItem[]): string {
+  const heroImage = PROFESSIONAL_IMAGES.electricien.hero[2]
+  const serviceImages = PROFESSIONAL_IMAGES.electricien.services
+  
+  return `<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>${data.companyName} - Électricien Artisan ${data.city} | Tradition & Savoir-Faire</title>
+    <meta name="description" content="⚡ ${data.companyName} - Électricien artisan à ${data.city}. Savoir-faire traditionnel, entreprise familiale, proximité client. Devis gratuit. ✅ +${data.serviceCities.length} villes.">
+    <meta name="keywords" content="électricien artisan ${data.city}, entreprise familiale, savoir-faire, ${data.services.map(s => s.name.toLowerCase()).join(', ')}, tradition électrique, proximité">
+    
+    <!-- SEO Artisan -->
+    <meta property="og:title" content="${data.companyName} - Électricien Artisan ${data.city}">
+    <meta property="og:description" content="Savoir-faire traditionnel, entreprise familiale, proximité client.">
+    <meta property="og:image" content="${heroImage}">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://${data.domain}">
+    <meta name="twitter:card" content="summary_large_image">
+    
+    <!-- Schema.org Artisan -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ElectricalContractor",
+      "name": "${data.companyName}",
+      "description": "${data.description}",
+      "telephone": "${data.phone}",
+      "email": "${data.email}",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "${data.address}",
+        "addressLocality": "${data.city}",
+        "addressCountry": "FR"
+      },
+      "url": "https://${data.domain}",
+      "image": "${heroImage}",
+      "priceRange": "€€",
+      "openingHours": "${data.openingHours || 'Mo-Sa 07:00-19:00'}",
+      "areaServed": [${data.serviceCities.map(city => `"${city}"`).join(', ')}],
+      "serviceType": "Artisan Electrical Services",
+      "hasCredential": "Artisan Certified",
+      "foundingDate": "1995",
+      "slogan": "Tradition et savoir-faire depuis 3 générations",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "156"
+      }
+    }
+    </script>
+    
+    <!-- Polices Artisan -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS Artisan Moderne -->
+    <style>
+        :root {
+            --primary: #dc2626;
+            --primary-dark: #b91c1c;
+            --primary-light: #ef4444;
+            --secondary: #ef4444;
+            --accent: #fbbf24;
+            --accent-dark: #f59e0b;
+            --text: #1f2937;
+            --text-light: #4b5563;
+            --text-muted: #9ca3af;
+            --bg: #ffffff;
+            --bg-warm: #fefce8;
+            --bg-alt: #fef3c7;
+            --bg-dark: #f3f4f6;
+            --border: #e5e7eb;
+            --border-warm: #fbbf24;
+            --success: #10b981;
+            --warning: #f59e0b;
+            --error: #ef4444;
+            --shadow-sm: 0 1px 2px 0 rgba(220, 38, 38, 0.05);
+            --shadow: 0 4px 6px -1px rgba(220, 38, 38, 0.1);
+            --shadow-md: 0 10px 15px -3px rgba(220, 38, 38, 0.1);
+            --shadow-lg: 0 20px 25px -5px rgba(220, 38, 38, 0.1);
+            --shadow-xl: 0 25px 50px -12px rgba(220, 38, 38, 0.25);
+            --radius: 0.75rem;
+            --radius-lg: 1rem;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            --transition-fast: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+        
+        body {
+            font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            line-height: 1.7;
+            color: var(--text);
+            background: var(--bg);
+            overflow-x: hidden;
+        }
+        
+        /* Container Artisan */
+        .container {
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+        
+        @media (min-width: 640px) { .container { padding: 0 2rem; } }
+        @media (min-width: 1024px) { .container { padding: 0 3rem; } }
+        
+        /* Typography Artisan */
+        .text-xs { font-size: 0.75rem; line-height: 1rem; }
+        .text-sm { font-size: 0.875rem; line-height: 1.25rem; }
+        .text-base { font-size: 1rem; line-height: 1.5rem; }
+        .text-lg { font-size: 1.125rem; line-height: 1.75rem; }
+        .text-xl { font-size: 1.25rem; line-height: 1.75rem; }
+        .text-2xl { font-size: 1.5rem; line-height: 2rem; }
+        .text-3xl { font-size: 1.875rem; line-height: 2.25rem; }
+        .text-4xl { font-size: 2.25rem; line-height: 2.5rem; }
+        .text-5xl { font-size: 3rem; line-height: 1.1; }
+        
+        /* Header Artisan */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: linear-gradient(to right, var(--bg), var(--bg-warm));
+            border-bottom: 3px solid var(--accent);
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+        
+        .header.scrolled {
+            box-shadow: var(--shadow-lg);
+            background: var(--bg);
+        }
+        
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1rem 0;
+        }
+        
+        .logo {
+            font-family: 'Merriweather', serif;
+            font-size: 2rem;
+            font-weight: 900;
+            color: var(--primary);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            transition: var(--transition);
+            position: relative;
+        }
+        
+        .logo:hover {
+            transform: scale(1.02);
+        }
+        
+        .logo::before {
+            content: '🔨';
+            font-size: 2.25rem;
+            filter: drop-shadow(2px 2px 4px rgba(220, 38, 38, 0.3));
+        }
+        
+        .logo::after {
+            content: 'Artisan depuis 1995';
+            position: absolute;
+            bottom: -1.5rem;
+            left: 3rem;
+            font-size: 0.75rem;
+            color: var(--accent-dark);
+            font-weight: 600;
+            font-style: italic;
+        }
+        
+        /* Navigation Artisan */
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 1.5rem;
+            align-items: center;
+        }
+        
+        .nav-link {
+            text-decoration: none;
+            color: var(--text);
+            font-weight: 600;
+            padding: 1rem 1.5rem;
+            border-radius: var(--radius);
+            transition: var(--transition);
+            position: relative;
+            border: 2px solid transparent;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 50%;
+            width: 0;
+            height: 3px;
+            background: var(--primary);
+            transform: translateX(-50%);
+            transition: var(--transition);
+            border-radius: 2px;
+        }
+        
+        .nav-link:hover {
+            color: var(--primary);
+            background: var(--bg-warm);
+            border-color: var(--accent);
+        }
+        
+        .nav-link:hover::after {
+            width: 80%;
+        }
+        
+        /* Badge Familial */
+        .family-badge {
+            background: linear-gradient(135deg, var(--accent), var(--accent-dark));
+            color: var(--text);
+            padding: 0.75rem 1.25rem;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 0.875rem;
+            box-shadow: var(--shadow);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .family-badge::before {
+            content: '👨‍👩‍👧‍👦';
+            font-size: 1.125rem;
+        }
+        
+        /* Hero Artisan */
+        .hero {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(135deg, 
+                rgba(220, 38, 38, 0.9) 0%, 
+                rgba(239, 68, 68, 0.8) 50%, 
+                rgba(251, 191, 36, 0.7) 100%
+            ), url('${heroImage}');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: var(--bg);
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="50" cy="50" r="1" fill="%23000" opacity="0.1"/></pattern></defs><rect width="100%" height="100%" fill="url(%23grain)"/></svg>');
+            opacity: 0.3;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            animation: heroEnter 1.2s ease-out;
+        }
+        
+        @keyframes heroEnter {
+            from { opacity: 0; transform: translateY(60px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(15px);
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            margin-bottom: 2rem;
+            font-weight: 700;
+            animation: fadeInUp 0.8s ease-out 0.2s both;
+        }
+        
+        .hero-badge::before {
+            content: '🏆';
+            font-size: 1.5rem;
+        }
+        
+        .hero h1 {
+            font-family: 'Merriweather', serif;
+            font-size: clamp(3rem, 8vw, 5.5rem);
+            font-weight: 900;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            text-shadow: 0 6px 25px rgba(0,0,0,0.4);
+            animation: fadeInUp 0.8s ease-out 0.4s both;
+        }
+        
+        .hero-highlight {
+            background: linear-gradient(135deg, var(--accent), #fcd34d);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            position: relative;
+        }
+        
+        .hero-subtitle {
+            font-family: 'Merriweather', serif;
+            font-size: 1.5rem;
+            font-style: italic;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+            animation: fadeInUp 0.8s ease-out 0.6s both;
+        }
+        
+        .hero p {
+            font-size: 1.25rem;
+            margin-bottom: 3rem;
+            max-width: 650px;
+            margin-left: auto;
+            margin-right: auto;
+            opacity: 0.95;
+            line-height: 1.8;
+            animation: fadeInUp 0.8s ease-out 0.8s both;
+        }
+        
+        .hero-actions {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            animation: fadeInUp 0.8s ease-out 1s both;
+        }
+        
+        .btn-hero {
+            background: linear-gradient(135deg, var(--accent), var(--accent-dark));
+            color: var(--text);
+            text-decoration: none;
+            padding: 1.25rem 2.5rem;
+            border-radius: var(--radius-lg);
+            font-weight: 700;
+            font-size: 1.125rem;
+            transition: var(--transition);
+            box-shadow: var(--shadow-lg);
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            border: 3px solid transparent;
+        }
+        
+        .btn-hero:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-xl);
+            border-color: rgba(255, 255, 255, 0.3);
+        }
+        
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            color: var(--bg);
+            text-decoration: none;
+            padding: 1.25rem 2.5rem;
+            border-radius: var(--radius-lg);
+            font-weight: 600;
+            font-size: 1.125rem;
+            transition: var(--transition);
+            border: 3px solid rgba(255, 255, 255, 0.3);
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+        
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.25);
+            transform: translateY(-2px);
+            border-color: rgba(255, 255, 255, 0.5);
+        }
+        
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        /* Services Artisan */
+        .services {
+            padding: 6rem 0;
+            background: linear-gradient(to bottom, var(--bg), var(--bg-warm));
+            position: relative;
+        }
+        
+        .services::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 100px;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"><path d="M0,96L40,96C80,96,160,96,240,90C320,84,400,72,480,69.3C560,67,640,75,720,74.7C800,75,880,67,960,58.7C1040,51,1120,43,1160,38.7L1200,32L1200,0L1160,0C1120,0,1040,0,960,0C880,0,800,0,720,0C640,0,560,0,480,0C400,0,320,0,240,0C160,0,80,0,40,0L0,0Z" fill="%23fefce8"/></svg>') no-repeat;
+            background-size: cover;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+        
+        .section-badge {
+            display: inline-block;
+            background: var(--primary);
+            color: var(--bg);
+            padding: 0.75rem 2rem;
+            border-radius: 50px;
+            font-size: 0.875rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            box-shadow: var(--shadow);
+        }
+        
+        .section-title {
+            font-family: 'Merriweather', serif;
+            font-size: clamp(2.5rem, 5vw, 3.5rem);
+            font-weight: 900;
+            color: var(--text);
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+        
+        .section-description {
+            font-size: 1.25rem;
+            color: var(--text-light);
+            max-width: 650px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 2.5rem;
+            margin-top: 4rem;
+        }
+        
+        .service-card {
+            background: var(--bg);
+            border-radius: var(--radius-lg);
+            padding: 2.5rem;
+            box-shadow: var(--shadow-md);
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+            border: 3px solid var(--border);
+        }
+        
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 6px;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-xl);
+            border-color: var(--accent);
+        }
+        
+        .service-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            border-radius: var(--radius-lg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 2rem;
+            font-size: 2rem;
+            color: var(--bg);
+            box-shadow: var(--shadow);
+        }
+        
+        .service-card h3 {
+            font-family: 'Merriweather', serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text);
+            margin-bottom: 1rem;
+        }
+        
+        .service-card p {
+            color: var(--text-light);
+            margin-bottom: 2rem;
+            line-height: 1.8;
+            font-size: 1.125rem;
+        }
+        
+        .service-features {
+            list-style: none;
+            margin-bottom: 2rem;
+        }
+        
+        .service-features li {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 0.75rem;
+            color: var(--text-light);
+            font-weight: 500;
+        }
+        
+        .service-features li::before {
+            content: '✓';
+            color: var(--success);
+            font-weight: 700;
+            font-size: 1.25rem;
+        }
+        
+        .service-btn {
+            background: var(--primary);
+            color: var(--bg);
+            text-decoration: none;
+            padding: 1rem 2rem;
+            border-radius: var(--radius);
+            font-weight: 700;
+            transition: var(--transition);
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            width: 100%;
+            justify-content: center;
+            border: 3px solid transparent;
+        }
+        
+        .service-btn:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+            border-color: var(--accent);
+        }
+        
+        /* Badge Urgence Familial */
+        .emergency-badge {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            z-index: 100;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: var(--bg);
+            padding: 1.25rem 1.75rem;
+            border-radius: 50px;
+            box-shadow: var(--shadow-xl);
+            animation: emergencyPulse 2s infinite;
+            text-decoration: none;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            border: 3px solid var(--accent);
+        }
+        
+        @keyframes emergencyPulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+        
+        /* Responsive Artisan */
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+            }
+            
+            .logo::after {
+                display: none;
+            }
+            
+            .hero {
+                background-attachment: scroll;
+                padding: 6rem 0 4rem;
+            }
+            
+            .hero-actions {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .btn-hero,
+            .btn-secondary {
+                width: 100%;
+                max-width: 350px;
+                justify-content: center;
+            }
+            
+            .services-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .emergency-badge {
+                bottom: 1rem;
+                right: 1rem;
+                padding: 1rem 1.25rem;
+                font-size: 0.875rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Artisan -->
+    <header class="header" id="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">
+                    ${data.companyName}
+                </a>
+                
+                <!-- Navigation Artisan -->
+                <nav>
+                    <ul class="nav-menu">
+                        ${navigation.map(item => `
+                            <li class="nav-item">
+                                <a href="${item.href}" class="nav-link">${item.label}</a>
+                            </li>
+                        `).join('')}
+                    </ul>
+                </nav>
+                
+                <!-- Badge Familial -->
+                <div class="family-badge">
+                    Entreprise Familiale
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Artisan -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    Tradition et savoir-faire depuis 3 générations
+                </div>
+                
+                <h1>
+                    Électricien <span class="hero-highlight">Artisan</span><br>
+                    ${data.city} & Environs
+                </h1>
+                
+                <div class="hero-subtitle">
+                    "La passion de l'électricité se transmet de père en fils"
+                </div>
+                
+                <p>
+                    Entreprise familiale d'électriciens artisans, nous perpétuons un savoir-faire traditionnel 
+                    allié aux techniques modernes. Proximité, confiance et qualité sont nos valeurs depuis toujours.
+                </p>
+                
+                <div class="hero-actions">
+                    <a href="tel:${data.phone}" class="btn-hero">
+                        📞 Nous Contacter
+                    </a>
+                    <a href="contact.html" class="btn-secondary">
+                        📝 Devis Artisan
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Artisan -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">🔨 Nos Métiers</span>
+                <h2 class="section-title">Savoir-Faire Artisanal</h2>
+                <p class="section-description">
+                    Chaque intervention est menée avec le soin et l'attention d'un véritable artisan. 
+                    Notre expérience familiale garantit un travail de qualité et durable.
+                </p>
+            </div>
+            
+            <div class="services-grid">
+                ${data.services.map((service, index) => `
+                    <div class="service-card">
+                        <div class="service-icon">
+                            ${index === 0 ? '⚡' : index === 1 ? '🔨' : '🏠'}
+                        </div>
+                        <h3>${service.name}</h3>
+                        <p>${service.description}</p>
+                        <ul class="service-features">
+                            <li>Savoir-faire artisanal</li>
+                            <li>Entreprise familiale</li>
+                            <li>Proximité et confiance</li>
+                            <li>Devis transparent</li>
+                            <li>Garantie artisan</li>
+                        </ul>
+                        <a href="service-${service.id}.html" class="service-btn">
+                            Découvrir le service 🔨
+                        </a>
+                    </div>
+                `).join('')}
+            </div>
+        </div>
+    </section>
+
+    <!-- Badge Urgence -->
+    ${data.emergencyAvailable ? `
+        <a href="tel:${data.phone}" class="emergency-badge">
+            🚨 Urgence 24h/7j
+        </a>
+    ` : ''}
+
+    <script>
+        // Header Scroll Effect
+        window.addEventListener('scroll', function() {
+            const header = document.getElementById('header');
+            if (window.scrollY > 100) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Smooth Scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Animation on Scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+        
+        document.querySelectorAll('.service-card').forEach((card, index) => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(30px)';
+            card.style.transition = \`opacity 0.6s ease \${index * 0.15}s, transform 0.6s ease \${index * 0.15}s\`;
+            observer.observe(card);
+        });
+    </script>
+</body>
+</html>`
+}
